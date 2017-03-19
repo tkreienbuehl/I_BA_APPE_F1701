@@ -1,0 +1,61 @@
+% !TEX root = Dokumentation.tex
+\subsubsection{Systemtest 1}
+\begin{table}[H]
+\begin{tabular}{ | p{0.22\textwidth} | p{0.68\textwidth} |} \hline
+\rowcolor{gray!50}
+%Titelzeile
+	\textbf{ID}          &
+	\begin{tabular}{l}
+		\textbf{S2}
+	\end{tabular}
+	\\ \hline
+%Zeile
+	\textbf{Bezeichnung}			 &
+	\begin{tabular}{l}
+		Automatische Nachbestellung auslösen.
+	\end{tabular}
+\\ \hline
+%Zeile
+	\textbf{Beschreibung}   		 &
+	\begin{tabular}{l}
+		Das Filialbestellsystem löst automatisch eine Nachbestellung aus, wenn\\
+ein definierter Lagerbestand unterschritten wird.
+	\end{tabular}
+\\ \hline
+%Zeile
+	\textbf{Akteure}              & 
+	\begin{tabular}{l}
+		Filialbestellsystem, Filialleiter, Filialverwalter
+	\end{tabular}
+\\ \hline
+%Zeile
+	\textbf{Vorbedingungen}       &
+	\begin{tabular}{l}
+		Lagerbestand unterschreitet Mindestlagerbestand.
+	\end{tabular}		
+\\ \hline
+%Zeile
+	\textbf{Ergebnis}             &        
+	\begin{tabular}{l}
+		Nachbestellung ausgelöst\\
+		Filialleiter kann Nachbestellung einsehen\\
+		Filialverwalter sieht Logeintrag.
+	\end{tabular}
+\\ \hline
+%Zeile
+	\textbf{Ergebnis bei Fehler}  &
+	\begin{tabular}{l}
+		- nfo an Filialleiter
+	\end{tabular}
+\\ \hline
+%Zeile
+	\textbf{Ablauf}				 &
+	\begin{tabular}{l}
+		1. Lagerbestand unterschreiten\\
+		2. Nachbestellung auslösen\\
+		3. Log-Eintrag erstellen\\
+		4. Nachbestellung prüfen (Filialverwalter)
+	\end{tabular}
+\\ \hline	%Untere Abgrenzung
+\end{tabular}
+\end{table}

@@ -7,7 +7,8 @@
 \usepackage[ngerman]{babel}
 \usepackage{tocbibind}
 \usepackage{enumerate}
-\usepackage{xcolor}
+%\usepackage{xcolor}
+\usepackage[table]{xcolor} 
 \usepackage{pdfpages}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -40,7 +41,7 @@
 }
 
 \pagestyle{scrheadings}
-\ihead{APPE Team 13}\ohead{SysSpec} 
+\ihead{APPE Team 13}\ohead{Projektmanagementplan} 
 \ifoot{\today} \ofoot{Seite \thepage\ von {\hypersetup{linkcolor=black}\pageref{LastPage}}}
 
 % Einrücken zu Beginn von neuem Absatz unterdrücken
@@ -72,8 +73,10 @@
 \makeatother
 \MSonehalfspacing
 
-
 \begin{document}
+%Zweifarbige Tabellen als Standard
+\rowcolors{2}{gray!25}{white}
+%
 \input{00_titlepage.tex}
 \tableofcontents
 \clearpage
@@ -94,7 +97,7 @@
 \subsection{Konfigurationsmanagement}
 
 \section{Testplan}
-\subsection{Testdesign \& Abläufe}
-\subsection{Testfälle}
+\input{Testkonzept/Testkonzept.tex}
+
 \section{Anhänge}
 \end{document}
