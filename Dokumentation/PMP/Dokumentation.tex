@@ -80,67 +80,10 @@
 \input{00_titlepage.tex}
 \tableofcontents
 \clearpage
-\section{Projektüberblick}
-Das folgende Kapitel definiert die organisatorischen Aspekte im Zusammenhang mit dem Entwicklungsprojekt in APPE. Es umfasst dabei die Projektziele \&-resultate.
-\subsection{Projektauftrag, Ziele \& Resultate}
-Der Kunde hat ein Informatik-System für ein elektronisches Artikel-Bestellsystem für seine dezentralen Filialen bestellt.\\
-Jede Filiale hat ein lokales Lager, welches in einer lokalen Datenbank (pro Filiale) verwaltet wird. Daneben existiert auch ein zentrales Lager, dieses wird in einem bestehenden System (Legacy System) verwaltet, welches über eine zur Verfügung gestellte Komponente einzubinden ist. Im zentralen Lager sind die Artikel entweder sofort lieferbar oder müssen nachbestellt werden.
-\subsubsection{Ziele}
-Mit dem Projekt sind dabei folgende Ziele zu erreichen:\\
-\textbf{Funktionale Ziele / Anforderungen}\\
-- Das Verkaufspersonal kann per Telefon, Schalterkontakt, Fax oder Mail eingegangene Bestellungen im System erfassen, d.h. es können Artikel aus einem Katalog auswählt, die Verfügbarkeit der Artikel geprüft und die Bestellung ausgeführt werden.\\
-- Auch wenn mehrere Benutzer einer Filiale gleichzeitig im System arbeiten, dürfen keine inkonsistenten Zustände entstehen (Bsp.: gleiches Exemplar mehrfach verkaufen)\\
-- Benutzer/innen des Systems müssen sich mit Name und Passwort identifizieren, ihnen werden danach entsprechende Rechte zugeteilt. (Benutzergruppen: SysAdmin, Filialleiter/in, Verkäufer/in, Datentypist/in)\\
-- Der Filialverwalter kann die Vorgänge im System (Fehler, wesentliche Geschäftsvorfälle) anhand von Logbucheinträgen laufend überwachen.\\
-- Der Filialleiter kann jederzeit die aktuellen Bestellungen, Nachbestellungen und Lieferungen aus der Zentrale einsehen\\
-- Der/die Datentypist/in kann im System angelieferte Artikel im Filiallager eintragen.\\
-- Das Verkaufspersonal und der Filialleiter können jederzeit den Zustand der Bestellungen einsehen. Eine Bestellung kann auch geändert oder annulliert werden.\\
-- Jegliche Exception und pro wesentlicher Business-Vorgang werden Logger-Einträge mitteils einem Logging-Framework aufgezeichnet.\\
+\input{Ziele/Projektubersicht}
+\input{Ziele/Projektfuhrung}
+\input{Ziele/Projektunterstutzung}
 
-\textbf{Organisatorische Ziele / Anforderungen}\\
-- Alle Gruppenmitglieder müssen in der Softwareerstellung involviert sein. Die entsprechenden Verantwortlichkeiten sind in der Dokumentation ausgewiesen.\\
-
-\textbf{Abgrenzungen \& Vorgaben}\\
-- Die Buchhaltung inkl. Mahnwesen für die Rechnungsstellung/-behandlung erfolgt in einer separaten RW-Applikation mit Zugriff auf die lokale DB und ist nicht Teil des Auftrages.\\
-- Der Datenbankserver wird zur Verfügung gestellt.\\
-- Die Komponente für die Einbindung des Legacy Systems (Zentrallager) wird durch den Auftraggeber geliefert / zur Verfügung gestellt.\\
-
-\textbf{Resultate}\\
-Im Bereich der Softwareentwicklung sind entsprechende Resultate auszuweisen. Dabei werden in der Systemspezifikationen folgende Resultate beschrieben:\\
-- Ein Kontext-Diagramm\\
-- Übersichtsdiagramm aller Use Cases inkl. einer Kurzbeschreibung der Use Cases. Detaillierte Beschreibung des Use Cases 'Bestellung ausführen'.\\
-- Konzeptionelles Datenmodell\\
-- Architektur-Modell(e) und nachvollziehbare Architekturentscheide\\
-- Schnittstellen-Spezifikation(en)\\
-
-Im PMP werden dabei folgende Resultate abgebildet:\\
-- Projektverantwortlichkeiten\\
-- Rahmenplan mit wichtigen Meilensteinen und Sprints\\
-- Dokumentation der Epics und Stories inkl. der Akzeptanzkriterien.\\
-- Testplan \& Testprotokoll\\
-
-Auf applikatorischer Ebene werden folgende Softwaredeliverables erwartet:\\
-Ein lauffähiges Programm, welches:\\
-- in der vorgegebenen Projektstruktur auf GitLab verwaltet wird.\\
-- über einen automatisierten Build verfügt und auf dem Buildserver laufend integriert wird (CI)\\
-- automatisierte (Unit-)Tests ohne Fehler durchläuft und über eine begründete minimale Codeabdeckung verfügt\\
-
-\subsection{Organisation, Rollen \& Zuständigkeiten}
-Wir haben definierte Rollen, die müssen noch etwas ausgearbeitet werden
-\section{Projektführung}
-\subsection{Rahmenplan}
-\subsubsection{Projektkontrolle}
-
-\subsubsection{Risikomanagement}
-
-\subsubsection{Projektabschluss}
-
-\section{Projektunterstützung}
-\subsection{Tools für Entwicklung, Test \& Abnahme}
-
-\subsection{Konfigurationsmanagement}
-
-\section{Testplan}
 \input{Testkonzept/Testkonzept.tex}
 
 \section{Anhänge}
