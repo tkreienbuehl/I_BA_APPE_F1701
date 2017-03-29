@@ -6,43 +6,57 @@ Der Kunde hat ein Informatik-System für ein elektronisches Artikel-Bestellsyste
 Jede Filiale hat ein lokales Lager, welches in einer lokalen Datenbank (pro Filiale) verwaltet wird. Daneben existiert auch ein zentrales Lager, dieses wird in einem bestehenden System (Legacy System) verwaltet, welches über eine zur Verfügung gestellte Komponente einzubinden ist. Im zentralen Lager sind die Artikel entweder sofort lieferbar oder müssen nachbestellt werden.
 \subsubsection{Ziele}
 Mit dem Projekt sind dabei folgende Ziele zu erreichen:\\
-\textbf{Funktionale Ziele / Anforderungen}\\
-- Das Verkaufspersonal kann per Telefon, Schalterkontakt, Fax oder Mail eingegangene Bestellungen im System erfassen, d.h. es können Artikel aus einem Katalog auswählt, die Verfügbarkeit der Artikel geprüft und die Bestellung ausgeführt werden.\\
-- Auch wenn mehrere Benutzer einer Filiale gleichzeitig im System arbeiten, dürfen keine inkonsistenten Zustände entstehen (Bsp.: gleiches Exemplar mehrfach verkaufen)\\
-- Benutzer/innen des Systems müssen sich mit Name und Passwort identifizieren, ihnen werden danach entsprechende Rechte zugeteilt. (Benutzergruppen: SysAdmin, Filialleiter/in, Verkäufer/in, Datentypist/in)\\
-- Der Filialverwalter kann die Vorgänge im System (Fehler, wesentliche Geschäftsvorfälle) anhand von Logbucheinträgen laufend überwachen.\\
-- Der Filialleiter kann jederzeit die aktuellen Bestellungen, Nachbestellungen und Lieferungen aus der Zentrale einsehen\\
-- Der/die Datentypist/in kann im System angelieferte Artikel im Filiallager eintragen.\\
-- Das Verkaufspersonal und der Filialleiter können jederzeit den Zustand der Bestellungen einsehen. Eine Bestellung kann auch geändert oder annulliert werden.\\
-- Jegliche Exception und pro wesentlicher Business-Vorgang werden Logger-Einträge mitteils einem Logging-Framework aufgezeichnet.\\
+\textbf{Funktionale Ziele / Anforderungen}
+\begin{itemize}
+\item Das Verkaufspersonal kann per Telefon, Schalterkontakt, Fax oder Mail eingegangene Bestellungen im System erfassen, d.h. es können Artikel aus einem Katalog auswählt, die Verfügbarkeit der Artikel geprüft und die Bestellung ausgeführt werden.
+\item Auch wenn mehrere Benutzer einer Filiale gleichzeitig im System arbeiten, dürfen keine inkonsistenten Zustände entstehen (Bsp.: gleiches Exemplar mehrfach verkaufen)
+\item Benutzer/innen des Systems müssen sich mit Name und Passwort identifizieren, ihnen werden danach entsprechende Rechte zugeteilt. (Benutzergruppen: SysAdmin, Filialleiter/in, Verkäufer/in, Datentypist/in)
+\item Der Filialverwalter kann die Vorgänge im System (Fehler, wesentliche Geschäftsvorfälle) anhand von Logbucheinträgen laufend überwachen.
+\item Der Filialleiter kann jederzeit die aktuellen Bestellungen, Nachbestellungen und Lieferungen aus der Zentrale einsehen
+\item Der/die Datentypist/in kann im System angelieferte Artikel im Filiallager eintragen.
+\item Das Verkaufspersonal und der Filialleiter können jederzeit den Zustand der Bestellungen einsehen. Eine Bestellung kann auch geändert oder annulliert werden.
+\item Jegliche Exception und pro wesentlicher Business-Vorgang werden Logger-Einträge mitteils einem Logging-Framework aufgezeichnet.
+\end{itemize}
 
-\textbf{Organisatorische Ziele / Anforderungen}\\
-- Alle Gruppenmitglieder müssen in der Softwareerstellung involviert sein. Die entsprechenden Verantwortlichkeiten sind in der Dokumentation ausgewiesen.\\
+\textbf{Organisatorische Ziele / Anforderungen}
+\begin{itemize}
+\item Alle Gruppenmitglieder müssen in der Softwareerstellung involviert sein. Die entsprechenden Verantwortlichkeiten sind in der Dokumentation ausgewiesen.
+\end{itemize}
 
-\textbf{Abgrenzungen \& Vorgaben}\\
-- Die Buchhaltung inkl. Mahnwesen für die Rechnungsstellung/-behandlung erfolgt in einer separaten RW-Applikation mit Zugriff auf die lokale DB und ist nicht Teil des Auftrages.\\
-- Der Datenbankserver wird zur Verfügung gestellt.\\
-- Die Komponente für die Einbindung des Legacy Systems (Zentrallager) wird durch den Auftraggeber geliefert / zur Verfügung gestellt.\\
+\textbf{Abgrenzungen \& Vorgaben}
+\begin{itemize}
+\item Die Buchhaltung inkl. Mahnwesen für die Rechnungsstellung/-behandlung erfolgt in einer separaten RW-Applikation mit Zugriff auf die lokale DB und ist nicht Teil des Auftrages.
+\item Der Datenbankserver wird zur Verfügung gestellt.
+\item Die Komponente für die Einbindung des Legacy Systems (Zentrallager) wird durch den Auftraggeber geliefert / zur Verfügung gestellt.
+\end{itemize}
 
 \subsubsection{Resultate}
-Im Bereich der Softwareentwicklung sind entsprechende Resultate auszuweisen. Dabei werden in der Systemspezifikationen folgende Resultate beschrieben:\\
-- Ein Kontext-Diagramm\\
-- Übersichtsdiagramm aller Use Cases inkl. einer Kurzbeschreibung der Use Cases. Detaillierte Beschreibung des Use Cases 'Bestellung ausführen'.\\
-- Konzeptionelles Datenmodell\\
-- Architektur-Modell(e) und nachvollziehbare Architekturentscheide\\
-- Schnittstellen-Spezifikation(en)\\
+Im Bereich der Softwareentwicklung sind entsprechende Resultate auszuweisen. Dabei werden in der Systemspezifikationen folgende Resultate beschrieben:
+\begin{itemize}
+\item Ein Kontext-Diagramm
+\item Übersichtsdiagramm aller Use Cases inkl. einer Kurzbeschreibung der Use Cases. Detaillierte Beschreibung des Use Cases 'Bestellung ausführen'.
+\item Konzeptionelles Datenmodell
+\item Architektur-Modell(e) und nachvollziehbare Architekturentscheide
+\item Schnittstellen-Spezifikation(en)
+\end{itemize}
 
-Im PMP werden dabei folgende Resultate abgebildet:\\
-- Projektverantwortlichkeiten\\
-- Rahmenplan mit wichtigen Meilensteinen und Sprints\\
-- Dokumentation der Epics und Stories inkl. der Akzeptanzkriterien.\\
-- Testplan \& Testprotokoll\\
+Im PMP werden dabei folgende Resultate abgebildet:
+\begin{itemize}
+\item Projektverantwortlichkeiten
+\item Rahmenplan mit wichtigen Meilensteinen und Sprints
+\item Dokumentation der Epics und Stories inkl. der Akzeptanzkriterien.
+\item Testplan \& Testprotokoll
+\end{itemize}
 
 Auf applikatorischer Ebene werden folgende Softwaredeliverables erwartet:\\
-Ein lauffähiges Programm, welches:\\
-- in der vorgegebenen Projektstruktur auf GitLab verwaltet wird.\\
-- über einen automatisierten Build verfügt und auf dem Buildserver laufend integriert wird (CI)\\
-- automatisierte (Unit-)Tests ohne Fehler durchläuft und über eine begründete minimale Codeabdeckung verfügt\\
+Ein lauffähiges Programm, welches:
+\begin{itemize}
+\item in der vorgegebenen Projektstruktur auf GitLab verwaltet wird.
+\item über einen automatisierten Build verfügt und auf dem Buildserver laufend integriert wird (CI)
+\item automatisierte (Unit-)Tests ohne Fehler durchläuft und über eine begründete minimale Codeabdeckung verfügt
+\end{itemize}
 
 \subsection{Organisation, Rollen \& Zuständigkeiten}
-Wir haben definierte Rollen, die müssen noch etwas ausgearbeitet werden
+Das Projektteam besteht aus vier Personen. Aufgrund dieser geringen Anzahl wird grundsätzlich keine hierarchische Organisationsform angestrebt. Primär werden Lösungen und Entscheidung mit einem gemeinsamen Konsens gefunden / gefällt. Bei unentschiedener Ausgangslage entscheidet der Projektleiter endgültig.
+Die Rollen und Zuständigkeiten definieren die u.a. die Aufgaben und Verantwortungen einer Rolle und sind für unser Team wie folgt definiert:
+\input{Ziele/Projektrollen.tex}
