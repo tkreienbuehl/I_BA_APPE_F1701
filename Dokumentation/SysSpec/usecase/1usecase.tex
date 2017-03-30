@@ -1,64 +1,76 @@
-% !TEX root = Dokumentation_PMP.tex
-\subsubsection{Integrationstest 1 - Applikationsstart}
+% !TEX root = Dokumentation_SysSpec.tex
+\subsubsection{Use Case 1: Anmeldung}
 \begin{table}[H]
 \begin{tabular}{ | p{0.22\textwidth} | p{0.68\textwidth} |} \hline
 \rowcolor{gray!50}
 %Titelzeile
-	\textbf{ID}          &
+	\textbf{Name}          &
 	\begin{tabular}{l}
-		\textbf{I1}
+		\textbf{Anmeldung}
 	\end{tabular}
 	\\ \hline
 %Zeile
-	\textbf{Bezeichnung}			 &
+	\textbf{Kurzbeschreibung}			 &
 	\begin{tabular}{l}
-		Applikation \glqq{}Filialbestelsystem\grqq{} kann gestartet werden.
+		Ein Benutzer meldet sich im System an
 	\end{tabular}
 \\ \hline
 %Zeile
-	\textbf{Beschreibung}   		 &
+	\textbf{Akteure}}   		 &
 	\begin{tabular}{l}
-		Die Applikation kann gestartet werden.
+		Filialleiter, Verkaufspersonal, Sysadmin, Filialverwalter, Datatypist
 	\end{tabular}
 \\ \hline
 %Zeile
-	\textbf{Akteure}              & 
+	\textbf{Auslöser}              & 
 	\begin{tabular}{l}
-		Nutzer
+		Der Akteure will sich am System anmelden
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Vorbedingungen}       &
 	\begin{tabular}{l}
-		keine
+		-	Der Akteur muss im System vorhanden sein \\
+		-	Benutzername muss vorhanden sein \\
+		-	Passwort muss vorhanden sein \\
+
 	\end{tabular}		
 \\ \hline
 %Zeile
-	\textbf{Ergebnis}             &        
+	\textbf{Input Information}             &        
 	\begin{tabular}{l}
-		Integrationstest werden fehlerfrei abgeschlossen. \\
-		Die Applikation ist erfolgreich gestartet. \\
-		Die Anmelde-Maske wird gestartet. \\
+		-	Username \\
+		-	Passwort
+
 	\end{tabular}
 \\ \hline
 %Zeile
-	\textbf{Ergebnis bei Fehler}  &
+	\textbf{Ergebnisse}  &
 	\begin{tabular}{l}
-		- Exception\\
-		- Unit Test failed
+		Benutzer ist am System angemeldet.
 	\end{tabular}
 \\ \hline
 %Zeile
-	\textbf{Ablauf}				 &
+	\textbf{Nachbedingung}				 &
 	\begin{tabular}{l}
-		1. Applikation starten\\
-		2. Ergebnis prüfen
+		Benutzer kann im System je nach definierter Rolle arbeiten.
 	\end{tabular}
 \\ \hline
-	\textbf{Testdaten}            &
+%Zeile
+	\textbf{Ablauf}            &
 	\begin{tabular}{l}
-		Keine benötigt.
+		1.	Applikation starten \\
+		2.	Username \& Passwort eingeben \\
+		3.	Schaltfläche \glqq{} \«Login\»\grqq{} betätigen
+
 	\end{tabular}
-\\ \hline	%Untere Abgrenzung
+\\ \hline
+%Zeile
+	\textbf{Sonderfälle}			 &
+	\begin{tabular}{l}
+		Passwort wird 3-mal falsch eingegeben.
+	\end{tabular}
+\\ \hline	
+%Untere Abgrenzung
 \end{tabular}
 \end{table}
