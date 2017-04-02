@@ -6,71 +6,85 @@
 %Titelzeile
 	\textbf{Name}          &
 	\begin{tabular}{l}
-		\textbf{Anmeldung}
+		\textbf{Bestellung bearbeiten}
 	\end{tabular}
 	\\ \hline
 %Zeile
 	\textbf{Kurzbeschreibung}			 &
 	\begin{tabular}{l}
-		Ein Benutzer meldet sich im System an
+		Ein Akteure kann Bestellungen erfassen, ändern oder 				annulieren
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Akteure}   		 &
 	\begin{tabular}{l}
-		Filialleiter, Verkaufspersonal, Sysadmin, Filialverwalter, Datatypist
+		Filialleiter, Verkaufspersonal
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Auslöser}              & 
 	\begin{tabular}{l}
-		Der Akteure will sich am System anmelden
+		Eine Bestellung wird bearbeitet.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Vorbedingungen}       &
 	\begin{tabular}{l}
-		-	Der Akteur muss im System vorhanden sein \\
-		-	Benutzername muss vorhanden sein \\
-		-	Passwort muss vorhanden sein 
+		-	Der Akteur muss im System angemeldet sein.\\
+		-	Der Akteur ist berechtige Bestellungen zu. bearbeiten. \\
+		- 	Der Kunde muss bereits im System erfasst sein \\
+		- 	Das Produkt muss in der Datenbank vorhanden sein. \\
+  
 
 	\end{tabular}		
 \\ \hline
 %Zeile
 	\textbf{Input Information}             &        
 	\begin{tabular}{l}
-		-	Username \\
-		-	Passwort
+		- 	Verkäufer \\
+		-	Kunde \\
+		-   Bestellung des Kunden \\
+		-	Produkt \\
+		-  	Anzahl 
+		
 
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Ergebnisse}  &
 	\begin{tabular}{l}
-		Benutzer ist am System angemeldet.
+		Verkäufer erfasst, ändert oder annulliert eine Bestellung.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Nachbedingung}				 &
 	\begin{tabular}{l}
-		Benutzer kann im System je nach definierter Rolle arbeiten.
+		Verkäufer kann aktuelle Bestellung einsehen.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Ablauf}            &
 	\begin{tabular}{l}
-		1.	Applikation starten \\
-		2.	Username \& Passwort eingeben \\
-		3.	Schaltfläche Login betätigen
+		1.	Verkäufer ist am System angemeldet. \\
+		2.	Kunde auswählen. \\
+		3.	Schaltfläche "Neue Bestellung erfassen" oder "Bestellungen ansehen" auswählen. \\
+		4. 	Produkt auswählen (Dropdown). \\
+		5. 	Anzahl eingeben. \\
+		6.	Schaltfläche "Hinzufügen" oder "Löschen" betätigen. \\
+		7.	Falls mehrere Produkte Schritt 4 bis 6 wiederholen.\\
+		8.  Schaltfläche "Bestellung abschliessen" betätigen.
 
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Sonderfälle}			 &
 	\begin{tabular}{l}
-		Passwort wird 3-mal falsch eingegeben.
+		- Kunde hat offene Mahnung -> Bei der Kundenansicht eine Info.\\
+		- Produkt ist nicht im Lager -> Nachbestellung auslösen
 	\end{tabular}
 \\ \hline	
 %Untere Abgrenzung
 \end{tabular}
+\label{tab:3usecase}
+\caption{Use Case 3: Bestellung bearbeiten}
 \end{table}

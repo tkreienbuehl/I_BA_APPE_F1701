@@ -6,48 +6,46 @@
 %Titelzeile
 	\textbf{Name}          &
 	\begin{tabular}{l}
-		\textbf{Anmeldung}
+		\textbf{Bestellung einsehen}
 	\end{tabular}
 	\\ \hline
 %Zeile
 	\textbf{Kurzbeschreibung}			 &
 	\begin{tabular}{l}
-		Ein Benutzer meldet sich im System an
+		Definiertes Personal kann sich alle offenen Bestellungen ansehen.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Akteure}   		 &
 	\begin{tabular}{l}
-		Filialleiter, Verkaufspersonal, Sysadmin, Filialverwalter, Datatypist
+		Filialleiter, Verkaufspersonal
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Auslöser}              & 
 	\begin{tabular}{l}
-		Der Akteure will sich am System anmelden
+		Ein Akteure will die Bestellungen einsehen
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Vorbedingungen}       &
 	\begin{tabular}{l}
-		-	Der Akteur muss im System vorhanden sein \\
-		-	Benutzername muss vorhanden sein \\
-		-	Passwort muss vorhanden sein 
-
+		-	Der Akteur muss im System angemeldet sein
+	
 	\end{tabular}		
 \\ \hline
 %Zeile
 	\textbf{Input Information}             &        
 	\begin{tabular}{l}
-		-	Username \\
-		-	Passwort
+		-	Produkt-ID \\
+		-	Dropdown Liste
 
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Ergebnisse}  &
 	\begin{tabular}{l}
-		Benutzer ist am System angemeldet.
+		Bestellung wird angezeigt
 	\end{tabular}
 \\ \hline
 %Zeile
@@ -59,18 +57,20 @@
 %Zeile
 	\textbf{Ablauf}            &
 	\begin{tabular}{l}
-		1.	Applikation starten \\
-		2.	Username \& Passwort eingeben \\
-		3.	Schaltfläche Login betätigen
+		1.	Dropdownliste Anwählen\\
+		2.	Produkt manuell suchen \\
+		3.	Anzeige betätigen
 
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Sonderfälle}			 &
 	\begin{tabular}{l}
-		Passwort wird 3-mal falsch eingegeben.
+		-
 	\end{tabular}
 \\ \hline	
 %Untere Abgrenzung
 \end{tabular}
+\label{tab:2usecase}
+\caption{Use Case 2: Bestellung einsehen}
 \end{table}
