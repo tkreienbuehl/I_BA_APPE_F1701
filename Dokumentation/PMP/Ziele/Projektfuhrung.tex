@@ -20,13 +20,13 @@ Alle Use Cases bis auf 'Logbuch überwachen' sind umgesetzt. Erste Integrations-
 \item Meilenstein 4 \textit{Use Case 'Logbuch überwachen' \& Dokumentation abgeschlossen}\\
 Neben dem letzten Use Case 'Logbuch überwachen' werden alle Integrations- \& Systemtests durchgeführt. Abschliessend liegen die SysSpec und der PMP vor.
 \end{enumerate}
-
+\clearpage
 \subsection{Projektkontrolle}
 In der Projektkontrolle sollen Abweichungen zwischen SOLL- und IST-Zustand aufgedeckt werden. Der Zustand bezieht sich auf den Projektfortschritt. In jedem Sprint werden Arbeitspakete definiert und mit einem bestimmten Aufwand (in Stunden) versehen. Die Arbeitspakete werden jeweils im Rahmen des Sprintreviews auf der Umsetzung kontrolliert und der Status über ScrumDo nachgeführt und mit dem ProductOwner verifiziert.
 \subsection{Risikomanagement}
-Die Projektrisiken wurden evaluiert und in Tabelle 4.2 dargestellt. Die einzelnen Risiken wurde auf ihre Wahrscheinlichkeit und Auswirkung bewertet und in der folgender Grafik klassifiziert. Zusätzlich wurde je eine Massnahme zur Prävention und zur Verringerung / Eindämmung definiert
+Die Projektrisiken wurden evaluiert und in Tabelle \ref{tab:risklist} dargestellt. Die einzelnen Risiken wurde auf ihre Wahrscheinlichkeit und Auswirkung bewertet und in der folgender Grafik klassifiziert. Zusätzlich wurde je eine Massnahme zur Prävention und zur Verringerung / Eindämmung definiert
 \begin{table}[H]
-\begin{tabular}{ | p{0.20\textwidth} | p{0.13\textwidth} | p{0.09\textwidth} | p{0.48\textwidth} | }
+\begin{tabular}{ | p{0.25\textwidth} | p{0.13\textwidth} | p{0.09\textwidth} | p{0.44\textwidth} | }
 \hline \rowcolor{gray!50}
 %Titelzeile
 	\textbf{Risiko} &
@@ -35,34 +35,36 @@ Die Projektrisiken wurden evaluiert und in Tabelle 4.2 dargestellt. Die einzelne
 	\textbf{Massnahme}
 	\\ \hline
 %Zeile
-	Risiko1 &
-	1 &
-	2 &
+	Projektmitglied fällt für mehr als zwei Wochen aus &
+	kritisch &
+	vorstellbar &
 	\begin{tabular}{l}
-		- Ist für das Projektmanagement verantwortlich\\
-		- und führt Protokolle, Risikoliste und stellt
+		- Planbare Absenzen frühzeitig melden\\
+		- Regelmässiger Abgleich Arbeitsstand\\
+		im Team
 	\end{tabular}
 	\\ \hline	%Untere Abgrenzung
 %Zeile
-	Risiko2 &
-	1 &
-	2 &
+	EnterpriseLab steht während	einer Woche	oder mehr nicht	zur Verfügung &
+	katastrophal &
+	vorstellbar &
 	\begin{tabular}{l}
-		- Ist für das Projektmanagement verantwortlich\\
-		- und führt Protokolle, Risikoliste und stellt
+		- Lokale Kopie der Artefakte vorhanden\\
+		- Lokale Kopien auf GitHub pushen \\
+		und verwenden
 	\end{tabular}
 	\\ \hline	%Untere Abgrenzung
 %Zeile
-	Risiko3 &
-	1 &
-	2 &
+	Eingesetzte Frameworks zu aufwändig &
+	geringfügig &
+	vorstellbar &
 	\begin{tabular}{l}
-		- Ist für das Projektmanagement verantwortlich\\
-		- und führt Protokolle, Risikoliste und stellt
+		- Nicht von Tools \& unnötige Features\\
+		 ablenken lassen\\
+		- Unnötige Technologien ausschliessen
 	\end{tabular}
 	\\ \hline	%Untere Abgrenzung
 \end{tabular}
 \label{tab:risklist}
 \caption{Risikoliste}
 \end{table}
-\subsection{Projektabschluss}

@@ -1,6 +1,130 @@
 % !TEX root = Dokumentation_PMP.tex
 \section{Projektunterstützung}
-
+Im Zentrum stehen hier Werkzeuge, welche das Team in ihrer Arbeit unterstützen sollen.
+Ausserdem werden hier auch das Konfigurations-Management beschrieben, welche pro Sprint vorliegen.
 \subsection{Tools für Entwicklung, Test \& Abnahme}
+Im Rahmen des Moduls werden folgende Tools verwendet.
+\begin{table}[H]
+\begin{tabular}{ | p{0.30\textwidth} | p{0.70\textwidth} | }
+\hline \rowcolor{gray!50}
+%Titelzeile
+	\textbf{Zweck} 		 &
+	\textbf{Tool}
+	\\	\hline
+%Zeile
+	Scrum-Tool 	&
+	ScrumDo (Online)
+	\\  \hline	%Untere Abgrenzung
+%Zeile
+	ERM-/ERD-Designer 		&
+	MySQL Workbench v.6.3
+	\\  \hline	%Untere Abgrenzung
+%Zeile
+	UML-Designer 		&
+	Dia v0.97.2 \& MS Visio 2016
+	\\  \hline	%Untere Abgrenzung
+%Zeile
+	Entwicklungsumgebung 		&
+	Eclipse Neon 3
+	\\  \hline	%Untere Abgrenzung
+%Zeile
+	Sourcecode Verwaltung 		&
+	GitLab CE 8.14.2
+	\\  \hline	%Untere Abgrenzung
+%Zeile
+	Sourcecode Style 		&
+	CheckStyle / PMD / JaCoCo (Coverage)
+	\\  \hline	%Untere Abgrenzung
+%Zeile
+	Buildserver 		&
+	Maven, Jenkins v.1.558
+	\\  \hline	%Untere Abgrenzung
+%Zeile
+	Test 		&
+	JUnit / manuelle Integrations-Tests
+	\\  \hline	%Untere Abgrenzung
+%Zeile
+	Dokumentation 		&
+	\LaTeX  on GitHub
+	\\  \hline	%Untere Abgrenzung
+\end{tabular}
+\label{tab:tooling}
+\caption{Tools}
+\end{table}
+
 
 \subsection{Konfigurationsmanagement}
+Jede Komponente wird versioniert. Sie kann nur mit definierten Versionen anderer Komponenten im Verbund korrekt zusammenarbeiten. Daher werden hier die Komponentenversionen pro Sprint (shippable Software) aufgelistet. Die Tests basieren auf diesen Versionen.
+\subsubsection{Softwarekomponenten}
+\begin{table}[H]
+\begin{tabular}{ | p{0.20\textwidth} | p{0.10\textwidth} | p{0.10\textwidth} | p{0.10\textwidth} | p{0.10\textwidth} | }
+\hline \rowcolor{gray!50}
+%Titelzeile
+	\textbf{Artefakt} 		 &
+	\textbf{Sprint 1}	 	 &
+	\textbf{Sprint 2}	 	 &
+	\textbf{Sprint 3}		 &
+	\textbf{Sprint 4}
+	\\	\hline
+%Zeile
+	fbs\_business 	&
+	v0.1 			&
+	v0.2 			&
+	v0.3 			&
+	v1.0
+	\\  \hline	%Untere Abgrenzung
+%Zeile
+	fbs\_client 		&
+	v0.1 			&
+	v0.2 			&
+	v0.3 			&
+	v1.0
+	\\  \hline	%Untere Abgrenzung
+%Zeile
+	fbs\_data 		&
+	v0.1 			&
+	v0.2 			&
+	v0.3 			&
+	v1.0
+	\\  \hline	%Untere Abgrenzung
+%Zeile
+	fbs\_model 		&
+	v0.1 			&
+	v0.2 			&
+	v0.3 			&
+	v1.0
+	\\  \hline	%Untere Abgrenzung
+\end{tabular}
+\label{tab:config_sw}
+\caption{Softwarekomponenten Konfigurationsmanagement}
+\end{table}
+
+\subsubsection{Dokumentation}
+\begin{table}[H]
+\begin{tabular}{ | p{0.30\textwidth} | p{0.10\textwidth} | p{0.10\textwidth} | p{0.10\textwidth} | p{0.10\textwidth} | }
+\hline \rowcolor{gray!50}
+%Titelzeile
+	\textbf{Dokument} 		&
+	\textbf{Sprint 1}	 	&
+	\textbf{Sprint 2}	 	&
+	\textbf{Sprint 3}		&
+	\textbf{Sprint 4}
+	\\	\hline
+%Zeile
+	Projektmanagementplan 	&
+	v0.1 					&
+	v0.2 					&
+	v0.3 					&
+	v1.0
+	\\  \hline	%Untere Abgrenzung
+%Zeile
+	Systemspezifikation 	&
+	v0.1 					&
+	v0.2 					&
+	v0.3 					&
+	v1.0
+	\\  \hline	%Untere Abgrenzung
+\end{tabular}
+\label{tab:config_dok}
+\caption{Dokumentaiton Konfigurationsmanagement}
+\end{table}
