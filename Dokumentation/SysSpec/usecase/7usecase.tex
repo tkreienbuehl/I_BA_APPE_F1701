@@ -6,69 +6,69 @@
 %Titelzeile
 	\textbf{Name}          &
 	\begin{tabular}{l}
-		\textbf{Logbuch überwachen}
+		\textbf{Anmeldung}
 	\end{tabular}
 	\\ \hline
 %Zeile
 	\textbf{Kurzbeschreibung}			 &
 	\begin{tabular}{l}
-		Filialverwalter kann im Logbuch alle Aktivitäten betrachten.
+		Ein Benutzer meldet sich im System an
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Akteure}   		 &
 	\begin{tabular}{l}
-		Filialverwalter
+		Filialleiter, Verkaufspersonal, Sysadmin, Filialverwalter, Datatypist
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Auslöser}              & 
 	\begin{tabular}{l}
-		Filialverwalter will aktivitäten überprüfen.
+		Der Akteure will sich am System anmelden
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Vorbedingungen}       &
 	\begin{tabular}{l}
-		-	Der Akteur muss im System angemeldet sein.\\
-		-	Im Filial-Bestellesystem sind Aktivitäten abgelaufen .
-		
+		-	Der Akteur muss im System vorhanden sein \\
+		-	Benutzername muss vorhanden sein \\
+		-	Passwort muss vorhanden sein 
 
 	\end{tabular}		
 \\ \hline
 %Zeile
 	\textbf{Input Information}             &        
 	\begin{tabular}{l}
-		-	Dokument Log öffnen.
+		-	Username \\
+		-	Passwort
 
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Ergebnisse}  &
 	\begin{tabular}{l}
-		Filialverwalter bekommt Textfile mit Aktivitäten.
+		Benutzer ist am System angemeldet.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Nachbedingung}				 &
 	\begin{tabular}{l}
-		Textfile kann gespeichert werden.
+		Benutzer kann im System je nach definierter Rolle arbeiten.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Ablauf}            &
 	\begin{tabular}{l}
-		1.	Textfile öffnen \\
-		2.	Log betrachten oder speichern
-		
+		1.	Applikation starten \\
+		2.	Username \& Passwort eingeben \\
+		3.	Schaltfläche Login betätigen
 
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Sonderfälle}			 &
 	\begin{tabular}{l}
-		- keine Aktivitäten im System -> Textfile ist leer.\\
-		- 
+		Passwort wird 3-mal falsch eingegeben.
 	\end{tabular}
 \\ \hline	
 %Untere Abgrenzung

@@ -6,69 +6,68 @@
 %Titelzeile
 	\textbf{Name}          &
 	\begin{tabular}{l}
-		\textbf{Anmeldung}
+		\textbf{Wareineingang erfassen}
 	\end{tabular}
 	\\ \hline
 %Zeile
 	\textbf{Kurzbeschreibung}			 &
 	\begin{tabular}{l}
-		Ein Benutzer meldet sich im System an
+		Wenn eine Ware eintrifft wird sie vom Datentypist erfasst.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Akteure}   		 &
 	\begin{tabular}{l}
-		Filialleiter, Verkaufspersonal, Sysadmin, Filialverwalter, Datatypist
+		Datatypist
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Auslöser}              & 
 	\begin{tabular}{l}
-		Der Akteure will sich am System anmelden
+		Ware wird geliefert.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Vorbedingungen}       &
 	\begin{tabular}{l}
-		-	Der Akteur muss im System vorhanden sein \\
-		-	Benutzername muss vorhanden sein \\
-		-	Passwort muss vorhanden sein 
+		-	Der Akteur muss im System angemeldet sein.
+		 
 
 	\end{tabular}		
 \\ \hline
 %Zeile
 	\textbf{Input Information}             &        
 	\begin{tabular}{l}
-		-	Username \\
-		-	Passwort
+		-	Ware wird an Filiale geliefert
 
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Ergebnisse}  &
 	\begin{tabular}{l}
-		Benutzer ist am System angemeldet.
+		Filialager wird benachrichtigt.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Nachbedingung}				 &
 	\begin{tabular}{l}
-		Benutzer kann im System je nach definierter Rolle arbeiten.
+		Ware wird an Kunde ausgeliefert oder abgeholt.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Ablauf}            &
 	\begin{tabular}{l}
-		1.	Applikation starten \\
-		2.	Username \& Passwort eingeben \\
-		3.	Schaltfläche Login betätigen
+		1.	Ware im System erfassen \\
+		2.	Kunde benachrichtigen \\
+		
 
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Sonderfälle}			 &
 	\begin{tabular}{l}
-		Passwort wird 3-mal falsch eingegeben.
+		- Ware kommt nicht vollständig zur Filiale -> Teillieferung \\oder auf komplett Ware warten. \\
+		- Defektes oder unvollständige Lieferung -> Zurück an Filiallager.
 	\end{tabular}
 \\ \hline	
 %Untere Abgrenzung
