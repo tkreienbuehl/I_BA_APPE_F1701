@@ -6,7 +6,7 @@
 %Titelzeile
 	\textbf{Name}          &
 	\begin{tabular}{l}
-		\textbf{Wareineingang erfassen}
+		\textbf{Wareneingang erfassen}
 	\end{tabular}
 	\\ \hline
 %Zeile
@@ -30,7 +30,7 @@
 %Zeile
 	\textbf{Vorbedingungen}       &
 	\begin{tabular}{l}
-		-	Der Akteur muss im System angemeldet sein.
+		-	Der Akteur muss im System angemeldet sein (Use Case 1 erfüllt).
 		 
 
 	\end{tabular}		
@@ -38,27 +38,27 @@
 %Zeile
 	\textbf{Input Information}             &        
 	\begin{tabular}{l}
-		-	Ware wird an Filiale geliefert
+		-	Ware wird ins Filiallager geliefert. 
 
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Ergebnisse}  &
 	\begin{tabular}{l}
-		Filialager wird benachrichtigt.
+		Ware ist im Filiallager.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Nachbedingung}				 &
 	\begin{tabular}{l}
-		Ware wird an Kunde ausgeliefert oder abgeholt.
+		Lagerbestand wird aktualisiert 
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Ablauf}            &
 	\begin{tabular}{l}
-		1.	Ware im System erfassen \\
-		2.	Kunde benachrichtigen \\
+		1.	gelieferte Ware überprüfen \\
+		2.	Lagerbestand im Filiallager aktualisieren.
 		
 
 	\end{tabular}
@@ -67,9 +67,11 @@
 	\textbf{Sonderfälle}			 &
 	\begin{tabular}{l}
 		- Ware kommt nicht vollständig zur Filiale -> Teillieferung \\oder auf komplett Ware warten. \\
-		- Defektes oder unvollständige Lieferung -> Zurück an Filiallager.
+		- Defektes oder unvollständige Lieferung -> Zurück an Zentrallager.
 	\end{tabular}
 \\ \hline	
 %Untere Abgrenzung
 \end{tabular}
+\label{tab:5usecase}
+\caption{Use Case 5: Wareneingang erfassen}
 \end{table}

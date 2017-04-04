@@ -6,68 +6,87 @@
 %Titelzeile
 	\textbf{Name}          &
 	\begin{tabular}{l}
-		\textbf{Nachbestellung einsehen}
+		\textbf{Bestellung bearbeiten}
 	\end{tabular}
 	\\ \hline
 %Zeile
 	\textbf{Kurzbeschreibung}			 &
 	\begin{tabular}{l}
-		Filialleiter kann die Nachbestellungen einsehen.
+		Ein Akteure kann Bestellungen ändern oder annullieren
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Akteure}   		 &
 	\begin{tabular}{l}
-		Filialleiter
+		Filialleiter, Verkaufspersonal
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Auslöser}              & 
 	\begin{tabular}{l}
-		Filialleiter will Nachbestellungen ansehen.
+		Eine Bestellung wird bearbeitet.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Vorbedingungen}       &
 	\begin{tabular}{l}
-		-	Der Akteur muss im System angemeldet sein. \\
-
+		-	Der Akteur muss im System angemeldet sein (Use Case 1 erfühlt).\\
+		-	Der Akteur ist berechtige Bestellungen zu bearbeiten. \\
+		
+		- 	Die Bestellung muss vorhanden sein. \\
+  
 
 	\end{tabular}		
 \\ \hline
 %Zeile
 	\textbf{Input Information}             &        
 	\begin{tabular}{l}
-		-	Dropdown Liste
+		- 	Verkäufer \\
+		-	Kunde \\
+		-   Bestellung des Kunden \\
+		-	Produkt \\
+		-  	Anzahl 
+		
+
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Ergebnisse}  &
 	\begin{tabular}{l}
-		Nachbestellungen werden aufgelistet.
+		Verkäufer ändert oder annulliert eine Bestellung.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Nachbedingung}				 &
 	\begin{tabular}{l}
-		-
+		- Verkäufer kann die geänderte Bestellung einsehen.\\
+		- Rechnungswesen wird benachrichtigt.\\
+		- Kunde bekommt neue Bestellbestätigung.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Ablauf}            &
 	\begin{tabular}{l}
-		1.	Button \grqq Nachbestellungen\grqq{} anklicken \\
-		2.	Produkt in Dropdown Liste auswählen \\
-		3.	Anzeige tätigen
+		1.	Verkäufer ist am System angemeldet. \\
+		2.	Schaltfläche \grqq Bestellungen bearbeiten\grqq{} auswählen.
+		3.	Bestellung aus Liste auswählen. \\
+		4. 	Bestellung bearbeiten.\\
+		5.	Schaltfläche \grqq Hinzufügen\grqq{}  oder \grqq Löschen\grqq{} betätigen. \\
+		6.	Falls mehrere Bestellungen bearbeitet werden möchten\\
+		 Schritt 3 bis 5 wiederholen.\\
+		8.  Schaltfläche \grqq Bestellung abschliessen\grqq{}  betätigen.
 
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Sonderfälle}			 &
 	\begin{tabular}{l}
-		- lehre Liste wenn keine Nachbestellungen im Auftrag sind
+		- Kunde hat offene Mahnung -> Bei der Kundenansicht eine Info.\\
+		- Produkt ist nicht im Lager -> Nachbestellung auslösen
 	\end{tabular}
 \\ \hline	
 %Untere Abgrenzung
 \end{tabular}
+\label{tab:4usecase}
+\caption{Use Case 4: Bestellung bearbeiten}
 \end{table}
