@@ -1,5 +1,5 @@
 % !TEX root = Dokumentation_SysSpec.tex
-\subsubsection{Use Case 3: }
+\subsubsection{Use Case 3: Bestellung erfassen}
 \begin{table}[H]
 \begin{tabular}{ | p{0.22\textwidth} | p{0.68\textwidth} |} \hline
 \rowcolor{gray!50}
@@ -30,10 +30,10 @@
 %Zeile
 	\textbf{Vorbedingungen}       &
 	\begin{tabular}{l}
-		-	Der Akteur muss im System angemeldet sein (Use Case 1 erfühlt).\\
+		-	Der Akteur muss im System angemeldet sein (Use Case 1 erfüllt).\\
 		-	Der Akteur ist berechtige Bestellungen zu erfassen. \\
 		- 	Der Kunde muss bereits im System erfasst sein \\
-		- 	Das Produkt muss in der Datenbank (Filliallager) vorhanden sein. \\
+		- 	Das Produkt muss in der Datenbank (Filliallager) vorhanden sein. 
   
 
 	\end{tabular}		
@@ -41,8 +41,8 @@
 %Zeile
 	\textbf{Input Information}             &        
 	\begin{tabular}{l}
-		- 	Verkäufer \\
-		-	Kunde \\
+		
+		-   Kunde \\
 		-	Produkt \\
 		-  	Anzahl 
 		
@@ -66,13 +66,12 @@
 	\textbf{Ablauf}            &
 	\begin{tabular}{l}
 		1.	Verkäufer ist am System angemeldet. \\
-		2.	Kunde auswählen. \\
-		3.	Schaltfläche \grqq Neue Bestellung erfassen\grqq{} auswählen. \\
-		4. 	Produkt aus Liste auswählen. \\
-		5. 	Anzahl eingeben. \\
-		6.	Schaltfläche \grqq Hinzufügen\grqq{} betätigen. \\
-		7.	Falls mehrere Produkte gewünscht werden, Schritt 4 bis 6 wiederholen.\\
-		8.  Schaltfläche \grqq Bestellung abschliessen\grqq{}  betätigen.
+		2.	Kunde auswählen (Dropdown List). \\
+		3.  Produkt in Liste suchen und Anzahl eingeben.\\
+		4.  Falls mehrere Produkte gewünscht werden, Schritt 3 wiederholen.\\
+		5.	Schaltfläche \grqq Bestellung absenden\grqq{} betätigen. \\
+		
+	
 
 	\end{tabular}
 \\ \hline
@@ -80,7 +79,10 @@
 	\textbf{Sonderfälle}			 &
 	\begin{tabular}{l}
 		- Kunde hat offene Mahnung -> Bei der Kundenansicht eine Info.\\
-		- Produkt ist nicht im Lager -> Nachbestellung auslösen
+		- Produkt ist unter Lagerbestand -> Nachbestellung auslösen\\
+		- Wenn Kunde während Bestellung keine Produkt mehr möchte \\
+		  -> Schaltfläche \grqq abbrechen\grqq{}  betätigen. \\
+		- Bestellung absenden ohne Produktanzahl eingegeben -> Nullwert Übergabe 
 	\end{tabular}
 \\ \hline	
 %Untere Abgrenzung

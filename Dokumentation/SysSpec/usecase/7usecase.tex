@@ -1,5 +1,5 @@
 % !TEX root = Dokumentation_SysSpec.tex
-\subsubsection{Use Case 7: }
+\subsubsection{Use Case 7: Nachbestellung auslösen}
 \begin{table}[H]
 \begin{tabular}{ | p{0.22\textwidth} | p{0.68\textwidth} |} \hline
 \rowcolor{gray!50}
@@ -12,7 +12,7 @@
 %Zeile
 	\textbf{Kurzbeschreibung}			 &
 	\begin{tabular}{l}
-		Wenn der minimale Lagerbestand eines Produktes erreicht ist, wird automatisch eine Nachbestellung ausgelöst. 
+		Der Lagerbestand wird mit dem definierten Grenzwert verglichen und eine Bestellung ausgelöst.
 	\end{tabular}
 \\ \hline
 %Zeile
@@ -24,21 +24,22 @@
 %Zeile
 	\textbf{Auslöser}              & 
 	\begin{tabular}{l}
-		Lagerbestand eines Produktes ist unter der minimal  Menge gefallen.
+		Lagerbestand ist unter den definierten Grenzwert gefallen.
 	\end{tabular}
 \\ \hline
 %Zeile
 	\textbf{Vorbedingungen}       &
 	\begin{tabular}{l}
-		-	Lagerbestände mit minimal Lagerbestände vergleichen. 
+		-	Bestellung wird abgeschlossen.
 
 	\end{tabular}		
 \\ \hline
 %Zeile
 	\textbf{Input Information}             &        
 	\begin{tabular}{l}
-		-	Lagerbestand \\
-		-	Minimal Lagerbestand
+		-	Lagerbestand. \\
+		-   Bestand Nachbestellung. \\
+		-	Definierter Grenzwert.\\
 
 	\end{tabular}
 \\ \hline
@@ -57,10 +58,10 @@
 %Zeile
 	\textbf{Ablauf}            &
 	\begin{tabular}{l}
-		1.	Lagerbestand von Artikel \\
-		2.	Vergleich mit minimal Lagerbestand \\
-		3.	Bei Unterschreitung Nachbestellung auslösen.\\
-		4.  nächster Vergleich.
+		1.  Bestellung wird ausgelöst.\
+		2.	Lagerbestand von Artikel. \\
+		3.	Vergleich mit definierten Grenzwert. \\
+		4.	Prüfen ob Nachbestellung aktiv.
 
 	\end{tabular}
 \\ \hline
