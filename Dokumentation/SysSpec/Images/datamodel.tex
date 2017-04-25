@@ -1,640 +1,705 @@
-% PSTricks TeX macro
+% Graphic for TeX using PGF
 % Title: C:\Users\Ramon Wyss\Dropbox\APPE\Projektdokumentation\ERM\erm_v4.dia
 % Creator: Dia v0.97.2
-% CreationDate: Fri Apr 14 12:46:31 2017
+% CreationDate: Tue Apr 25 23:03:15 2017
 % For: Ramon Wyss
-% \usepackage{pstricks}
+% \usepackage{tikz}
 % The following commands are not supported in PSTricks at present
 % We define them conditionally, so when they are implemented,
-% this pstricks file will use them.
-\ifx\setlinejoinmode\undefined
-  \newcommand{\setlinejoinmode}[1]{}
+% this pgf file will use them.
+\ifx\du\undefined
+  \newlength{\du}
 \fi
-\ifx\setlinecaps\undefined
-  \newcommand{\setlinecaps}[1]{}
-\fi
-% This way define your own fonts mapping (for example with ifthen)
-\ifx\setfont\undefined
-  \newcommand{\setfont}[2]{}
-\fi
-\pspicture(-8.100000,-37.250000)(58.915000,-3.800000)
-\psscalebox{1.000000 -1.000000}{
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\newrgbcolor{diafillcolor}{1.000000 1.000000 1.000000}%
-\psset{fillcolor=diafillcolor}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(14.100000,13.000000)(14.100000,14.400000)(21.530000,14.400000)(21.530000,13.000000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(14.100000,13.000000)(14.100000,14.400000)(21.530000,14.400000)(21.530000,13.000000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(17.815000,14.000000){\psscalebox{1 -1}{Customer}}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(14.100000,14.400000)(14.100000,17.000000)(21.530000,17.000000)(21.530000,14.400000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(14.100000,14.400000)(14.100000,17.000000)(21.530000,17.000000)(21.530000,14.400000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](14.250000,15.060000){\psscalebox{1 -1}{+\ensuremath{\left[\right.}PK\ensuremath{\left.\right]} ID: int}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](14.250000,15.860000){\psscalebox{1 -1}{+firstname: String}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](14.250000,16.660000){\psscalebox{1 -1}{+lastname: String}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(36.550000,6.350000)(36.550000,7.750000)(43.595000,7.750000)(43.595000,6.350000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(36.550000,6.350000)(36.550000,7.750000)(43.595000,7.750000)(43.595000,6.350000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(40.072500,7.350000){\psscalebox{1 -1}{City}}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(36.550000,7.750000)(36.550000,9.550000)(43.595000,9.550000)(43.595000,7.750000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(36.550000,7.750000)(36.550000,9.550000)(43.595000,9.550000)(43.595000,7.750000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](36.700000,8.410000){\psscalebox{1 -1}{+\ensuremath{\left[\right.}PK\ensuremath{\left.\right]} plz: int}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](36.700000,9.210000){\psscalebox{1 -1}{+cityname: String}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(23.300000,5.050000)(23.300000,6.450000)(30.730000,6.450000)(30.730000,5.050000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(23.300000,5.050000)(23.300000,6.450000)(30.730000,6.450000)(30.730000,5.050000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(27.015000,6.050000){\psscalebox{1 -1}{Address}}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(23.300000,6.450000)(23.300000,8.250000)(30.730000,8.250000)(30.730000,6.450000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(23.300000,6.450000)(23.300000,8.250000)(30.730000,8.250000)(30.730000,6.450000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](23.450000,7.110000){\psscalebox{1 -1}{+\ensuremath{\left[\right.}PK\ensuremath{\left.\right]} ID: int}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](23.450000,7.910000){\psscalebox{1 -1}{+streetnumber: int}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(10.550000,26.050000)(10.550000,27.450000)(18.750000,27.450000)(18.750000,26.050000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(10.550000,26.050000)(10.550000,27.450000)(18.750000,27.450000)(18.750000,26.050000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(14.650000,27.050000){\psscalebox{1 -1}{Orders}}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(10.550000,27.450000)(10.550000,30.050000)(18.750000,30.050000)(18.750000,27.450000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(10.550000,27.450000)(10.550000,30.050000)(18.750000,30.050000)(18.750000,27.450000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](10.700000,28.110000){\psscalebox{1 -1}{+\ensuremath{\left[\right.}PK\ensuremath{\left.\right]} ID: int}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](10.700000,28.910000){\psscalebox{1 -1}{+order\_date: Date}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](10.700000,29.710000){\psscalebox{1 -1}{+description: String}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(34.550000,25.650000)(34.550000,27.050000)(42.750000,27.050000)(42.750000,25.650000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(34.550000,25.650000)(34.550000,27.050000)(42.750000,27.050000)(42.750000,25.650000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(38.650000,26.650000){\psscalebox{1 -1}{Article}}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(34.550000,27.050000)(34.550000,30.450000)(42.750000,30.450000)(42.750000,27.050000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(34.550000,27.050000)(34.550000,30.450000)(42.750000,30.450000)(42.750000,27.050000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](34.700000,27.710000){\psscalebox{1 -1}{+\ensuremath{\left[\right.}PK\ensuremath{\left.\right]} ID: int}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](34.700000,28.510000){\psscalebox{1 -1}{+name: String}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](34.700000,29.310000){\psscalebox{1 -1}{+description: String}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](34.700000,30.110000){\psscalebox{1 -1}{+prize: int}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(41.450000,34.000000)(41.450000,35.400000)(46.955000,35.400000)(46.955000,34.000000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(41.450000,34.000000)(41.450000,35.400000)(46.955000,35.400000)(46.955000,34.000000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(44.202500,35.000000){\psscalebox{1 -1}{Stock}}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(41.450000,35.400000)(41.450000,37.200000)(46.955000,37.200000)(46.955000,35.400000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(41.450000,35.400000)(41.450000,37.200000)(46.955000,37.200000)(46.955000,35.400000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](41.600000,36.060000){\psscalebox{1 -1}{+\ensuremath{\left[\right.}PK\ensuremath{\left.\right]} ID: int}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](41.600000,36.860000){\psscalebox{1 -1}{+amount: int}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(34.600000,15.650000)(34.600000,17.050000)(42.800000,17.050000)(42.800000,15.650000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(34.600000,15.650000)(34.600000,17.050000)(42.800000,17.050000)(42.800000,15.650000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(38.700000,16.650000){\psscalebox{1 -1}{OrderStatus}}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(34.600000,17.050000)(34.600000,18.850000)(42.800000,18.850000)(42.800000,17.050000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(34.600000,17.050000)(34.600000,18.850000)(42.800000,18.850000)(42.800000,17.050000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](34.750000,17.710000){\psscalebox{1 -1}{+\ensuremath{\left[\right.}PK\ensuremath{\left.\right]} ID: int}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](34.750000,18.510000){\psscalebox{1 -1}{+description: String}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\setlinejoinmode{0}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(17.815000,17.050250)(17.815000,21.525000)(14.650000,21.525000)(14.650000,25.999750)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(16.232500,21.325000){\psscalebox{1 -1}{has}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(16.910000,21.325000)(16.910000,20.925000)(17.310000,21.125000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](18.015000,17.650250){\psscalebox{1 -1}{1}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](14.850000,25.799750){\psscalebox{1 -1}{0..*}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\setlinejoinmode{0}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(34.501319,28.050000)(25.400100,28.050000)(25.400100,28.050000)(18.800048,28.050000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(25.400100,27.850000){\psscalebox{1 -1}{consists of}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(27.617600,27.850000)(27.617600,27.450000)(28.017600,27.650000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](34.301319,27.850000){\psscalebox{1 -1}{0..*}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](19.000048,27.850000){\psscalebox{1 -1}{0..*}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\setlinejoinmode{0}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(44.202500,33.950146)(44.202500,33.500000)(38.650000,33.500000)(38.650000,30.450000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(41.426250,33.300000){\psscalebox{1 -1}{has stored}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(43.451250,33.300000)(43.451250,32.900000)(43.851250,33.100000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](44.402500,33.750146){\psscalebox{1 -1}{1}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](38.850000,31.050000){\psscalebox{1 -1}{1}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\setlinejoinmode{0}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(18.750000,26.050000)(18.750000,22.475201)(38.700000,22.475201)(38.700000,18.900403)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(28.725000,22.275201){\psscalebox{1 -1}{has}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(29.402500,22.275201)(29.402500,21.875201)(29.802500,22.075201)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](18.950000,25.850000){\psscalebox{1 -1}{0..*}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](38.900000,19.500403){\psscalebox{1 -1}{1}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(22.600000,32.662500)(22.600000,34.062500)(28.105000,34.062500)(28.105000,32.662500)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(22.600000,32.662500)(22.600000,34.062500)(28.105000,34.062500)(28.105000,32.662500)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(25.352500,33.662500){\psscalebox{1 -1}{Amount}}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(22.600000,34.062500)(22.600000,35.862500)(28.105000,35.862500)(28.105000,34.062500)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(22.600000,34.062500)(22.600000,35.862500)(28.105000,35.862500)(28.105000,34.062500)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](22.750000,34.722500){\psscalebox{1 -1}{+\ensuremath{\left[\right.}PK\ensuremath{\left.\right]} ID: int}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](22.750000,35.522500){\psscalebox{1 -1}{+amount: int}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=dashed,dash=1.000000 1.000000}
-\psset{linestyle=dashed,dash=1.000000 1.000000}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(25.250100,28.350000)(25.323919,32.612240)
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(53.350000,26.850000)(53.350000,28.250000)(58.865000,28.250000)(58.865000,26.850000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(53.350000,26.850000)(53.350000,28.250000)(58.865000,28.250000)(58.865000,26.850000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(56.107500,27.850000){\psscalebox{1 -1}{SupplyOrder}}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(53.350000,28.250000)(53.350000,29.250000)(58.865000,29.250000)(58.865000,28.250000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(53.350000,28.250000)(53.350000,29.250000)(58.865000,29.250000)(58.865000,28.250000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](53.500000,28.910000){\psscalebox{1 -1}{+\ensuremath{\left[\right.}PK\ensuremath{\left.\right]} ID: int}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\setlinejoinmode{0}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(53.299657,28.050000)(53.249657,28.050000)(42.850253,28.050000)(42.800253,28.050000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(48.049955,27.850000){\psscalebox{1 -1}{consists of}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(45.732455,27.850000)(45.732455,27.450000)(45.332455,27.650000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](53.099657,27.850000){\psscalebox{1 -1}{ 0..*}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](53.099657,28.650000){\psscalebox{1 -1}{}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](43.000253,27.850000){\psscalebox{1 -1}{ 0..*}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](43.000253,28.650000){\psscalebox{1 -1}{}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(53.300000,10.200000)(53.300000,11.600000)(58.805000,11.600000)(58.805000,10.200000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(53.300000,10.200000)(53.300000,11.600000)(58.805000,11.600000)(58.805000,10.200000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(56.052500,11.200000){\psscalebox{1 -1}{Amount}}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(53.300000,11.600000)(53.300000,13.400000)(58.805000,13.400000)(58.805000,11.600000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(53.300000,11.600000)(53.300000,13.400000)(58.805000,13.400000)(58.805000,11.600000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](53.450000,12.260000){\psscalebox{1 -1}{+\ensuremath{\left[\right.}PK\ensuremath{\left.\right]} ID: int}}
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](53.450000,13.060000){\psscalebox{1 -1}{+amount: int}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=dashed,dash=1.000000 1.000000}
-\psset{linestyle=dashed,dash=1.000000 1.000000}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(56.052500,13.400000)(55.950200,17.450000)
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\setlinejoinmode{0}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(42.850295,17.250000)(56.000200,17.250000)(56.000200,26.850000)(56.107500,26.850000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](56.100200,21.850000){\psscalebox{1 -1}{has}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(55.900200,21.850000)(55.900200,21.450000)(55.500200,21.650000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](43.050295,17.050000){\psscalebox{1 -1}{ 1}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](43.050295,17.850000){\psscalebox{1 -1}{}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](55.907500,26.650000){\psscalebox{1 -1}{ 0..*}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](55.907500,27.450000){\psscalebox{1 -1}{}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(-8.050000,27.350000)(-8.050000,28.750000)(0.000000,28.750000)(0.000000,27.350000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(-8.050000,27.350000)(-8.050000,28.750000)(0.000000,28.750000)(0.000000,27.350000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(-4.025000,28.350000){\psscalebox{1 -1}{OrderConfirmation}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(-6.800000,25.350000)(-6.800000,26.750000)(-0.012500,26.750000)(-0.012500,25.350000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(-6.800000,25.350000)(-6.800000,26.750000)(-0.012500,26.750000)(-0.012500,25.350000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(-3.406250,26.350000){\psscalebox{1 -1}{InvoiceRequest}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\setlinejoinmode{0}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(10.550000,26.050000)(10.500000,26.050000)(0.087920,26.050000)(0.037920,26.050000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(5.293960,25.850000){\psscalebox{1 -1}{triggers}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(3.553960,25.850000)(3.553960,25.450000)(3.153960,25.650000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](10.350000,25.850000){\psscalebox{1 -1}{ 1}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](10.350000,26.650000){\psscalebox{1 -1}{}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](0.237920,25.850000){\psscalebox{1 -1}{ 1}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](0.237920,26.650000){\psscalebox{1 -1}{}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\setlinejoinmode{0}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(10.499747,28.050000)(10.449747,28.050000)(0.100497,28.050000)(0.050497,28.050000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(5.275122,27.850000){\psscalebox{1 -1}{triggers}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(3.535122,27.850000)(3.535122,27.450000)(3.135122,27.650000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](10.299747,27.850000){\psscalebox{1 -1}{ 1}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](10.299747,28.650000){\psscalebox{1 -1}{}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](0.250497,27.850000){\psscalebox{1 -1}{ 1}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](0.250497,28.650000){\psscalebox{1 -1}{}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(36.550000,3.850000)(36.550000,5.250000)(44.365000,5.250000)(44.365000,3.850000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(36.550000,3.850000)(36.550000,5.250000)(44.365000,5.250000)(44.365000,3.850000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(40.457500,4.850000){\psscalebox{1 -1}{Street}}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(36.550000,5.250000)(36.550000,6.250000)(44.365000,6.250000)(44.365000,5.250000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(36.550000,5.250000)(36.550000,6.250000)(44.365000,6.250000)(44.365000,5.250000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](36.700000,5.910000){\psscalebox{1 -1}{+streetname: String}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\setlinejoinmode{0}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(36.501271,5.050000)(33.000200,5.050000)(33.000200,5.050000)(30.730000,5.050000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(33.000200,4.850000){\psscalebox{1 -1}{}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(32.800200,4.850000)(32.800200,4.450000)(32.400200,4.650000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](36.301271,4.850000){\psscalebox{1 -1}{1}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](30.930000,4.850000){\psscalebox{1 -1}{0..*}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\newrgbcolor{dialinecolor}{1.000000 1.000000 1.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(-6.300000,14.300000)(-6.300000,15.700000)(0.052500,15.700000)(0.052500,14.300000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon(-6.300000,14.300000)(-6.300000,15.700000)(0.052500,15.700000)(0.052500,14.300000)
-\setfont{Helvetica-Bold}{1.000000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(-3.123750,15.300000){\psscalebox{1 -1}{WarningCheck}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\setlinejoinmode{0}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(0.102536,15.000000)(7.150200,15.000000)(7.150200,15.000000)(14.049709,15.000000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(7.150200,14.800000){\psscalebox{1 -1}{has open}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(5.410200,14.800000)(5.410200,14.400000)(5.010200,14.600000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](0.302536,14.800000){\psscalebox{1 -1}{0..1}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](13.849709,14.800000){\psscalebox{1 -1}{1}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\setlinejoinmode{0}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(36.550000,8.250000)(33.100200,8.250000)(33.100200,8.250000)(30.730000,8.250000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(33.100200,8.050000){\psscalebox{1 -1}{}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(32.900200,8.050000)(32.900200,7.650000)(32.500200,7.850000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](36.350000,8.050000){\psscalebox{1 -1}{1}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](30.930000,8.050000){\psscalebox{1 -1}{0..1}}
-\psset{linewidth=0.100000cm}
-\psset{linestyle=solid}
-\setlinejoinmode{0}
-\setlinecaps{0}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\psline(23.300000,6.950000)(17.815000,6.950000)(17.815000,13.000000)
-\setfont{Courier}{0.800000}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput(20.557500,6.750000){\psscalebox{1 -1}{is located}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\pspolygon*(18.432500,6.750000)(18.432500,6.350000)(18.032500,6.550000)
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](23.100000,6.750000){\psscalebox{1 -1}{ 1}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[r](23.100000,7.550000){\psscalebox{1 -1}{}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](18.015000,12.000000){\psscalebox{1 -1}{ 1..*}}
-\newrgbcolor{dialinecolor}{0.000000 0.000000 0.000000}%
-\psset{linecolor=dialinecolor}
-\rput[l](18.015000,12.800000){\psscalebox{1 -1}{}}
-}\endpspicture
+\setlength{\du}{15\unitlength}
+\begin{tikzpicture}
+\pgftransformxscale{1.000000}
+\pgftransformyscale{-1.000000}
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (14.100000\du,13.000000\du)--(14.100000\du,14.400000\du)--(21.530000\du,14.400000\du)--(21.530000\du,13.000000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (14.100000\du,13.000000\du)--(14.100000\du,14.400000\du)--(21.530000\du,14.400000\du)--(21.530000\du,13.000000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (17.815000\du,14.000000\du){Customer};
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (14.100000\du,14.400000\du)--(14.100000\du,17.000000\du)--(21.530000\du,17.000000\du)--(21.530000\du,14.400000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (14.100000\du,14.400000\du)--(14.100000\du,17.000000\du)--(21.530000\du,17.000000\du)--(21.530000\du,14.400000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (14.250000\du,15.060000\du){+\ensuremath{[}PK\ensuremath{]} ID: int};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (14.250000\du,15.860000\du){+firstname: String};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (14.250000\du,16.660000\du){+lastname: String};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (36.550000\du,6.350000\du)--(36.550000\du,7.750000\du)--(43.595000\du,7.750000\du)--(43.595000\du,6.350000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (36.550000\du,6.350000\du)--(36.550000\du,7.750000\du)--(43.595000\du,7.750000\du)--(43.595000\du,6.350000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (40.072500\du,7.350000\du){City};
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (36.550000\du,7.750000\du)--(36.550000\du,9.550000\du)--(43.595000\du,9.550000\du)--(43.595000\du,7.750000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (36.550000\du,7.750000\du)--(36.550000\du,9.550000\du)--(43.595000\du,9.550000\du)--(43.595000\du,7.750000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (36.700000\du,8.410000\du){+\ensuremath{[}PK\ensuremath{]} plz: int};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (36.700000\du,9.210000\du){+cityname: String};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (23.300000\du,5.050000\du)--(23.300000\du,6.450000\du)--(30.730000\du,6.450000\du)--(30.730000\du,5.050000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (23.300000\du,5.050000\du)--(23.300000\du,6.450000\du)--(30.730000\du,6.450000\du)--(30.730000\du,5.050000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (27.015000\du,6.050000\du){Address};
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (23.300000\du,6.450000\du)--(23.300000\du,8.250000\du)--(30.730000\du,8.250000\du)--(30.730000\du,6.450000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (23.300000\du,6.450000\du)--(23.300000\du,8.250000\du)--(30.730000\du,8.250000\du)--(30.730000\du,6.450000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (23.450000\du,7.110000\du){+\ensuremath{[}PK\ensuremath{]} ID: int};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (23.450000\du,7.910000\du){+streetnumber: int};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (10.550000\du,26.050000\du)--(10.550000\du,27.450000\du)--(18.750000\du,27.450000\du)--(18.750000\du,26.050000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (10.550000\du,26.050000\du)--(10.550000\du,27.450000\du)--(18.750000\du,27.450000\du)--(18.750000\du,26.050000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (14.650000\du,27.050000\du){Orders};
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (10.550000\du,27.450000\du)--(10.550000\du,30.050000\du)--(18.750000\du,30.050000\du)--(18.750000\du,27.450000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (10.550000\du,27.450000\du)--(10.550000\du,30.050000\du)--(18.750000\du,30.050000\du)--(18.750000\du,27.450000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (10.700000\du,28.110000\du){+\ensuremath{[}PK\ensuremath{]} ID: int};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (10.700000\du,28.910000\du){+order\_date: Date};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (10.700000\du,29.710000\du){+description: String};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (34.550000\du,25.650000\du)--(34.550000\du,27.050000\du)--(42.750000\du,27.050000\du)--(42.750000\du,25.650000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (34.550000\du,25.650000\du)--(34.550000\du,27.050000\du)--(42.750000\du,27.050000\du)--(42.750000\du,25.650000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (38.650000\du,26.650000\du){Article};
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (34.550000\du,27.050000\du)--(34.550000\du,30.450000\du)--(42.750000\du,30.450000\du)--(42.750000\du,27.050000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (34.550000\du,27.050000\du)--(34.550000\du,30.450000\du)--(42.750000\du,30.450000\du)--(42.750000\du,27.050000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (34.700000\du,27.710000\du){+\ensuremath{[}PK\ensuremath{]} ID: int};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (34.700000\du,28.510000\du){+name: String};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (34.700000\du,29.310000\du){+description: String};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (34.700000\du,30.110000\du){+prize: int};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (41.450000\du,34.000000\du)--(41.450000\du,35.400000\du)--(46.955000\du,35.400000\du)--(46.955000\du,34.000000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (41.450000\du,34.000000\du)--(41.450000\du,35.400000\du)--(46.955000\du,35.400000\du)--(46.955000\du,34.000000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (44.202500\du,35.000000\du){Stock};
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (41.450000\du,35.400000\du)--(41.450000\du,37.200000\du)--(46.955000\du,37.200000\du)--(46.955000\du,35.400000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (41.450000\du,35.400000\du)--(41.450000\du,37.200000\du)--(46.955000\du,37.200000\du)--(46.955000\du,35.400000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (41.600000\du,36.060000\du){+\ensuremath{[}PK\ensuremath{]} ID: int};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (41.600000\du,36.860000\du){+amount: int};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (34.600000\du,15.650000\du)--(34.600000\du,17.050000\du)--(42.800000\du,17.050000\du)--(42.800000\du,15.650000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (34.600000\du,15.650000\du)--(34.600000\du,17.050000\du)--(42.800000\du,17.050000\du)--(42.800000\du,15.650000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (38.700000\du,16.650000\du){OrderStatus};
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (34.600000\du,17.050000\du)--(34.600000\du,18.850000\du)--(42.800000\du,18.850000\du)--(42.800000\du,17.050000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (34.600000\du,17.050000\du)--(34.600000\du,18.850000\du)--(42.800000\du,18.850000\du)--(42.800000\du,17.050000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (34.750000\du,17.710000\du){+\ensuremath{[}PK\ensuremath{]} ID: int};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (34.750000\du,18.510000\du){+description: String};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (17.815000\du,17.050250\du)--(17.815000\du,21.525000\du)--(14.650000\du,21.525000\du)--(14.650000\du,25.999750\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (16.232500\du,21.325000\du){has};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (16.910000\du,21.325000\du)--(16.910000\du,20.925000\du)--(17.310000\du,21.125000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (18.015000\du,17.650250\du){1};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (14.850000\du,25.799750\du){0..*};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (34.501319\du,28.050000\du)--(25.400100\du,28.050000\du)--(25.400100\du,28.050000\du)--(18.800048\du,28.050000\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (25.400100\du,27.850000\du){consists of};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (27.617600\du,27.850000\du)--(27.617600\du,27.450000\du)--(28.017600\du,27.650000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (34.301319\du,27.850000\du){0..*};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (19.000048\du,27.850000\du){0..*};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (44.202500\du,33.950146\du)--(44.202500\du,33.500000\du)--(38.650000\du,33.500000\du)--(38.650000\du,30.450000\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (41.426250\du,33.300000\du){has stored};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (43.451250\du,33.300000\du)--(43.451250\du,32.900000\du)--(43.851250\du,33.100000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (44.402500\du,33.750146\du){1};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (38.850000\du,31.050000\du){1};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (18.750000\du,26.050000\du)--(18.750000\du,22.475201\du)--(38.700000\du,22.475201\du)--(38.700000\du,18.900403\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (28.725000\du,22.275201\du){has};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (29.402500\du,22.275201\du)--(29.402500\du,21.875201\du)--(29.802500\du,22.075201\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (18.950000\du,25.850000\du){0..*};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (38.900000\du,19.500403\du){1};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (22.600000\du,32.662500\du)--(22.600000\du,34.062500\du)--(28.105000\du,34.062500\du)--(28.105000\du,32.662500\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (22.600000\du,32.662500\du)--(22.600000\du,34.062500\du)--(28.105000\du,34.062500\du)--(28.105000\du,32.662500\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (25.352500\du,33.662500\du){Amount};
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (22.600000\du,34.062500\du)--(22.600000\du,35.862500\du)--(28.105000\du,35.862500\du)--(28.105000\du,34.062500\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (22.600000\du,34.062500\du)--(22.600000\du,35.862500\du)--(28.105000\du,35.862500\du)--(28.105000\du,34.062500\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (22.750000\du,34.722500\du){+\ensuremath{[}PK\ensuremath{]} ID: int};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (22.750000\du,35.522500\du){+amount: int};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{{1.000000\du}{1.000000\du}}{0\du}
+\pgfsetdash{{1.000000\du}{1.000000\du}}{0\du}
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (25.250100\du,28.350000\du)--(25.323919\du,32.612240\du);
+}
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (53.350000\du,26.850000\du)--(53.350000\du,28.250000\du)--(58.865000\du,28.250000\du)--(58.865000\du,26.850000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (53.350000\du,26.850000\du)--(53.350000\du,28.250000\du)--(58.865000\du,28.250000\du)--(58.865000\du,26.850000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (56.107500\du,27.850000\du){SupplyOrder};
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (53.350000\du,28.250000\du)--(53.350000\du,29.250000\du)--(58.865000\du,29.250000\du)--(58.865000\du,28.250000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (53.350000\du,28.250000\du)--(53.350000\du,29.250000\du)--(58.865000\du,29.250000\du)--(58.865000\du,28.250000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (53.500000\du,28.910000\du){+\ensuremath{[}PK\ensuremath{]} ID: int};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (53.299657\du,28.050000\du)--(53.249657\du,28.050000\du)--(42.850253\du,28.050000\du)--(42.800253\du,28.050000\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (48.049955\du,27.850000\du){consists of};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (45.732455\du,27.850000\du)--(45.732455\du,27.450000\du)--(45.332455\du,27.650000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (53.099657\du,27.850000\du){ 0..*};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (53.099657\du,28.650000\du){};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (43.000253\du,27.850000\du){ 0..*};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (43.000253\du,28.650000\du){};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (48.950000\du,31.650000\du)--(48.950000\du,33.050000\du)--(54.455000\du,33.050000\du)--(54.455000\du,31.650000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (48.950000\du,31.650000\du)--(48.950000\du,33.050000\du)--(54.455000\du,33.050000\du)--(54.455000\du,31.650000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (51.702500\du,32.650000\du){Amount};
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (48.950000\du,33.050000\du)--(48.950000\du,34.850000\du)--(54.455000\du,34.850000\du)--(54.455000\du,33.050000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (48.950000\du,33.050000\du)--(48.950000\du,34.850000\du)--(54.455000\du,34.850000\du)--(54.455000\du,33.050000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (49.100000\du,33.710000\du){+\ensuremath{[}PK\ensuremath{]} ID: int};
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (49.100000\du,34.510000\du){+amount: int};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{{1.000000\du}{1.000000\du}}{0\du}
+\pgfsetdash{{1.000000\du}{1.000000\du}}{0\du}
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (51.702500\du,31.650000\du)--(48.700000\du,28.200000\du);
+}
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (42.850295\du,17.250000\du)--(56.000200\du,17.250000\du)--(56.000200\du,26.850000\du)--(56.107500\du,26.850000\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (56.100200\du,21.850000\du){has};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (55.900200\du,21.850000\du)--(55.900200\du,21.450000\du)--(55.500200\du,21.650000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (43.050295\du,17.050000\du){ 1};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (43.050295\du,17.850000\du){};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (55.907500\du,26.650000\du){ 0..*};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (55.907500\du,27.450000\du){};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (-8.050000\du,27.350000\du)--(-8.050000\du,28.750000\du)--(0.000000\du,28.750000\du)--(0.000000\du,27.350000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (-8.050000\du,27.350000\du)--(-8.050000\du,28.750000\du)--(0.000000\du,28.750000\du)--(0.000000\du,27.350000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (-4.025000\du,28.350000\du){OrderConfirmation};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (-6.800000\du,25.350000\du)--(-6.800000\du,26.750000\du)--(-0.012500\du,26.750000\du)--(-0.012500\du,25.350000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (-6.800000\du,25.350000\du)--(-6.800000\du,26.750000\du)--(-0.012500\du,26.750000\du)--(-0.012500\du,25.350000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (-3.406250\du,26.350000\du){InvoiceRequest};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (10.550000\du,26.050000\du)--(10.500000\du,26.050000\du)--(0.087920\du,26.050000\du)--(0.037920\du,26.050000\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (5.293960\du,25.850000\du){triggers};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (3.553960\du,25.850000\du)--(3.553960\du,25.450000\du)--(3.153960\du,25.650000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (10.350000\du,25.850000\du){ 1};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (10.350000\du,26.650000\du){};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (0.237920\du,25.850000\du){ 1};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (0.237920\du,26.650000\du){};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (10.499747\du,28.050000\du)--(10.449747\du,28.050000\du)--(0.100497\du,28.050000\du)--(0.050497\du,28.050000\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (5.275122\du,27.850000\du){triggers};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (3.535122\du,27.850000\du)--(3.535122\du,27.450000\du)--(3.135122\du,27.650000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (10.299747\du,27.850000\du){ 1};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (10.299747\du,28.650000\du){};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (0.250497\du,27.850000\du){ 1};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (0.250497\du,28.650000\du){};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (36.550000\du,3.850000\du)--(36.550000\du,5.250000\du)--(44.365000\du,5.250000\du)--(44.365000\du,3.850000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (36.550000\du,3.850000\du)--(36.550000\du,5.250000\du)--(44.365000\du,5.250000\du)--(44.365000\du,3.850000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (40.457500\du,4.850000\du){Street};
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (36.550000\du,5.250000\du)--(36.550000\du,6.250000\du)--(44.365000\du,6.250000\du)--(44.365000\du,5.250000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (36.550000\du,5.250000\du)--(36.550000\du,6.250000\du)--(44.365000\du,6.250000\du)--(44.365000\du,5.250000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (36.700000\du,5.910000\du){+streetname: String};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (36.501271\du,5.050000\du)--(33.000200\du,5.050000\du)--(33.000200\du,5.050000\du)--(30.730000\du,5.050000\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (33.000200\du,4.850000\du){};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (32.800200\du,4.850000\du)--(32.800200\du,4.450000\du)--(32.400200\du,4.650000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (36.301271\du,4.850000\du){1};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (30.930000\du,4.850000\du){0..*};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\definecolor{dialinecolor}{rgb}{1.000000, 1.000000, 1.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (-6.300000\du,14.300000\du)--(-6.300000\du,15.700000\du)--(0.052500\du,15.700000\du)--(0.052500\du,14.300000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (-6.300000\du,14.300000\du)--(-6.300000\du,15.700000\du)--(0.052500\du,15.700000\du)--(0.052500\du,14.300000\du)--cycle;
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (-3.123750\du,15.300000\du){WarningCheck};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (0.102536\du,15.000000\du)--(7.150200\du,15.000000\du)--(7.150200\du,15.000000\du)--(14.049709\du,15.000000\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (7.150200\du,14.800000\du){has open};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (5.410200\du,14.800000\du)--(5.410200\du,14.400000\du)--(5.010200\du,14.600000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (0.302536\du,14.800000\du){0..1};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (13.849709\du,14.800000\du){1};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (36.550000\du,8.250000\du)--(33.100200\du,8.250000\du)--(33.100200\du,8.250000\du)--(30.730000\du,8.250000\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (33.100200\du,8.050000\du){};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (32.900200\du,8.050000\du)--(32.900200\du,7.650000\du)--(32.500200\du,7.850000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (36.350000\du,8.050000\du){1};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (30.930000\du,8.050000\du){0..1};
+\pgfsetlinewidth{0.100000\du}
+\pgfsetdash{}{0pt}
+\pgfsetmiterjoin
+\pgfsetbuttcap
+{
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+% was here!!!
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\draw (23.300000\du,6.950000\du)--(17.815000\du,6.950000\du)--(17.815000\du,13.000000\du);
+}
+% setfont left to latex
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node at (20.557500\du,6.750000\du){is located};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetfillcolor{dialinecolor}
+\fill (18.432500\du,6.750000\du)--(18.432500\du,6.350000\du)--(18.032500\du,6.550000\du)--cycle;
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (23.100000\du,6.750000\du){ 1};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=east] at (23.100000\du,7.550000\du){};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (18.015000\du,12.000000\du){ 1..*};
+\definecolor{dialinecolor}{rgb}{0.000000, 0.000000, 0.000000}
+\pgfsetstrokecolor{dialinecolor}
+\node[anchor=west] at (18.015000\du,12.800000\du){};
+\end{tikzpicture}
