@@ -28,8 +28,8 @@ Im Rahmen der Architekturausarbeitung wurden folgende Entwurfsentscheide gefäll
 	\item Die Tier-übergreifende Kommunikation zwischen Tier Client und Business wird mittels RMI (Remote Method Invocation) umgesetzt. Eine alternative Anbindung bspw. mit REST (Representational state transfer) wird nach Release 1.0 in Betracht gezogen.
 	\item Als GUI-Komponente auf Layer Client wird JavaFX verwendet.
 	\item Als Datenbank wird eine MySQL-Instanz aus dem EnterpriseLab der HSLU verwendet.
-	\item Bis Release 1.0 müssen neue Kunden \& Artikel in der Datenbank manuell erfasst / abgebildet werden.
-	\item Die Rechnungsdaten und Mahnungen werden aufgrund der 
+	\item Bis Release 1.0 müssen neue Kunden \& Artikel in der Datenbank manuell erfasst / abgebildet werden. Diese werden idealerweise mit einer zentralen Benutzerverwaultung (Rechnungswesen, Zentrallager) in folgenden Releases zusammengeführt.
+	\item Die Rechnungsdaten und Mahnungen werden aufgrund in einem Stub generiert. Die Anbindung eines beliebigen, externen Rechnungswesen ist dadurch in folgenden Releases schneller zu bewältigen.
 \end{itemize}
 
 
