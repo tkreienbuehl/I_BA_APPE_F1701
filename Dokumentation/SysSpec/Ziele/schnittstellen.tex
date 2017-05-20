@@ -21,11 +21,11 @@ Für das Zentrallager wird eine Stock-Schnittstelle zur Verfügung gestellt. Sie
 Die detaillierte Dokumentation zur vorgegebenen Schnittstelle ist unter\\
 'https://elearning.hslu.ch/ilias/ilias.php?ref\_id=3290529\&page=APPE\_Startseite\&wpg\_id=11071\&cmd=downloadFile\&cmdClass=ilwikipagegui\&cmdNode=yi:l5:yk\&baseClass=ilwikihandlergui\&file\_id=il\_\_file\_3582976' zu beziehen.
 
-Die Implementation wurde im Business-Layer vorgenommen. Die vorgegebene Schnittstelle wurde nur in einem minimalen Ausmass verwendet. Im Rahmen einer Bestelländerung /-erfassung wird bei Unterschreiten der definierten Mindestanzahl eines Artikels (bis Release 1.0 fix auf 2 definiert) über die Methode 'orderArticle(....)' eine Nachbestellung in der Höhe der geforderten Artikel + 2 ausgelöst. Es wird dabei nicht geprüft, ob am Zentrallager noch entsprechende Artikel vorhanden sind. Es wird daher davon ausgegangen, dass am Zentrallager wie auch im Filiallager ein Negativlagerbestand möglich ist.\\
+Die Implementation wurde im Business-Layer vorgenommen. Die vorgegebene Schnittstelle wurde nur in einem minimalen Ausmass verwendet. Im Rahmen einer Bestelländerung /-erfassung wird bei Unterschreiten der definierten Mindestanzahl eines Artikels (bis Release 1.0 fix auf 2 definiert) über die Methode 'orderArticle(....)' eine Nachbestellung in der Höhe der geforderten Artikel + 2 ausgelöst. Es wird dabei nicht geprüft, ob am Zentrallager noch entsprechende Artikel vorhanden sind. \\Es wird daher davon ausgegangen, dass am Zentrallager wie auch im Filiallager ein Negativlagerbestand möglich ist. Die Schnittstelle ist dadurch nur unidirektional und es werden keine Daten \& Interaktionen durch das Zentrallager an das Filial-Bestellsystem direkt ausgeführt.  \\
 TODO Severin: Klassendiagram hinzufügen
 \subsubsection{Rechnungswesen}
 Das Rechnungswesen hat die Aufgabe bei Erfassung / Änderung einer Bestellung eine entsprechende Rechnung an den Kunden zu versenden.\\
-Von seiten Auftraggeber sind keine Schnittstellen zur Verfügung gestellt worden und daher wurden die entsprechenden Aufgaben des Rechnungswesen als simpler Stub implementiert, der lediglich ein Output über die ausgeführte Arbeit (z.B. Neue Rechnung gedruckt) protokolliert.\\
+Von Seiten Auftraggeber sind keine Schnittstellen zur Verfügung gestellt worden und daher wurden die entsprechenden Aufgaben des Rechnungswesen als simpler Stub implementiert, der lediglich ein Output über die ausgeführte Arbeit (z.B. Neue Rechnung gedruckt) protokolliert. \\
 TODO Severin: Klassendiagram hinzufügen
 
 \subsection{Interne Schnittstellen}
