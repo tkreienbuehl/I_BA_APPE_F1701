@@ -32,7 +32,15 @@ Im Rahmen der Architekturausarbeitung wurden folgende Entwurfsentscheide gefäll
 	\item Die Rechnungsdaten und Mahnungen werden aufgrund in einem Stub generiert. Die Anbindung eines beliebigen, externen Rechnungswesen ist dadurch in folgenden Releases schneller zu bewältigen.
 \end{itemize}
 
-
 TODO
 - Dateien einbinden (DB) -> Transaktionsmanagement
 
+
+\subsection{Datenmodell}
+Der Aufbau der Datenbank ist in folgender Abbildung dargestellt.
+\begin{figure}[H]
+	\includegraphics[width=1.0\linewidth]{Images/datamodel}
+	\caption{Datenmodel}
+	\label{fig:datamodel}
+\end{figure}
+Die Datenbank ist funktional aufgebaut und befolgt die ersten 3 Normalformen. Die Anbindung von Umsystemen sind im Datenmodell bereits abgebildet, sind jedoch nicht in der Datenbank vorhanden. Die abgebildeten Umsysteme sind WarningCheck, InvoiceRequest und OrderConfirmation.
