@@ -21,15 +21,71 @@ Die Iteration ist auf ScrumDo unter https://app.scrumdo.com/projects/appe-17fs-g
 Im ersten Sprint wurden ebenfalls noch administrative Tasks wie Dokumentationsbasis etc. erfasst, um ScrumDo auch für die initialen Aufgaben zu gebrauchen. \\
 Im Sprint 1 wurden folgende geplanten Stories umgesetzt:\\
 \begin{tabular}{|l|l|l|} \rowcolor{gray!50}
+	\hline
+	\textbf{Story-ID} & \textbf{Storytitel} & \textbf{Bemerkung} \\
 	\hline 
 	I8-18 & 
 	Liste aller Bestellungen anzeigen &
 	\begin{tabular}{l}
-		Aufgrund der Tatsache, dass der Datalayer noch nicht verfügbar \\ ist, wurde ein Stub erstellt, welcher die 'Testbestelldaten' zur \\Verfügung stellt. Diese Daten konnten erfolgreich im JavaFX GUI \\angezeigt werden.
+		Aufgrund der Tatsache, dass der Datalayer noch nicht \\verfügbar ist, wurde ein Stub erstellt, welcher die 'Test-\\bestelldaten' zur Verfügung stellt. Diese Daten konnten\\ erfolgreich im JavaFX GUI angezeigt werden.
 	\end{tabular} \\ 
 	\hline
+	I8-10 & 
+	Architekturdesign &
+	\begin{tabular}{l}
+		Die Layer- \& Tierarchitektur wurde im Team festgelegt. \\Klassendiagramm für 'Order' ist erstellt. \\Entsprechend notwendige Schnittstellen und DTOs sind \\definiert und in der SysSpec festgehalten. Die weiteren \\Klassendiagramme wie 'Article', etc. werden \\kontinuierlich erstellt / ergänzt.
+	\end{tabular} \\
+	\hline
+	I8-15 & 
+	DB-Schema erstellen &
+	\begin{tabular}{l}
+		Schema ist erstellt und die DDL-Skripts liegen vor. \\Die Dummydaten sind ebenfalls vorhanden und aktuell \\für Testzwecke in der Datenbank. Eine Abnahme durch \\R. Christen steht noch aus.
+	\end{tabular} \\
+	\hline
+	I8-11 & 
+	UseCase-Definitionen &
+	\begin{tabular}{l}
+		Die geforderten UseCases wurden entsprechend \\beschrieben (und UC 'Bestellung erfassen' detailliert) \\und mittels Übersichtsdiagramm aufgezeigt. \\Das PMP-Dokument wurde dahingehend ergänzt.
+	\end{tabular} \\
+	\hline
+	I8-13 & 
+	GUI-Design &
+	\begin{tabular}{l}
+		Die FXML-Pages (JavaFX) wurden für die Fälle 'Login', \\'Orderoverview', 'Orderdetail','NewOrder', 'EditOrder', \\'Supply', 'Logs' erstellt
+	\end{tabular} \\
+	\hline
+	I8-16 & 
+	Allgemeine administrative Arbeiten &
+	\begin{tabular}{l}
+		Dokumentationsbasis für SysSpec \& PMP inkl. \\Inhaltsgerüst sind erstellt. Im PMP sind die Risikoliste \\inkl. Massnahmen und die Anforderungen vorhanden.
+	\end{tabular} \\
+	\hline
 \end{tabular}
-Die folgenden Stories konnte nicht abgeschlossen werden:
+\\ \\Die folgenden Stories konnte nicht abgeschlossen werden: \\
+\begin{tabular}{|l|l|l|} \rowcolor{gray!50}
+	\hline
+	\textbf{Story-ID} & \textbf{Storytitel} & \textbf{Bemerkung} \\
+	\hline 
+	I8-2 & 
+	Bestellung einsehen &
+	\begin{tabular}{l}
+		Die Anzeige auf grafischer Ebene funktioniert und die \\notwendigen Implementationen auf Layer Client und \\Business sind vorhanden.\\ Aufgrund der Verbindungsprobleme an die Datenbank \\wird diese Story in Sprint 2 weitergeführt.
+	\end{tabular} \\
+	\hline
+	I8-17 & 
+	O/R-Mapper &
+	\begin{tabular}{l}
+		Die Auswahl des O/R-Mappers konnte ausgewählt werden. \\Jedoch konnte die Implementierung noch nicht erfolgreich \\umgesetzt werden. Es bestehen noch Verbindungsprobleme,\\ welche im folgenden Sprint genauer betrachtet werden.
+	\end{tabular} \\
+	\hline
+		I8-18 & 
+	Liste aller Bestellungen anzeigen &
+	\begin{tabular}{l}
+		Aufgrund der Tatsache, dass der Datalayer noch nicht ver-\\fügbar ist, wurde ein Stub erstellt, welcher die 'Testbestell-\\daten' zur Verfügung stellt. Diese Daten konnten erfolgreich\\ im JavaFX GUI angezeigt werden.
+	\end{tabular} \\
+	\hline
+\end{tabular}
+
 
 \subsubsection{Sprintreview \& MS2 - 28.04.2017}
 \begin{tabular}{|l|l|} \rowcolor{gray!50}
@@ -46,6 +102,65 @@ Die folgenden Stories konnte nicht abgeschlossen werden:
 	\hline 
 	Absenzen & S. Gmür (Unfall) \\ 
 	\hline 
-\end{tabular} 
+\end{tabular} \\ \\
+Die Iteration 2 ist auf ScrumDo unter https://app.scrumdo.com/projects/appe-17fs-g13/\#/iteration/200296/board erreichbar.
+Im zweiten Sprint lag der Fokus im Datalayer, damit ein Durchstich mit dem UseCase 'Bestellung einsehen' und neue Bestellungen erfasst und auch bearbeitet werden können.
+Die Anbindung dese O/R Mappers stellte eine Herausforderung dar, da die Konfiguration von JPA mittels EclipseLink in Eclipse nicht korrekt funktionierte. Der Durchstich konnte dabei mit Hilfe von R. Christen erreicht werden. \\
+Aufgrund der Tatsache, dass der Durchstich bis zum Sprintreview noch nicht vorlag, wurde beschlossen umgehend mit R. Christen Kontakt aufzusuchen und die betroffenen Stories neu zu kalkulieren und in Sprint 3 zu übernehmen.\\
+
+Im Sprint 2 wurden folgende geplanten Stories umgesetzt:\\
+\begin{tabular}{|l|l|l|} \rowcolor{gray!50}
+	\hline
+	\textbf{Story-ID} & \textbf{Storytitel} & \textbf{Bemerkung} \\
+	\hline 
+	I8-2 & 
+	Bestellung einsehen &
+	\begin{tabular}{l}
+		Die Story wurde aus Sprint 1 übernommen, da die Datenbankanbindung \\noch nicht funktionierte. Kurz nach dem Sprintreview konnte der\\ Durchstich erfolgreich getestet werden und die Bestellungen\\ eingesehen werden.
+	\end{tabular} \\ 
+	\hline
+		I8-4 & 
+	Bestellung annulieren &
+	\begin{tabular}{l}
+		Es gilt die gleiche Bemerkung wie bei I8-2. Es besteht jedoch noch die\\ Einschränkung, dass die zurückgebuchten Artikel nicht korrekt gebucht\\ werden. Dieser Aspekt wird aber separater Task behandelt.
+	\end{tabular} \\ 
+	\hline
+	I8-1 & 
+	Bestellung erfassen &
+	\begin{tabular}{l}
+		Es gilt die gleiche Bemerkung wie bei I8-2.
+	\end{tabular} \\ 
+	\hline
+\end{tabular}
+\\ \\Die folgenden Stories konnte nicht abgeschlossen werden: \\
+\begin{tabular}{|l|l|l|} \rowcolor{gray!50}
+	\hline
+	\textbf{Story-ID} & \textbf{Storytitel} & \textbf{Bemerkung} \\
+	\hline 
+	I8-3 & 
+	Bestellungen bearbeiten &
+	\begin{tabular}{l}
+		Aus zeitlichen Engpässen und Krankheiten wurde diese Story in Sprint 3 verschoben. 
+	\end{tabular} \\
+	\hline
+\end{tabular}
+
+
 \subsubsection{Sprintreview \& MS3 - 12.05.2017}
+\begin{tabular}{|l|l|} \rowcolor{gray!50}
+	\hline 
+	Datum & 28.04.2017 14:35-14:50 \\ 
+	\hline 
+	Teilnehmer &
+	\begin{tabular}{l}
+		J. Hofstetter (PO) \\
+		T. Kreienbühl \\
+		R. Wyss\\
+		M. Moro \\
+	\end{tabular} \\
+	\hline 
+	Absenzen & S. Gmür (Unfall) \\ 
+	\hline 
+\end{tabular} \\ \\
+Die Iteration 3 ist auf ScrumDo unter TODO erreichbar.
 \subsubsection{Sprintreview \& MS4 - 01.06.2017}
