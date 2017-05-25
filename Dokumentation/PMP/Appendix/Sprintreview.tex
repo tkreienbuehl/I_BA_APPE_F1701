@@ -85,7 +85,7 @@ Im Sprint 1 wurden folgende geplanten Stories umgesetzt:\\
 	\end{tabular} \\
 	\hline
 \end{tabular}
-
+\clearpage
 
 \subsubsection{Sprintreview \& MS2 - 28.04.2017}
 \begin{tabular}{|l|l|} \rowcolor{gray!50}
@@ -140,16 +140,16 @@ Im Sprint 2 wurden folgende geplanten Stories umgesetzt:\\
 	I8-3 & 
 	Bestellungen bearbeiten &
 	\begin{tabular}{l}
-		Aus zeitlichen Engpässen und Krankheiten wurde diese Story in Sprint 3 verschoben. 
+		Aus zeitlichen Engpässen und Krankheiten wurde diese Story \\in Sprint 3 verschoben. 
 	\end{tabular} \\
 	\hline
 \end{tabular}
-
+\clearpage
 
 \subsubsection{Sprintreview \& MS3 - 12.05.2017}
 \begin{tabular}{|l|l|} \rowcolor{gray!50}
 	\hline 
-	Datum & 28.04.2017 14:35-14:50 \\ 
+	Datum & 12.05.2017 14:35-14:50 \\ 
 	\hline 
 	Teilnehmer &
 	\begin{tabular}{l}
@@ -162,5 +162,100 @@ Im Sprint 2 wurden folgende geplanten Stories umgesetzt:\\
 	Absenzen & S. Gmür (Unfall) \\ 
 	\hline 
 \end{tabular} \\ \\
-Die Iteration 3 ist auf ScrumDo unter TODO erreichbar.
+Die Iteration 3 ist auf ScrumDo unter https://app.scrumdo.com/projects/appe-17fs-g13/\#/iteration/200298/board erreichbar.\\
+Im dritten Sprint lag der Fokus im Bereich der Bearbeitung von Bestellungen (Anpassung Bestellstatus, Artikelmenge, etc.). Zusätzlich wird die Authentifizierung \& Autorisierung am System umgesetzt. Ebenfalls werden die Logbucheinträge (Anbindung Logger) realisiert. Bei zeitlichen Reserven wird die Story 'Nachbestellung auslösen' in Angriff genommen.\\
+
+Im Sprint 3 wurden folgende geplanten Stories umgesetzt:\\
+\begin{tabular}{|l|l|l|} \rowcolor{gray!50}
+	\hline
+	\textbf{Story-ID} & \textbf{Storytitel} & \textbf{Bemerkung} \\
+	\hline 
+	I8-3 & 
+	Bestellung bearbeiten &
+	\begin{tabular}{l}
+		Die Story wurde aus zeitlichen und personellen Gründen aus Sprint 2\\ übernommen. Die Bestelländerungen können über das GUI vorge-\\nommen werden (Änderungen Artikelmenge, Status) und werden auf \\dem Business-Layer auf Gültigkeit (z.B Lagerbestand und Auslösung \\Rechnung) überprüft.
+	\end{tabular} \\ 
+	\hline
+	I8-9 & 
+	Am System anmelden &
+	\begin{tabular}{l}
+		Beim Start der Applikation werden nun die Zugangsdaten benötigt. \\Anhand des Users bzw. dessen Rolle wird dem Benutzer direkt die \\korrekte Page angezeigt. Auf jeder Page wird mittels Context-Check \\geprüft, ob der User diese Page verwenden darf. Die Benutzer-\\informationen sind in DB gespeichert.
+	\end{tabular} \\ 
+	\hline
+	I8-6 & 
+	Logbuch überwachen &
+	\begin{tabular}{l}
+		Es wurde für den Filialverwalter eine Page für die Logeinträge \\(Verweis auf Logfile) erstellt. Die Business-Vorgänge und Exception\\ werden in eine Textfile protokolliert.
+	\end{tabular} \\ 
+	\hline
+\end{tabular}
+\\ \\Die folgenden Stories konnte nicht abgeschlossen werden: \\
+\begin{tabular}{|l|l|l|} \rowcolor{gray!50}
+	\hline
+	\textbf{Story-ID} & \textbf{Storytitel} & \textbf{Bemerkung} \\
+	\hline 
+	I8-7 & 
+	Nachbestellung auslösen &
+	\begin{tabular}{l}
+		Im Sprint 3 konnten erst die Schnittstellen und die GUI-Page \\erstellt werden. Die Implementation steht noch aus. 
+	\end{tabular} \\
+	\hline
+\end{tabular}
+\clearpage
+
 \subsubsection{Sprintreview \& MS4 - 01.06.2017}
+\begin{tabular}{|l|l|} \rowcolor{gray!50}
+	\hline 
+	Datum & 01.06.2017 14:35-14:50 \\ 
+	\hline 
+	Teilnehmer &
+	\begin{tabular}{l}
+		J. Hofstetter (PO) \\
+		T. Kreienbühl \\
+		R. Wyss\\
+		M. Moro \\
+		S. Gmür \\
+	\end{tabular} \\
+	\hline 
+	Absenzen & keine \\ 
+	\hline 
+\end{tabular} \\ \\
+Die Iteration 4 ist auf ScrumDo unter https://app.scrumdo.com/projects/appe-17fs-g13/\#/iteration/200299/board erreichbar.\\
+TODO\\
+
+Im Sprint 4 wurden folgende geplanten Stories umgesetzt:\\
+\begin{tabular}{|l|l|l|} \rowcolor{gray!50}
+	\hline
+	\textbf{Story-ID} & \textbf{Storytitel} & \textbf{Bemerkung} \\
+	\hline 
+	I8-5 & 
+	Wareneingang erfassen &
+	\begin{tabular}{l}
+		TODO
+	\end{tabular} \\ 
+	\hline
+	I8-8 & 
+	Lieferstatus von Nachbestellung einsehen &
+	\begin{tabular}{l}
+		TODO
+	\end{tabular} \\ 
+	\hline
+	I8-7 & 
+	Nachbestellung auslösen &
+	\begin{tabular}{l}
+		TODO
+	\end{tabular} \\ 
+	\hline
+\end{tabular}
+\\ \\Die folgenden Stories konnte nicht abgeschlossen werden: \\
+\begin{tabular}{|l|l|l|} \rowcolor{gray!50}
+	\hline
+	\textbf{Story-ID} & \textbf{Storytitel} & \textbf{Bemerkung} \\
+	\hline 
+	I8-19 & 
+	Tier-Architektur einbinden &
+	\begin{tabular}{l}
+		Im Sprint 4 konnte aus zeitlichen Gründen der Multi-Tier-\\Architektur-Ansatz nicht mehr verfolgt werden. Die Applikation \\wird somit bis Release 1.0.0 als Single-Tier-Applikation betrieben. 
+	\end{tabular} \\
+	\hline
+\end{tabular}
