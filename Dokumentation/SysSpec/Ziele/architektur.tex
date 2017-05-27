@@ -1,7 +1,5 @@
 % !TEX root = Dokumentation_SysSpec.tex
 \subsection{Modelle und Sichten}
-todo
-
 
 \subsubsection{Kontextdiagramm}
 todo bla
@@ -11,9 +9,35 @@ todo bla
 	\label{fig:kontextdiagram}
 \end{figure}
 
+\subsubsection{Layer-Architektur}
+TODO Übersichsgrafik importieren und erläutern
+
+\subsubsection{Client-Layer}
+Der Client-Layer ist in JavaFX implementiert und verwendet das MVC-Architektur-Pattern. Zur Gestaltung der Oberfläche wurde ein 3rd Party Tool eingesetzt, um die graphische Gestaltung zu vereinfachen.
+\begin{itemize}
+\item Scene Builder by Gluon: Basiert auf der von Oracle entwickelten JavaFX-Distribution, und erstellt ein passendes FXML-Dokument für die Einbindung der graphischen Oberfläche, inklusive Verlinkung und definition der Event-Handler. 
+\end{itemize}
+\begin{figure}[H]
+	\includegraphics[width=1.0\linewidth]{Images/ClientLayer-Architektur}
+	\caption{Architektur des Clientlayer}
+	\label{fig:clientlayer-architektur}
+\end{figure}
+
+\textbf{View}: Die View ist dafür verantwortlich, dass die angezeigte Oberfläche korrekt geladen ist.
+
+\textbf{Controller}: Die Controller binden die FXML-Dokumente ein. Die Controller registrieren ausgelöste Events und steuern die durchzufürenden Aktionen, wie Datenabfragen vom Business-Layer durch.
+
+\textbf{Model}: Im Model befinden sich die im GUI angezeigten Datenwerte, und sind bereits durch die Verwendung von Property-Klassen als Observable-Objekte abgespeichert.
+
+\textbf{Session}: Die Session enthält die User-Informationen. Die Session-Informationen werden bei Aktionen mitgesendet, um unauthorisierte Aufrufe zu unterbinden.
+
+\subsubsection{Remote-Layer}
+\subsubsection{Business-Layer}
+\subsubsection{Data-Layer}
+\subsubsection{Model-Layer}
 
 \subsubsection{UML-Klassendiagramme}
-todo
+
 
 
 \subsubsection{Sequenzdiagramme}
