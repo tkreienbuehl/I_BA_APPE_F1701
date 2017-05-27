@@ -1,0 +1,28 @@
+% !TEX root = Dokumentation_SysSpec.tex
+\subsection{Robustheit}
+\begin{itemize}
+	\item Ausfälle von Umsystemen abfangen.
+	\item Datentyp-Mismatch zwischen Applikation und Datenbank abfangen (Overflows durch unterschiedliche Längendefinition)
+\end{itemize}
+
+\subsection{Performance \& Skalierung}
+\begin{itemize}
+	\item Datenbank-Notifications, wenn Datenbank erweitert werden muss (bspw durch max. Anzahl möglicher Bestellungen)
+\end{itemize}
+
+\subsection{Sicherheit}
+\begin{itemize}
+	\item Einsatz von 2-Faktor-Authentifizierung durch EInbindung von Open-Source-OTP-Software, bspw. Google Authenticator oder Microsoft Authenticator
+	\item Verschlüsselung der Applikationsdaten (Stufe Datenbank) und der übertragenene Daten
+	\item Applikation, Datenbank und Periphere Systeme prüfen die Identität der Umsysteme, bspw über Zertifikate.
+	\item Applikation darf nur "lokale" Aufrufe ausführen. Sicherstellung, dass Applikation nicht über das Internet, sondern üer Unternehmens-Netzwerke kommuniziert (VPN-Tunnel, Trusted Networks)
+	\item Usersessions mit dediziertem Sessionmanagement (bspw. Cookies) lösen
+\end{itemize}
+
+\subsection{Erweiterungen \& Features}
+\begin{itemize}
+	\item Anbindung einer zentralen Benutzerverwaltung (Applikationsbenutzer) wie AD
+	\item Anbindung einer zentralen Kundenverwaltung zum Vermeiden von Redundanzen mit Rechnungswesen. Führt zu klarer Trennung von Aufgabenbereichen der Applikation.
+	\item Einbindung einer zentralen Log-Infrastruktur wie Syslog
+	\item Einbindung von kritischen Events für SIEM-Systeme
+\end{itemize}
