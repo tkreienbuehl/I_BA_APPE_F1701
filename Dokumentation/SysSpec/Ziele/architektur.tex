@@ -2,12 +2,27 @@
 \subsection{Modelle und Sichten}
 
 \subsubsection{Kontextdiagramm}
-todo bla
+Die entwickelte Applikation hat folgende Abhängigkeiten/Umsysteme/Akteuere:
 \begin{figure}[H]
 	\includegraphics[width=1.0\linewidth]{Images/kontextdiagram}
 	\caption{Kontextdiagram}
 	\label{fig:kontextdiagram}
 \end{figure}
+
+\textbf{Umsysteme}:
+\begin{itemize}
+\item Zentrallager: Nachbestellungen des lokalen Filiallagers werden an das Zentrallager gesendet.
+\item Rechnungswesen: Das Rechnungswesen wird für Bestell-Bestätigungen, Rechnungsversand und Mahnungsprüfungen verwendet.
+\item Filiallager: Lagerung der in der Filiale verkauften Artikel. Filiallager und Applikation müssen jederzeit einen übereinstimmenden Datenbestand haben.
+\end{itemize}
+
+\textbf{Akteuere}:
+\begin{itemize}
+\item Benutzer: Bestehend aus Filialverwalter, Filialleiter, Verkaufspersonal und Datentypist, bezeichnet alle Nutzer der Applikation. Die einzelnen Aktionen sind in der Use Case Übersicht ersichtlich
+\item Sysadmin: Gemäss Anforderungen kein eigentlicher Benutzer. Für konfigurative Anpassungen könnte ein Zugriff notwendig sein
+\item Kunde: Interaktion mit der Applikation wird via Verkaufspersonal abgewickelt.
+\end{itemize}
+
 
 \subsubsection{Layer-Architektur}
 TODO Übersichsgrafik importieren und erläutern
@@ -32,12 +47,28 @@ Der Client-Layer ist in JavaFX implementiert und verwendet das MVC-Architektur-P
 \textbf{Session}: Die Session enthält die User-Informationen. Die Session-Informationen werden bei Aktionen mitgesendet, um unauthorisierte Aufrufe zu unterbinden.
 
 \subsubsection{Remote-Layer}
+\begin{figure}[H]
+	\includegraphics[width=1.0\linewidth]{Images/RemoteLayer-Architektur}
+	\caption{Architektur des Remotelayer}
+	\label{fig:remotelayer-architektur}
+\end{figure}
+
 \subsubsection{Business-Layer}
+\begin{figure}[H]
+	\includegraphics[width=1.0\linewidth]{Images/BusinessLayer-Architektur}
+	\caption{Architektur des Businesslayer}
+	\label{fig:businesslayer-architektur}
+\end{figure}
+
 \subsubsection{Data-Layer}
-\subsubsection{Model-Layer}
+\begin{figure}[H]
+	\includegraphics[width=1.0\linewidth]{Images/DataLayer-Architektur}
+	\caption{Architektur des Datalayer}
+	\label{fig:datalayer-architektur}
+\end{figure}
 
 \subsubsection{UML-Klassendiagramme}
-
+todo
 
 
 \subsubsection{Sequenzdiagramme}
