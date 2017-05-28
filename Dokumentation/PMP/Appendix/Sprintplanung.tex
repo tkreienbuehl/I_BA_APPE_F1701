@@ -1,11 +1,299 @@
 % !TEX root = Dokumentation_PMP.tex
 \subsection{Sprintplanungen}
-bal
+In diesem Kapitel wird aufgezeigt, welche Stories inkl. Akzeptanzkriterien in welchem Sprint eingeplant wurden und welche UseCases diese Stories betreffen. 
 \subsubsection{Sprint 1}
-fgh
+Die Ziele im ersten Sprint liegen im Bereich der Definition (DB, UseCases und GUI) sowie der Anzeige aller vorhandenen Bestellungen.\\
+\begin{tabular}{|l|l|l|l|l} \rowcolor{gray!50}
+	\hline
+	\textbf{Story-ID} & \textbf{Storytitel} & \textbf{UseCases} & \textbf{Akzeptanzkriterien}\\
+	\hline 
+	I8-18 &
+	\begin{tabular}{l}
+		Liste aller Bestell-\\ungen anzeigen
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 2
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: Alle vordefinierten Bestellungen werden in\\ JavaFX GUI aufgelistet\\
+		- DL: Aufgrund Abhängigkeit zu I8-17, I8-15 ggf. \\als Stub andernfalls über DB-Anbindung.
+	\end{tabular} \\ 
+	\hline 
+	I8-10 & 
+	\begin{tabular}{l}
+	Architekturdesign
+	\end{tabular} & 
+	\begin{tabular}{l}
+		Alle
+	\end{tabular} &
+	\begin{tabular}{l}
+		- Layerarchitektur ist einer ersten Version vorhanden\\
+		- Klassendiagramm für mind. UC 'Bestellungen\\ einsehen'\\
+		- Definition der Interfaces \& DTOs zwischen BL-DL\\ und BL-PL
+	\end{tabular} \\ 
+	\hline 
+	I8-12 & 
+	\begin{tabular}{l}
+	Bestellung einsehen
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 2
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: Anzeige der Details einer Bestellung in grafischer Oberfläche\\
+		- DL: Bestellungen werden via OR-Mapper aus Datenbank gelesen
+	\end{tabular} \\ 
+	\hline 
+	I8-17 & 
+	\begin{tabular}{l}
+	O/R-Mapper
+	\end{tabular} & 
+	\begin{tabular}{l}
+		Alle, ausser \\
+		UC 6
+	\end{tabular} &
+	\begin{tabular}{l}
+		- DL: Auswahl und Ausarbeitung des O/R-Mapper\\ sowie Anbindung der DB
+	\end{tabular} \\ 
+	\hline 
+	I8-15 & 
+	\begin{tabular}{l}
+	DB-Schema erstellen
+	\end{tabular} & 
+	\begin{tabular}{l}
+		Alle
+	\end{tabular} &
+	\begin{tabular}{l}
+		- Modell  in erster Version vorliegend (noch nicht\\ zwingend abgenommen - siehe Testat)\\
+		- SQL-DB gem. Modell aufgesetzt\\
+		- Dummy-Daten sind als SQL-Skript vorhanden und\\ können für Testzwecke importiert werden
+	\end{tabular} \\ 
+	\hline 
+	I8-11 & 
+	\begin{tabular}{l}
+	UseCase-Definitionen
+	\end{tabular} & 
+	\begin{tabular}{l}
+		keine
+	\end{tabular} &
+	\begin{tabular}{l}
+		- zu allen UseCases gem. Übersicht und \\Anforderungsliste sind folgende Punkte beschrieben:\\
+		-- Kurzbeschrieb und bei UC "Bestellung" detaillierter\\
+		-- Akteure, Auslöser, Precondition, Input, Ergebnisse \\und ggf. Sonderfälle\\
+		-- Ablauf
+	\end{tabular} \\ 
+	\hline 
+	I8-13 & 
+	\begin{tabular}{l}
+	GUI-Design
+	\end{tabular} & 
+	\begin{tabular}{l}
+		Alle
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: Alle Views / Pages für Login, Detailorder, \\OrderOverview, New- /EditOrder, Supply sind in \\JavaFX abgebildet.
+	\end{tabular} \\ 
+	\hline 
+	I8-16 & 
+	\begin{tabular}{l}
+	Allgemeine administ-\\rative Arbeiten
+	\end{tabular} & 
+	\begin{tabular}{l}
+		keine
+	\end{tabular} &
+	\begin{tabular}{l}
+		- Dokument für SysSpec mit Inhaltsübersicht liegt vor\\
+		- PMP mit Organisation, Risikoliste, Anforderungen \\ist in einer ersten Version vorhanden
+	\end{tabular} \\ 
+\end{tabular}\\
+\clearpage
 \subsubsection{Sprint 2}
-fghj
+Im zweiten Sprint lag das Ziel im Bereich des Durchstiches. Dadurch soll es möglich sein Bestellungen einzusehen, bearbeiten und zu erfassen\\
+\begin{tabular}{|l|l|l|l|l} \rowcolor{gray!50}
+	\hline
+	\textbf{Story-ID} & \textbf{Storytitel} & \textbf{UseCases} & \textbf{Akzeptanzkriterien}\\
+	\hline 
+	I8-2 &
+	\begin{tabular}{l}
+		Bestellung einsehen
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 2
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: Anzeige der Details einer Bestellung in \\grafischer Oberfläche\\
+		- DL: Bestellungen werden via OR-Mapper \\aus Datenbank gelesen
+	\end{tabular} \\ 
+	\hline 
+	I8-4 & 
+	\begin{tabular}{l}
+		Bestellung annullieren
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 4
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: Die Annullierung kann via grafische \\Oberfläche ausgelöst werden.\\
+		- BL: Die Datenänderung wird auf Gültigkeit \\und Vor/Nachbedingungen geprüft.\\
+		- DL: Die Datenänderung wird via OR-Mapper \\in die DB geschrieben
+	\end{tabular} \\ 
+	\hline 
+	I8-3 & 
+	\begin{tabular}{l}
+		Bestellung bearbeiten
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 4
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: Über eine grafische Oberfläche \\können Bestellungsänderungen eingegeben werden\\
+		- BL: Die Änderungen werden auf Gültigkeit \\validiert\\
+		-- Artikel bekannt\\
+		-- Lagerbestand genug hoch\\
+		- BL: Änderungen werden an Filiallager und \\Buchhaltung gemeldet\\
+		- DL: Die Änderungen werden via DB-Mapper \\in die DB geschrieben
+	\end{tabular} \\ 
+	\hline 
+	I8-1 & 
+	\begin{tabular}{l}
+		Bestellung erfassen
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 3
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: Eingabe der Daten via Formular in grafi-\\scher Oberfläche\\
+		- BL: Validierung der Eingaben:\\
+		-- Bekannter Artikel\\
+		-- Artikel vorhanden (lokal, Zentrallager)\\
+		-- Kunde hat Mahnungen offen\\
+		-- ohne Prüfung Zentrallagerbestand.\\
+		-- Auslösen von Bestellbestätigung\\
+		- DL: Persistierung der Eingabe in die Datenbank \\via OR-Mapper, inkl. Lagerbestandsanpassung\\
+	\end{tabular} \\ 
+	\hline 
+\end{tabular}\\
+\clearpage
 \subsubsection{Sprint 3}
-dghj
+Im Sprint 3 soll es möglich sein vorhandene Bestellungen zu bearbeiten sowie die Anmeldung \& Logbuch zu implementieren\\
+\begin{tabular}{|l|l|l|l|l} \rowcolor{gray!50}
+	\hline
+	\textbf{Story-ID} & \textbf{Storytitel} & \textbf{UseCases} & \textbf{Akzeptanzkriterien}\\
+	\hline 
+	I8-3 & 
+	\begin{tabular}{l}
+		Bestellung bearbeiten
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 4
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: Über eine grafische Oberfläche \\können Bestellungsänderungen eingegeben werden\\
+		- BL: Die Änderungen werden auf Gültigkeit \\validiert\\
+		-- Artikel bekannt\\
+		-- Lagerbestand genug hoch\\
+		- BL: Änderungen werden an Filiallager und \\Buchhaltung gemeldet\\
+		- DL: Die Änderungen werden via DB-Mapper \\in die DB geschrieben
+	\end{tabular} \\ 
+	\hline 
+	I8-9 &
+	\begin{tabular}{l}
+		Am System anmelden
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 1
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: Über ein Anmeldefeld am System anmelden\\
+		- BL: Verifizierung der Benutzerdaten \& Zuweisung \\und Überprüfung der Benutzerdaten (Berechtigungs-\\konzept (Authorisation, Authentication)\\
+		- DL: Die Zugangsdaten werden aus der Datenbank \\verifiziert
+	\end{tabular} \\ 
+	\hline 
+	I8-6 & 
+	\begin{tabular}{l}
+		Logbuch überwachen
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 6
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: Anzeige von Logdaten\\
+		- BL: Kategorisierung von Logdaten\\
+		-- Fehler (Exceptions)\\
+		-- Relevante Vorgänge\\
+		- DL: Persistierung der Logdaten
+	\end{tabular} \\ 
+	\hline 
+
+	I8-7 & 
+	\begin{tabular}{l}
+		Nachbestellung auslösen
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 7
+	\end{tabular} &
+	\begin{tabular}{l}
+		- BL: Bei Unterschreitung eines Lagerbestands wird \\eine Nachbestellung zum Zentrallager gesendet.\\
+		- DL: Die Nachbestellung ist in der Datenbank \\gespeichert
+	\end{tabular} \\ 
+	\hline 
+\end{tabular}\\
+\clearpage
 \subsubsection{Sprint 4}
-rhd
+Im letzten Sprint werden die Aspekte der Nachbestellung und Wareneingang implementiert und bei zeitlicher Reserve wird die Tier-Separierung zwischen Presentation- \& Businesslayer in Betracht gezogen.\\
+\begin{tabular}{|l|l|l|l|l} \rowcolor{gray!50}
+	\hline
+	\textbf{Story-ID} & \textbf{Storytitel} & \textbf{UseCases} & \textbf{Akzeptanzkriterien}\\
+	\hline 
+	I8-7 & 
+	\begin{tabular}{l}
+		Nachbestellung auslösen
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 7
+	\end{tabular} &
+	\begin{tabular}{l}
+		- BL: Bei Unterschreitung eines Lagerbestands wird \\eine Nachbestellung zum Zentrallager gesendet.\\
+		- DL: Die Nachbestellung ist in der Datenbank \\gespeichert
+	\end{tabular} \\ 
+	\hline
+	I8-5 & 
+	\begin{tabular}{l}
+		Wareneingang erfassen
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 5
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: Via Formular werden Wareneingänge im \\System erfasst.\\
+		- BL: Die Eingaben werden auf Gültigkeit\\ validiert\\
+		-- Artikel ist bekannt\\
+		-- Artikelstückzahl ist gültig\\
+		- DL: Die Daten werden via OR-Mapper in die \\Datenbank geschrieben
+	\end{tabular} \\ 
+	\hline 
+	I8-8 &
+	\begin{tabular}{l}
+		Nachbestellung einsehen
+	\end{tabular} & 
+	\begin{tabular}{l}
+		UC 8 \& 9
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: Über eine grafische Oberfläche kann die \\Nachbestellung inkl. Status aus der DB an-\\gesehen werden		
+	\end{tabular} \\ 
+	\hline 
+	I8-19 & 
+	\begin{tabular}{l}
+		Tier-Architektur einbinden
+	\end{tabular} & 
+	\begin{tabular}{l}
+		keine
+	\end{tabular} &
+	\begin{tabular}{l}
+		- PL: kann auf einem separaten Tier betrieben \\werden\\
+		- BL: Das Transaktionsmanagement ist sauber \\definiert und implementiert\\
+	\end{tabular} \\ 
+	\hline 
+\end{tabular}\\\\
+Nach Sprint 4 waren für Release 1.0 keine weiteren Stories im Backlog. Die Entwicklung für Release 1.0 ist hiermit abschliessend und Code-Freeze wurde auf den 26.05.2017 festgelegt. Korrekturen aufgrund Fehler in Tests sind noch erlaubt.
