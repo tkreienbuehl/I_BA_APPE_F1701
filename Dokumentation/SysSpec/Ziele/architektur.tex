@@ -23,8 +23,24 @@ Die entwickelte Applikation hat folgende Abhängigkeiten/Umsysteme/Akteuere:
 \item Kunde: Interaktion mit der Applikation wird via Verkaufspersonal abgewickelt.
 \end{itemize}
 
+\clearpage
+\subsubsection{Layer- \& Tier-Architektur}
+Das Filialbestellsystem basiert in der horizontalen Orienterung auf dem 4-Schichten Modell. \\
+Der Client-Layer stellt die Interaktionsschicht mit dem Anwender zur Verfügung.\\
+Der Remote-Layer dient als Vermittlungsstelle zwischen dem Client- und Business-Layer und führt dadurch zu einer Entkopplung der Anbindung der Clients an den eigentlichen Business-Layer. Weiter ermöglicht dieser Layer in einem weiteren Release, dass der Client-Layer auf mehreren Tiers ohne grössere Aufwendungen betrieben werden könnte.\\
+Der Business-Layer übernimmt die Abläufe (auch Workflows) für die zur Verfügung gestellten Bestellungen. Der Business-Layer bindet dabei auch die notwendigen Umsysteme wie Zentrallager, Rechnungswesen an.\\
+Der Data-Layer übernimmt die Übersetzung der Business-Aktionen mittels O/R-Mapper auf die Datenbank und ermöglicht so die Persistierung der Daten.\\
+Quer durch alle Layer wurden jeweils die entsprechenden funktionalen Anforderungen abgebildet. Jeder der vertikalen Elemente können unter Beachtung der Schnittstellen ausgetauscht / erweitert werden.\\
+Dabei wurden folgende vertikalen Elemente umgesetzt:
+\begin{itemize}
+	\item Order:
+	\item SupplyOrder
+	\item Article:
+	\item Customer:
+	\item UserManagement
+	\item SessionManagement
+\end{itemize}
 
-\subsubsection{Layer-Architektur}
 TODO Übersichsgrafik importieren und erläutern
 
 \subsubsection{Client-Layer}
@@ -144,6 +160,10 @@ Im Layer Remote wurden folgende Klassen definiert:
 \end{longtable}
 
 \subsubsection{Business-Layer}
+Der Business-Layer stellt die administrative und ablaufgesteuerte Schnittstelle zwischen Client und Data-Layer dar. Der Business-Layer hat dabei folgende Aufgaben:\\
+- Transaktionhandling bei Bestellungen\\
+- 
+
 \begin{figure}[H]
 	\includegraphics[width=1.0\linewidth]{Images/BusinessLayer-Architektur}
 	\caption{Architektur des Businesslayer}
