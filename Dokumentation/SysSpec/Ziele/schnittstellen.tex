@@ -40,10 +40,7 @@ In einer groben Übersicht wird die globale Sicht der Schnittstellen zwischen de
 	\label{fig:schnittstellen}
 \end{figure}
 
-\subsubsection{Model}
-TODO Severin Schnittstellen zu Business oder was ist hier gemeint?
-
-\subsubsection{Client <-> Business-Remote}
+\subsubsection{Client <-> Remote}
 Der Client-Layer ist generell als MVC implementiert. Der Controller fordert bei Aktionen des Benutzers jeweils die nachgefragten Informationen über die Remote-Schicht an, und sendet neue und geänderte Bestellungen über die definierten Schnittstellen zur Remote-Schicht.
 Der Client-Layer strukturiert die erhaltenen Daten in einem eigenen Model transient ab.
 TODO Klassendiagramme hinzufügen, eventuell Sequenz-Diagram
@@ -74,29 +71,70 @@ Abbildungen der Schnittstellen:
     {\includegraphics[width=0.33\textwidth]{Images/ISupplyOrderHandlerRemonte}} 
     \newline
     {\includegraphics[width=0.33\textwidth]{Images/IUserHandlerRemonte}} 
-\caption{Schnittstellen Client <-> Business-Remote } 
+\caption{Schnittstellen Client <-> Remote } 
 \end{figure} 
 
 
 
-\subsubsection{Business-Remote <-> Business-Core}
-TODO Marco
-
-Abbildungen der Schnittstellen:
-
+\subsubsection{Remote <-> Business}
+Zwischen der Anbindung der Layer 'Remote' und 'Business' existieren ähnliche Schnittstellen wie bei 'Client <-> Remote'. Diese Schicht reicht die Client-Operationsanfragen mit notwendiger Datentransformation (DTO zu Model) an den entsprechenden Business-Handler.\\\\
+\textbf{IOrderHandler}\\
+Über die Methode 'getOrder' unter Angabe der gewünschten Bestellnr wird vom Data-Layer die Bestellung als 'OrderModel' bereitgestellt. Für die Auflistung aller Bestellungen wird die Methode 'getOrderList' verwendet.\\
+Unter Angabe der Bestellnummer kann eine Bestellung annulliert werden (Methode cancelOrder). Für das Ändern oder Speichern einer Bestellung werden zusätzlich Informationen (z.B. Kunden, bestellte Artikel) benötigt, weshalb ein OrderModel benötigt wird. 
 \begin{figure}[H]
-    {\includegraphics[width=0.33\textwidth]{Images/IArticleHandler}} 
-    {\includegraphics[width=0.33\textwidth]{Images/ICustomerHandler}} 
-    {\includegraphics[width=0.33\textwidth]{Images/ILoggerHandler}} 
-    \newline
-    {\includegraphics[width=0.33\textwidth]{Images/IOrderHandler}} 
-    {\includegraphics[width=0.33\textwidth]{Images/ISessionHandler}} 
-    {\includegraphics[width=0.33\textwidth]{Images/ISupplyOrderHandler}} 
-    \newline
-    {\includegraphics[width=0.33\textwidth]{Images/IUserHandler}} 
-\caption{Schnittstellen Business-Remote <-> Business-Core } 
-\end{figure} 
+	\includegraphics[width=0.3\linewidth]{Images/IOrderHandler}
+	\caption{Interface IOrderHandler}
+	\label{fig:if-IOrderHandler}
+\end{figure}
+\textbf{ISupplyOrderHandler}\\
+Für die Auflistung aller Nachbestellungen wird die Methode 'getFullOrderList' verwendet.\\
+Mittels der Methode 'changeLocalArticleStockAmount' wird überprüft, ob der Filiallagerbestand für jeden einzelnen Artikel unter den Mindestbestand fällt und löst bei Unterschreitung eine Bestellung beim Zentrallager aus. Die Methode 'setCurrentSupplyOrder' ermöglicht anhand der auslösenden Bestellung eine provisorische Nachbestellung zu erstellen. Alle nachzubestellende Artikel werden dieser Nachbestellung beigefügt. Nachdem alle Nachbestellartikel erfasst sind, muss diese über 'saveSupply' an den Data-Layer für die Persistierung gesendet werden. Die Methode 'updateSupplyFromArrival' wird beim Wareneingang verwendet, um angelieferte Artikel zu verbuchen. 
+\begin{figure}[H]
+	\includegraphics[width=0.6\linewidth]{Images/ISupplyOrderHandler}
+	\caption{Interface ISupplyOrderHandler}
+	\label{fig:if-ISupplyOrderHandler}
+\end{figure}
+\clearpage
+\textbf{IArticleHandler}\\
+Für die Auflistung aller möglicher Artikel (z.B. im NewOrder-Form) wird die Methode 'getFullArticleList' verwendet. Ein einzelner Artikel kann über 'getArticle' unter Artikelnummer von der Datenbank angefordert werden. Über 'getArticleAmountFromStock' kann pro Artikel der aktuelle Filiallagerbestand abgefragt werden. Die genannte Anzahl ist nicht garantiert, sondern zeigt lediglich einen Momentanbestand. Neben dem Auslesen der Artikelmenge wird über die Methode 'updateArticleAmount' die Möglichkeit zur Aktualisierung der Artikelmenge angeboten. Das Transaktionsmanagement unterliegt ausschliesslich dem Data-Layer, da über die Methode nur die gewünschte Mengendifferenz übertragen wird.
+\begin{figure}[H]
+	\includegraphics[width=0.6\linewidth]{Images/IArticleHandler}
+	\caption{Interface IArticlerHandler}
+	\label{fig:if-IArticleHandler}
+\end{figure}
+
+\textbf{ICustomerHandler}\\
+Beim ICustomerHandler wird bis Release 1.0 keine erstellende oder mutierende Operationen angeboten. Konkret heisst dies, dass über 'getCustomerList' alle möglichen Kunden ausgewiesen werden. Es besteht mittels Kundennummer auch die Möglichkeit einen selektiven Kunden zu erhalten (Methode 'getCustomer).\\
+Die Methode 'getCustomerStateOK' überprüft beim FinanceStub, ob der Kunden ausstehende Mahnungen hat und so nicht legitimiert ist Bestellungen zu tätigen.
+\begin{figure}[H]
+	\includegraphics[width=0.4\linewidth]{Images/ICustomerHandler}
+	\caption{Interface ICustomerHandler}
+	\label{fig:if-ICustomerHandler}
+\end{figure}
+\textbf{IUserHandler}\\
+Über das IUserHandler-Interface können die Userinformationen (Benutzername, Passwort und Userrolle) erfragt werden. Die Userrolle kann ebenfalls für einen bestimmten Benutzer separat erfragt werden, z.B. für die Auswahl der Ziel-Page im Client.
+\begin{figure}[H]
+	\includegraphics[width=0.4\linewidth]{Images/IUserHandler}
+	\caption{Interface IUserHandler}
+	\label{fig:if-IUserHandler}
+\end{figure}
+\clearpage
+\textbf{ISessionHandler}\\
+Die Schnittstelle 'ISessionHandler' überprüft, ob der User die Berechtigungen für den gewünschten Ziel-Context hat oder nicht. Bei jedem Pageaufruf, wird die Überprüfung für jede Page (LoginPage ausgenommen) vorgenommen.
+\begin{figure}[H]
+	\includegraphics[width=0.5\linewidth]{Images/ISessionHandler}
+	\caption{Interface ISessionHandler}
+	\label{fig:if-ISessionHandler}
+\end{figure}
+\textbf{ILoggerHandler}\\
+Das ILoggerHandler-Interface bietet anhand eines LoggerModels, welches bereits die Nachricht und Level enthält, zu übermitteln oder kann mittels dem Enum LogLevelEnum den Level und die Message als String vorgeben.
+\begin{figure}[H]
+	\includegraphics[width=0.5\linewidth]{Images/ILoggerHandler}
+	\caption{Interface ILoggerHandler}
+	\label{fig:if-ILoggerHandler}
+\end{figure}
 
 
-\subsubsection{Business-Core <-> Data}
+
+\subsubsection{Business <-> Data}
 TODO Marco \&Tobias

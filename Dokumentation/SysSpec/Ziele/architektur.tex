@@ -24,7 +24,7 @@ Die entwickelte Applikation hat folgende Abhängigkeiten/Umsysteme/Akteuere:
 \end{itemize}
 
 \clearpage
-\subsubsection{Layer- \& Tier-Architektur}
+\subsection{Layer- \& Tier-Architektur}
 Das Filialbestellsystem basiert in der horizontalen Orienterung auf dem 4-Schichten Modell. \\
 Der \textbf{Client-Layer} stellt die Interaktionsschicht mit dem Anwender zur Verfügung.\\
 Der \textbf{Remote-Layer} dient als Vermittlungsstelle zwischen dem Client- und Business-Layer und führt dadurch zu einer Entkopplung der Anbindung der Clients an den eigentlichen Business-Layer. Die übertragenen Daten zwischen Client- und Remote-Layer erfolgt mittels DTO's. Weiter ermöglicht dieser Layer in einem weiteren Release, dass der Client-Layer auf mehreren Tiers ohne grössere Aufwendungen betrieben werden könnte.\\
@@ -33,23 +33,24 @@ Der \textbf{Data-Layer} übernimmt die Übersetzung der Business-Aktionen mittel
 Quer durch alle Layer wurden jeweils die entsprechenden funktionalen Anforderungen abgebildet. Jeder der vertikalen Elemente können unter Beachtung der (internen) Schnittstellen ausgetauscht / erweitert werden.\\
 Dabei wurden folgende vertikalen Elemente umgesetzt:
 \begin{itemize}
-	\item Order:
-	\item SupplyOrder
-	\item Article:
+	\item Order: Die Bestellung als Gesamtkonstrukt mit der Möglichkeit zur Einsicht, Bearbeitung und Neuerfassung
+	\item SupplyOrder: Für Nachbestellung von fehlenden Artikel im Filiallager beim Zentrallager mit der Möglichkeit zur Einsicht, Bearbeitung (Wareneingang) und automatisierte Neuerfassung
+	\item Article: Ein einzelner bestellbarer Artikel 
 	\item Customer:
 	\item UserManagement
 	\item SessionManagement
 \end{itemize}
 
-
 \clearpage
-\textbf{Allgemeiner Klassenaufbau /-konzept}
+\subsubsection{Allgemeiner Klassenaufbau /-konzept}
 Durch die vertikale Umsetzung der Elemente wurde ein einheitliches Naming für die Klassen \& Interfaces festgelegt. So sind bspw. alle Klassen im Remote \& Business mit dem Namen 'Handler' versehen. Im Data-Layer sind alle Klassen mit dem Namen 'Manager' als Postfix definiert. Alle Model-Klassen tragen als Postfix den Namen 'Model', um diese bspw. von den automatisch generierten DB-Entitäten (siehe Klasse mit Stereotyp entity) zu unterschieden.
 \begin{figure}[H]
-	\includegraphics[width=0.7\linewidth]{Images/Class-Generic}
+	\centering
+	\includegraphics[width=0.65\linewidth]{Images/Class-Generic}
 	\caption{Allgemeiner Klassenaufbau /-konzept}
 	\label{fig:class-generic}
 \end{figure}
+
 \subsubsection{Client-Layer}
 Der Client-Layer ist in JavaFX implementiert und verwendet das MVC-Architektur-Pattern. Zur Gestaltung der Oberfläche wurde ein 3rd Party Tool eingesetzt, um die graphische Gestaltung zu vereinfachen.
 \begin{itemize}
@@ -69,7 +70,7 @@ Der Client-Layer ist in JavaFX implementiert und verwendet das MVC-Architektur-P
 
 \textbf{Session}: Die Session enthält die User-Informationen. Die Session-Informationen werden bei Aktionen mitgesendet, um unauthorisierte Aufrufe zu unterbinden.\\\\
 \clearpage
-Im Layer Client wurden folgende Klassen definiert:
+Im Layer Client wurden folgende Klassen \& Packages definiert:
 \begin{longtable} {|l|ll|} 
 		
 		\hline
@@ -278,6 +279,9 @@ Im Layer Data wurden folgende Klassen definiert:
 	\label{tab:classes-layer-data}
 \end{longtable}
 \clearpage
+\subsubsection{Tiering}
+Bis Release 1.0 liegt das Filialbestellsystem ausschliesslich als Single-Tier-Applikation bereit. Vorbereitungen für eine Multi-Tier-Applikation sind mit dem Remote-Layer für die Trennung zwischen Client und Business sind vorgenommen. Die Anbindung z.B. mittels RMI wäre somit ohne grössere Aufwendungen möglich. Die aktuelle Architektur sieht keine Tier-Trennung zwischen Business- und Data-Layer vor.
+\clearpage
 \subsection{UML-Klassendiagramme}
 In diesem Kapitel werden die einzelnen vertikalen Elemente (z.B. Artikel, Bestellung, Kunde) aufgezeigt.
 \subsubsection{Bestellunghandling}
@@ -314,6 +318,18 @@ Für den Client-Layer wird über die Factory ein 'OrderHandlerRemoteFacade'-Obje
 \subsection{Sequenzdiagramme}
 todo
 
+\subsection{Transaktionsmanagement}
+Das Transaktionsmanagement für die Aktualisierung von Datenbeständen wie z.B. Artikelanzahl wird über den Data-Layer sichergestellt. Kommt es unerwartet zu einem Transaktionsfehler, so wird mittels Exception dem Business-Layer mitgeteilt, dass ein Fehler während der Verarbeitung aufgetreten ist. Die laufende Business-Aktion (z.B. Abbuchung Artikel von einer Bestellung) wird auf Business-Layer rückgängig gemacht, indem eine Stornobuchung an den Data-Layer gesendet wird. Die laufende Data-Layer Transaktion wird ebenfalls zurückgefahren.
+Bis Release 1.0 ist damit ein grundlegendes Transaktionsmanagement eingebunden. Es wird bis Release 1.0 jedoch die Strategie angewendet, dass bei einem Fehler alle bereits getätigten Bestellaktionen zurückgefahren werden und nicht selektiv für die betroffene Aktion. Weiter werden keine Retry-Operationen vorgenommen.
+
+\subsection{Datenmodell}
+Der Aufbau der Datenbank ist in folgender Abbildung dargestellt.
+\begin{figure}[H]
+	\includegraphics[width=1.0\linewidth]{Images/datamodel}
+	\caption{Datenmodel}
+	\label{fig:datamodel}
+\end{figure}
+Die Datenbank ist funktional aufgebaut und befolgt die ersten 3 Normalformen. Die Anbindung von Umsystemen sind im Datenmodell bereits abgebildet, sind jedoch nicht in der Datenbank vorhanden. Die abgebildeten Umsysteme sind WarningCheck, InvoiceRequest und OrderConfirmation.
 
 \subsection{Entwurfsentscheid}
 Im Rahmen der Architekturausarbeitung wurden folgende Entwurfsentscheide gefällt:
@@ -327,15 +343,3 @@ Im Rahmen der Architekturausarbeitung wurden folgende Entwurfsentscheide gefäll
 	\item Die Rechnungsdaten und Mahnungen werden aufgrund in einem Stub generiert. Die Anbindung eines beliebigen, externen Rechnungswesen ist dadurch in folgenden Releases schneller zu bewältigen.
 \end{itemize}
 
-TODO
-- Dateien einbinden (DB) -> Transaktionsmanagement
-
-
-\subsection{Datenmodell}
-Der Aufbau der Datenbank ist in folgender Abbildung dargestellt.
-\begin{figure}[H]
-	\includegraphics[width=1.0\linewidth]{Images/datamodel}
-	\caption{Datenmodel}
-	\label{fig:datamodel}
-\end{figure}
-Die Datenbank ist funktional aufgebaut und befolgt die ersten 3 Normalformen. Die Anbindung von Umsystemen sind im Datenmodell bereits abgebildet, sind jedoch nicht in der Datenbank vorhanden. Die abgebildeten Umsysteme sind WarningCheck, InvoiceRequest und OrderConfirmation.
