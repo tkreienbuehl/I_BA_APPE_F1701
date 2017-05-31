@@ -61,9 +61,42 @@ TODO Klassendiagramme Hnzufügen
 Die Implementation des Client-Layers beruht auf JavaFX, bzw. FXML. Diese Implementation erzwingt den Einsatz von Observable-Objekten.
 
 Der Client ist stark von der Remote-Schicht der Business-Logik abhängig. Es ist nicht gedacht, dass der Client-Layer für andere Applikationen verwendet wird.
+\newline
+Abbildungen der Schnittstellen:
+
+\begin{figure}[H]
+    {\includegraphics[width=0.33\textwidth]{Images/IArticleHandlerRemonte}} 
+    {\includegraphics[width=0.33\textwidth]{Images/ICustomerHandlerRemonte}} 
+    {\includegraphics[width=0.33\textwidth]{Images/ILoggerHandlerRemonte}} 
+    \newline
+    {\includegraphics[width=0.33\textwidth]{Images/IOrderHandlerRemonte}} 
+    {\includegraphics[width=0.33\textwidth]{Images/ISessionHandlerRemonte}} 
+    {\includegraphics[width=0.33\textwidth]{Images/ISupplyOrderHandlerRemonte}} 
+    \newline
+    {\includegraphics[width=0.33\textwidth]{Images/IUserHandlerRemonte}} 
+\caption{Schnittstellen Client <-> Business-Remote } 
+\end{figure} 
+
 
 
 \subsubsection{Business-Remote <-> Business-Core}
 TODO Marco
+
+Abbildungen der Schnittstellen:
+
+\begin{figure}[H]
+    {\includegraphics[width=0.33\textwidth]{Images/IArticleHandler}} 
+    {\includegraphics[width=0.33\textwidth]{Images/ICustomerHandler}} 
+    {\includegraphics[width=0.33\textwidth]{Images/ILoggerHandler}} 
+    \newline
+    {\includegraphics[width=0.33\textwidth]{Images/IOrderHandler}} 
+    {\includegraphics[width=0.33\textwidth]{Images/ISessionHandler}} 
+    {\includegraphics[width=0.33\textwidth]{Images/ISupplyOrderHandler}} 
+    \newline
+    {\includegraphics[width=0.33\textwidth]{Images/IUserHandler}} 
+\caption{Schnittstellen Business-Remote <-> Business-Core } 
+\end{figure} 
+
+
 \subsubsection{Business-Core <-> Data}
 TODO Marco \&Tobias
