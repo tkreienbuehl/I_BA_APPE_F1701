@@ -26,11 +26,11 @@ Die entwickelte Applikation hat folgende Abhängigkeiten/Umsysteme/Akteuere:
 \clearpage
 \subsubsection{Layer- \& Tier-Architektur}
 Das Filialbestellsystem basiert in der horizontalen Orienterung auf dem 4-Schichten Modell. \\
-Der Client-Layer stellt die Interaktionsschicht mit dem Anwender zur Verfügung.\\
-Der Remote-Layer dient als Vermittlungsstelle zwischen dem Client- und Business-Layer und führt dadurch zu einer Entkopplung der Anbindung der Clients an den eigentlichen Business-Layer. Weiter ermöglicht dieser Layer in einem weiteren Release, dass der Client-Layer auf mehreren Tiers ohne grössere Aufwendungen betrieben werden könnte.\\
-Der Business-Layer übernimmt die Abläufe (auch Workflows) für die zur Verfügung gestellten Bestellungen. Der Business-Layer bindet dabei auch die notwendigen Umsysteme wie Zentrallager, Rechnungswesen an.\\
-Der Data-Layer übernimmt die Übersetzung der Business-Aktionen mittels O/R-Mapper auf die Datenbank und ermöglicht so die Persistierung der Daten.\\
-Quer durch alle Layer wurden jeweils die entsprechenden funktionalen Anforderungen abgebildet. Jeder der vertikalen Elemente können unter Beachtung der Schnittstellen ausgetauscht / erweitert werden.\\
+Der \textbf{Client-Layer} stellt die Interaktionsschicht mit dem Anwender zur Verfügung.\\
+Der \textbf{Remote-Layer} dient als Vermittlungsstelle zwischen dem Client- und Business-Layer und führt dadurch zu einer Entkopplung der Anbindung der Clients an den eigentlichen Business-Layer. Die übertragenen Daten zwischen Client- und Remote-Layer erfolgt mittels DTO's. Weiter ermöglicht dieser Layer in einem weiteren Release, dass der Client-Layer auf mehreren Tiers ohne grössere Aufwendungen betrieben werden könnte.\\
+Der \textbf{Business-Layer} übernimmt die Abläufe (auch Workflows) für die zur Verfügung gestellten Bestellungen. Der Business-Layer bindet dabei auch die notwendigen Umsysteme wie Zentrallager, Rechnungswesen an.\\
+Der \textbf{Data-Layer} übernimmt die Übersetzung der Business-Aktionen mittels O/R-Mapper auf die Datenbank und ermöglicht so die Persistierung der Daten.\\
+Quer durch alle Layer wurden jeweils die entsprechenden funktionalen Anforderungen abgebildet. Jeder der vertikalen Elemente können unter Beachtung der (internen) Schnittstellen ausgetauscht / erweitert werden.\\
 Dabei wurden folgende vertikalen Elemente umgesetzt:
 \begin{itemize}
 	\item Order:
@@ -41,8 +41,15 @@ Dabei wurden folgende vertikalen Elemente umgesetzt:
 	\item SessionManagement
 \end{itemize}
 
-TODO Übersichsgrafik importieren und erläutern
 
+\clearpage
+\textbf{Allgemeiner Klassenaufbau /-konzept}
+Durch die vertikale Umsetzung der Elemente wurde ein einheitliches Naming für die Klassen \& Interfaces festgelegt. So sind bspw. alle Klassen im Remote \& Business mit dem Namen 'Handler' versehen. Im Data-Layer sind alle Klassen mit dem Namen 'Manager' als Postfix definiert. Alle Model-Klassen tragen als Postfix den Namen 'Model', um diese bspw. von den automatisch generierten DB-Entitäten (siehe Klasse mit Stereotyp entity) zu unterschieden.
+\begin{figure}[H]
+	\includegraphics[width=0.7\linewidth]{Images/Class-Generic}
+	\caption{Allgemeiner Klassenaufbau /-konzept}
+	\label{fig:class-generic}
+\end{figure}
 \subsubsection{Client-Layer}
 Der Client-Layer ist in JavaFX implementiert und verwendet das MVC-Architektur-Pattern. Zur Gestaltung der Oberfläche wurde ein 3rd Party Tool eingesetzt, um die graphische Gestaltung zu vereinfachen.
 \begin{itemize}
@@ -69,7 +76,6 @@ Im Layer Client wurden folgende Klassen definiert:
 		\rowcolor{gray!50}\textbf{Package}                                                                                                & \textbf{Klasse}                                                           & \textbf{Aufgabe / Verantwortung}                                                                                                                 \\ \hline \endhead
 		ch.hslu.appe.fbs.client                                                                                         & MainApp                                                                   & Einstiegspunkt für GUI-Client                                                                                                                   \\ \hline
 		\multirow{12}{*}{\begin{tabular}[c]{@{}l@{}}ch.hslu.appe.fbs.client.\\ controller\end{tabular}}                 & AlertMessage                                                              & \begin{tabular}[c]{@{}l@{}}Erstellt Popup Messages für Warnungen/\\ Fehler\end{tabular}                                                         \\ \cline{2-3} 
-		& LandingController                                                         & ??                                                                                                                                              \\ \cline{2-3} 
 		& LoginPageController                                                       & \begin{tabular}[c]{@{}l@{}}Controller für LoginPage, behandelt rolen-\\ spezifische Pageselection \& Validierung \\ der Logindaten\end{tabular} \\ \cline{2-3} 
 		& MenuBarController                                                         & \begin{tabular}[c]{@{}l@{}}Verantwortlich für MenuBar in Pages \\ (u.a. Exit-Button)\end{tabular}                                               \\ \cline{2-3} 
 		& NewOrderController                                                        & \begin{tabular}[c]{@{}l@{}}Controller für die Erstellung einer neuen \\ Bestellung, bindet Remote-Schicht an\end{tabular}                       \\ \cline{2-3} 
@@ -271,12 +277,41 @@ Im Layer Data wurden folgende Klassen definiert:
 	\caption{Klasse Layer Data}
 	\label{tab:classes-layer-data}
 \end{longtable}
+\clearpage
+\subsection{UML-Klassendiagramme}
+In diesem Kapitel werden die einzelnen vertikalen Elemente (z.B. Artikel, Bestellung, Kunde) aufgezeigt.
+\subsubsection{Bestellunghandling}
+Das Bestellhandling über alle Layer hinweg, sieht wie folgt aus. Die einzelnen Layer werden in den folgenden Abschnitten detailliert beschrieben:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Images/Class-Order}
+	\caption{Klassendiagram Bestellung}
+	\label{fig:class-order}
+\end{figure}
+\clearpage
+\textbf{Client}\\
+Im Client-Layer wurde pro Aktionsart (Neue Bestellung, Bestellung editieren und Bestellübersicht) separat modelliert / aufgebaut. Pro Aktionsart besteht daher eine Page (View), der Controller (Control) und ein gemeinsames Model 'OrderData'.\\
+Das Attribut 'CONTEXT' in jedem Controller definiert den SecurityContext bzw. welche Userroles das Recht besitzen, die Page zu verwenden.\\
+Die Controller erhalten über die 'OrderHandlerRemoteFactory' und dem Interface 'IOrderHandlerRemote' die entsprechende Möglichkeit Business-Aktionen für Bestellungen über den Business-Layer zu starten.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{Images/Class-Order-Client}
+	\caption{Klassendiagram Bestellung - Ausschnitt Client}
+	\label{fig:class-order-client}
+\end{figure}
+Der Controller 'OrderEditController' benötigt für die Änderung der bestellten Artikeln noch eine entsprechende ArticleList, welche nur das Delta der Artikel- \&menge überträgt. Bei einer neuen Bestellung wird im Controller 'NewOrderController' zusätzlich noch der Kunde (über ICustomerHandlerRemote) für den Besteller angezogen. Bei einer Bestellung wird dann aktiv (über 'checkOpenWarnings()') über den Business-Layer beim Rechnungs- /Finanzwesen über offene Mahnungen nachgefragt. Bei Mahnungen wird beim Versuch einer Bestellungsauslösung eine Warn- /Abbruchmeldung eine Bestellung verweigert.
+\clearpage
+\textbf{Remote}\\
+Für den Client-Layer wird über die Factory ein 'OrderHandlerRemoteFacade'-Objekt bereitgestellt. Dieses Objekt ist primär für die konvertierung des OrderDTO zum OrderModel verantwortlich. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{Images/Class-Order-Remote}
+	\caption{Klassendiagram Bestellung - Ausschnitt Remote}
+	\label{fig:class-order-remote}
+\end{figure}
 
-\subsubsection{UML-Klassendiagramme}
-todo
-
-
-\subsubsection{Sequenzdiagramme}
+\clearpage
+\subsection{Sequenzdiagramme}
 todo
 
 
