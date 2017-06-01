@@ -49,29 +49,7 @@ In einer groben Übersicht wird die globale Sicht der Schnittstellen zwischen de
 
 
 \subsubsection{Client <-> Remote}
-Der Client-Layer ist generell als MVC implementiert. Der Controller fordert bei Aktionen des Benutzers jeweils die nachgefragten Informationen über die Remote-Schicht an, und sendet neue und geänderte Bestellungen über die definierten Schnittstellen zur Remote-Schicht.
-Der Client-Layer strukturiert die erhaltenen Daten in einem eigenen Model transient ab.
-TODO Klassendiagramme hinzufügen, eventuell Sequenz-Diagram
-
-Speziell ist das User- und Session-Management. Der User erhält auf Basis der über die Login-Schnittstelle erhaltenen Benutzergruppe seine Berechigung zugewiesen. Diese Zuweisung wird im Singelton-Pattern des Users abgespeichert.
-Das Singleton-Pattern wird dabei benötigt, um den Kontext des Benutzers auf Business-Ebene zu prüfen.
-TODO Klassendiagram hinzufügen
-
-Die Kontext-Prüfung wird dabei über eine dedizierte Schnittstelle zu Beginn jedes Aufrufes eingeleitet. So werden ungültige Aufrufe verhindert.
-TODO Klassendiagramme Hnzufügen
-
-Der Login-Prozess der Applikation entscheidet auf Basis der erhaltenen Benutzergruppe, welche Ansicht der jeweilige Benutzer erhält. Diese Entscheidung ist dabei über ein Strategy-Pattern implementiert. 
-TODO Klassendiagramme Hnzufügen
-
-Die Implementation des Client-Layers beruht auf JavaFX, bzw. FXML. Diese Implementation erzwingt den Einsatz von Observable-Objekten.
-
-Der Client ist stark von der Remote-Schicht der Business-Logik abhängig. Es ist nicht gedacht, dass der Client-Layer für andere Applikationen verwendet wird.
-\newline
-
-%------------------------------------------------------------------
-
-
-
+Zwischen der Anbindung der Layer 'Client' und 'Remote' existieren Schnittstellen, um die gewünschten Daten des Remote Layer zur Verfügung zu stellen.\\\\
 
 \textbf{IOrderHandlerRemote}\\
 Über die Methode 'getOrder' unter Angabe der gewünschten Bestellnr (int) wird vom Business Layer die Bestellung als 'OrderDTO' bereitgestellt. Für die Auflistung aller Bestellungen wird die Methode 'getOrderList' verwendet.\\
