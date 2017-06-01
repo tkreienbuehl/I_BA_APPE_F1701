@@ -13,9 +13,9 @@ Dabei wurden folgende vertikalen Elemente umgesetzt:
 	\item Order: Die Bestellung als Gesamtkonstrukt mit der Möglichkeit zur Einsicht, Bearbeitung und Neuerfassung
 	\item SupplyOrder: Für Nachbestellung von fehlenden Artikel im Filiallager beim Zentrallager mit der Möglichkeit zur Einsicht, Bearbeitung (Wareneingang) und automatisierte Neuerfassung
 	\item Article: Jeder Artikel gehört zum Filiallager und kann dort im Rahmen von Bestellungen oder Wareneingang entsprechend mengentechnisch angepasst werden.  
-	\item Customer: Für jede Bestellung wird ein Kunde angegeben. Der Kundeninformationen
-	\item UserManagement
-	\item SessionManagement
+	\item Customer: Für jede Bestellung wird ein Kunde angegeben. Die Kundeninformationen werden entsprechend angezeigt.
+	\item UserManagement: Für die Authentifizierung und die Rollenabbildung werden seperate Benutzer erstellt. Je nach Berechtigung werden nur entsprechende 'Views' zur Anzeige gebracht.
+	\item SessionManagement: Das SessionManagement überprüft für jeden Aktions \& Pageaufruf, ob der Benutzer für diese Page / Aktion erlaubt ist.
 \end{itemize}
 
 \clearpage
