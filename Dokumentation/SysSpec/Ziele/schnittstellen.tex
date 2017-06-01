@@ -11,10 +11,19 @@ Im Rahmen des Filial-Bestellsystems existieren folgende Akteure, welche zugleich
 	\item Sysadmin: hat keine aktiven Steuerungsmöglichkeiten innerhalb des Systems. Der Anwendungsfall des Sysadmins ist für Release 1.0 noch nicht definiert.
 \end{itemize}
 \subsubsection{Datenbankanbindung}
-TODO Tobias: OR-Mapper Anbindung beschreiben\\
+Die Anbindung an die Datenbank erfolgt via OR-Mapper, dabei sind sämtliche Verbindungsinformationen in der Datei \code{Persistence.xml} gespeichert. Benutzername und Passwort liegen dabei in Klartext vor, was ein grosses Sicherheitsrisiko mit sich bringt.\\
+Die \code{Entitäten} wurden mittels Eclipselink in einem eigenen Projekt erzeugt und im Anschluss in das bestehende Projekt eingebunden.\\
+Die Entitäten werden jeweils mittels einem zugehörigen Manager angebunden, um die Kopplung an das System so klein wie möglich zu halten. Dennoch sind innerhalb des Datenlayers diverse seitlichen Kopplungen entstanden. Ein Auszug der Wichtigsten Beziehungen ist dabei im Klassendiagramm, Abbildung \ref{fig:datalayer} dargestellt. Aus Übersichtsgründen ist das Diagramm nicht vollständig.
 
-Für die Persistierung der Daten (ausser Logdaten, RW und Zentrallager) wird eine MySQL-Datenbank aus dem EnterpriseLab mit dem folgenden ConnectionString verwendet:
-- TODO ConnectionString
+\begin{figure}[H]
+\centering
+	\includegraphics[width=1.0\linewidth]{Images/Datalayer-classdia.png}
+	\caption{Datenlayer übersicht}
+	\label{fig:datalayer}
+\end{figure}
+
+Für die Persistierung der Daten (ausser Logdaten, RW und Zentrallager) wird eine MySQL-Datenbank aus dem EnterpriseLab mit dem folgenden ConnectionString verwendet:\\
+\code{jdbc:mysql://db-appe.el.eee.intern:3306/grp13?serverTimezone=UTC}\\
 Auf Stufe Datenbank wurden keine weiteren Sichten, Prozeduren und Benutzer eingesetzt. Daher wird gegenüber der Datenbank nur der User grp13 verwendet.
 \subsubsection{Zentrallager}
 Für das Zentrallager wird eine Stock-Schnittstelle zur Verfügung gestellt. Sie ist in einem Maven-Repo ('https://bintray.com/hslu/maven/appe/5.0.1\#files/ch/hslu/appe/appe\_stock') abgelegt und bereits in das Modul 'appe\_layer\_business' integriert.\\

@@ -257,7 +257,17 @@ Im Layer Data wurden folgende Klassen definiert:
 \end{longtable}
 \clearpage
 \subsubsection{Tiering}
-Bis Release 1.0 liegt das Filialbestellsystem ausschliesslich als Single-Tier-Applikation bereit. Vorbereitungen für eine Multi-Tier-Applikation sind mit dem Remote-Layer für die Trennung zwischen Client und Business sind vorgenommen. Die Anbindung z.B. mittels RMI wäre somit ohne grössere Aufwendungen möglich. Die aktuelle Architektur sieht keine Tier-Trennung zwischen Business- und Data-Layer vor.
+Bis Release 1.0 liegt das Filialbestellsystem ausschliesslich als Single-Tier-Applikation bereit. Vorbereitungen für eine Multi-Tier-Applikation sind mit dem Remote-Layer für die Trennung zwischen Client und Business sind vorgenommen. Die Anbindung z.B. mittels RMI wäre somit ohne grössere Aufwendungen möglich. Die aktuelle Architektur sieht keine Tier-Trennung zwischen Business- und Data-Layer vor.\\
+Ein entprechendes Prototypenmodell ist erstellt worden. Der Remote-Layer ist dabei in einen Client- und einen Serverbereich aufgetrennt. Die ermöglicht die RMI-Implementation ohne in den bestehenden Klassen sowohl im Client und auch im Businesslayer grössere Änderungen vornehmen zu müssen. Einzig die Schnittstelle und die Factory sind anzupassen (Abbildung \ref{fig:class-RMI}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Images/RMI-Classdia-concept.png}
+	\caption{Klassendiagramm RMI-Prototyp Artikel}
+	\label{fig:class-RMI}
+\end{figure}
+
+Auf eine Realisierung ist verzichtet worden, da der abstrakte Typ \code{List} nicht als serialisierbar deklariert ist und RMI solche Typen weder als Parameter noch als Rückgabetyp zulässt. Ein weiterer, zentraler Entscheidungsfaktor für einen Verzicht auf die Realsierung ist die verfügbare Zeit gewesen. 
 \clearpage
 \subsection{UML-Klassendiagramme}
 In diesem Kapitel werden die einzelnen vertikalen Elemente (z.B. Artikel, Bestellung, Kunde) aufgezeigt.
@@ -266,7 +276,7 @@ Das Bestellhandling über alle Layer hinweg, sieht wie folgt aus. Die einzelnen 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{Images/Class-Order}
-	\caption{Klassendiagram Bestellung}
+	\caption{Klassendiagramm Bestellung}
 	\label{fig:class-order}
 \end{figure}
 \clearpage
