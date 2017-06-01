@@ -19,12 +19,12 @@ Die folgenden Komponenten bzw. Maven-Projekte mit entsprechender Version werden 
 \end{tabular} 
 
 \subsubsection{Zusammenfassung der Ergebnisse}
-TODO: Kurzes Fazit! \\
+Alle Testfälle konnten erfolgreich durchgeführt werden. Teils sind noch kleinere Anpassungen notwendig, welche aber nicht die Tests beeinflusst haben. \\
 \begin{tabular}{|l|l|l|}
 	\hline \rowcolor{gray!50}
 	\textbf{\# Tests} & \textbf{\# Erfolgreich} & \textbf{\# Fehlgeschlagen} \\ 
 	\hline 
-	8 & 7 & 1 \\ 
+	8 & 8 & 0 \\ 
 	\hline 
 \end{tabular} 
 
@@ -33,27 +33,45 @@ TODO: Kurzes Fazit! \\
 	\hline \rowcolor{gray!50}
 	Testnr & Testbezeichnung & OK/NOK & Kommentar / Beweis \\ 
 	\hline 
-	I1 & Applikation 'Filialbestellsystem' kann gestartet werden & OK & Logindialog wird angezeigt. \\ 
+	I1 & \begin{tabular}{l}Applikation 'Filialbestellsystem' kann \\gestartet werden \end{tabular}  & OK & \begin{tabular}{l} Logindialog wird angezeigt. \\ \end{tabular} \\
 	\hline 
-	I2 & Anmeldung an Applikation funktioniert & OK & Man kann sich mit den Benutzer sgmuer, mmoro, tkreienbuehl, rwyss erfolgreich anmelden \\ 
+	I2 & Anmeldung an Applikation funktioniert & OK & \begin{tabular}{l}
+		Man kann sich mit den Benut-\\zer sgmuer, mmoro, tkreien-\\buehl, rwyss erfolgreich \\anmelden
+	\end{tabular} \\
 	\hline 
-	I3 & Wareneingang kann erfasst werden & OK & Artikel 1 wird mit 1000 Elemente eingelagert. \\ 
+	I3 & Wareneingang kann erfasst werden & OK & \begin{tabular}{l}Artikel 1 wird mit 1000 \\
+		Elemente eingelagert. \\ \end{tabular} \\ 
 	\hline 
-	I5 & Nachbestellung einsehen & OK & Informationsgehalt lässt zu wünschen übrig. \\ 
+	I5 & Nachbestellung einsehen & OK & \begin{tabular}{l}Informationsgehalt lässt zu wünschen übrig. \\ \end{tabular} \\
 	\hline 
-	I6 & Bestellung einsehen & OK & Die Testbestellung kann erfolgreich angezeigt werden inkl. Details und die bestellten Artikel. \\ 
+	I6 & Bestellung einsehen & OK & \begin{tabular}{l}Die Testbestellung kann erfolgreich \\angezeigt werden inkl. Details und die \\
+		bestellten Artikel. \\ \end{tabular} \\
 	\hline
-	I7 & Bestellung annullieren & OK & DIe Bestellung erhält den Status "Annulliert" und die bestellten bzw. annullierten Artikel werden im Stock wieder freigegeben. \\ 
+	I7 & Bestellung annullieren & OK & \begin{tabular}{l}Die Bestellung erhält den Status 'Annulliert'\\
+		 und die bestellten bzw. annullierten Artikel\\
+		  werden im Stock wieder freigegeben. \\ \end{tabular} \\ 
 	\hline  
-	I8 & Bestellung editieren & OK & Der Testbestellung konnte erfolgreich ein weiterer Artikel bestellt werden und die Menge eines bereits bestellten Artikels angepasst werden. \\ 
+	I8 & Bestellung editieren & OK & \begin{tabular}{l}Der Testbestellung konnte erfolgreich ein \\
+		weiterer Artikel bestellt werden und die \\
+		Menge eines bereits bestellten Artikels \\
+		angepasst werden. \\ \end{tabular} \\
 	\hline 
-	I9 & Bestellung erfassen & OK & Eine neue Bestellung konnte erfolgreich mit den entsprechenden Artikeln und dem Kunden gespeichert werden. \\ 
+	I9 & Bestellung erfassen & OK & \begin{tabular}{l}Eine neue Bestellung konnte erfolgreich\\
+		 mit den entsprechenden Artikeln und dem \\
+		 Kunden gespeichert werden. \\ \end{tabular} \\
 	\hline 
-	S1 & Wareneingang erfassen & OK & Die angelieferten Artikeln konnten erfolgreich erfasst werden und das Filiallager wurde erfolgreich aktualisiert. \\ 
+	S1 & Wareneingang erfassen & OK & \begin{tabular}{l}Die angelieferten Artikeln konnten\\
+		 erfolgreich erfasst werden und das Filiallager \\
+		 wurde erfolgreich aktualisiert. \\ \end{tabular} \\
 	\hline 
-	S2 & Automatische Nachbestellung auslösen & OK & Eine Nachbestellung wird erfolgreich bei Unterschreitung von Menge 2\\  
+	S2 & Automatische Nachbestellung auslösen & OK & \begin{tabular}{l}Eine Nachbestellung wird erfolgreich bei \\
+		Unterschreitung von Menge 2\\ \end{tabular} \\ 
 	\hline 
-	S3 & Bestellung bearbeiten & OK & Bei Bestellung von mehr als im Filiallager verfügbarer Menge wird neben dem geänderten Filiallagerbestand (negativ) einen auch eine Nachbestellung am Zentrallager ausgelöst. \\ 
+	S3 & Bestellung bearbeiten & OK & \begin{tabular}{l}Bei Bestellung von mehr als im Filiallager\\
+		 verfügbarer Menge wird neben dem ge-\\
+		 änderten Filiallagerbestand (negativ) einen\\
+		  auch eine Nachbestellung am Zentrallager\\
+		   ausgelöst. \\ \end{tabular} \\
 	\hline 
 \end{tabular} 
 \clearpage
