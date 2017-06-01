@@ -268,13 +268,13 @@ Ein entprechendes Prototypenmodell ist erstellt worden. Der Remote-Layer ist dab
 
 Auf eine Realisierung ist verzichtet worden, da der abstrakte Typ \code{List} nicht als serialisierbar deklariert ist und RMI solche Typen weder als Parameter noch als Rückgabetyp zulässt. Ein weiterer, zentraler Entscheidungsfaktor für einen Verzicht auf die Realsierung ist die verfügbare Zeit gewesen. 
 \clearpage
-\subsection{UML-Klassendiagramme}
-In diesem Kapitel werden die einzelnen vertikalen Elemente (z.B. Artikel, Bestellung, Kunde) aufgezeigt.
+\subsection{Aufbau vertikale Elemente}
+In diesem Kapitel werden die einzelnen vertikalen Elemente (z.B. Artikel, Bestellung, Kunde) aufgezeigt. Da für Artikel, Kunde etc. die gleichen konzeptionellen Aspekte (Klassenstruktur) verwendet wurde, wird hier nur das Beispiel eines Bestellvorgangs aufgezeigt.
 \subsubsection{Bestellunghandling}
 Das Bestellhandling über alle Layer hinweg, sieht wie folgt aus. Die einzelnen Layer werden in den folgenden Abschnitten detailliert beschrieben:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Images/Class-Order}
+	\includegraphics[width=0.68\linewidth]{Images/Class-Order}
 	\caption{Klassendiagramm Bestellung}
 	\label{fig:class-order}
 \end{figure}
@@ -292,13 +292,37 @@ Die Controller erhalten über die 'OrderHandlerRemoteFactory' und dem Interface 
 Der Controller 'OrderEditController' benötigt für die Änderung der bestellten Artikeln noch eine entsprechende ArticleList, welche nur das Delta der Artikel- \&menge überträgt. Bei einer neuen Bestellung wird im Controller 'NewOrderController' zusätzlich noch der Kunde (über ICustomerHandlerRemote) für den Besteller angezogen. Bei einer Bestellung wird dann aktiv (über 'checkOpenWarnings()') über den Business-Layer beim Rechnungs- /Finanzwesen über offene Mahnungen nachgefragt. Bei Mahnungen wird beim Versuch einer Bestellungsauslösung eine Warn- /Abbruchmeldung eine Bestellung verweigert.
 \clearpage
 \textbf{Remote}\\
-Für den Client-Layer wird über die Factory ein 'OrderHandlerRemoteFacade'-Objekt bereitgestellt. Dieses Objekt ist primär für die konvertierung des OrderDTO zum OrderModel verantwortlich. 
+Für den Client-Layer wird über die Factory ein 'OrderHandlerRemoteFacade'-Objekt bereitgestellt. Dieses Objekt ist primär für die Konvertierung des OrderDTO zum OrderModel verantwortlich. Hierzu stehen die 'Transfer-Methoden' zur Verfügung. Zudem werden die meisten Operationen direkt an den Business-Layer übergeben, sofern keine ungültigen Werte.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{Images/Class-Order-Remote}
 	\caption{Klassendiagram Bestellung - Ausschnitt Remote}
 	\label{fig:class-order-remote}
 \end{figure}
+\clearpage
+\textbf{Business}\\
+Im Business-Layer findet die logische Verarbeitung der Objekte statt. Beim Bestellvorgang wird für die Verarbeitung ebenfalls das Finanzwesen (IFinanceHandler) für die Rechnungsverwaltung und der Perimeter-Stub (IPerimeterHandler) angebunden für Druckaufträge / Bestätigungen. Zusätzlich wird der Logger angebunden, damit die Business-relevanten Aktionen und Exception (auch von Layer Data) entsprechend aufgezeichnet werden.\\
+Die bestellten Artikel werden einzeln gegen den lokalen Filiallagerbestand (über IArticleManager) geprüft und ggf. über das Interface ISupplyOrder eine Nachbestellung für die betroffenen Artikel ausgelöst.\\
+Tritt während der Verarbeitung der Bestellung ein Fehler auf, so gilt die ganze Bestellung als fehlgeschlagen / ungültig und die bereits abgebuchten Artikel werden mittels Stornobuchungen (sofern noch möglich) wieder freigegeben (Methode rollbackArticles). Es handelt sich dabei (bis Release 1.0), um kein garantierten 'Rollback', da z.B. bei DB-Ausfall der Bestand nicht mehr geändert werden kann und so zu inkonsistenten Daten führt.
+Die Anbindung an den Data-Layer erfolgt nach der gleichen Vorgehensweise wie bei den vorangehenden Layers (Factory-Pattern). Primär wird der 'OrderManager' und der 'ArticleManager' über die entsprechenden Interfaces angebunden.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{Images/Class-Order-Business}
+	\caption{Klassendiagram Bestellung - Ausschnitt Business}
+	\label{fig:class-order-business}
+\textit{Aus Übersichtsgründen werden die anderen 'Handler' \& 'Manager'-Klassen nicht dargestellt.}
+\end{figure}
+\clearpage
+\textbf{Data}\\
+Die Klasse 'OrderManager' dient als zentrales Element. Der 'OrderManager' baut über den DBConnectionManager eine Verbindung (Standardwerte) zur Datenbank auf. Ebenfalls existieren 'Transfer-Methoden', um das Entity zu Models oder visversa.\\
+Aufgrund der Tatsache, dass zwischen den Tabellen 'Order' und 'Article' eine komplex-komplexe Beziehung besteht, wurde die Klasse 'OrderArticleManager' erstellt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{Images/Class-Order-Data}
+	\caption{Klassendiagram Bestellung - Ausschnitt Data}
+	\label{fig:class-order-data}
+\end{figure}
+\clearpage
 
 \clearpage
 \subsection{Sequenzdiagramme}

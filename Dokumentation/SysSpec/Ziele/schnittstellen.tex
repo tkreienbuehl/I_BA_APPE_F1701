@@ -30,10 +30,10 @@ Für das Zentrallager wird eine Stock-Schnittstelle zur Verfügung gestellt. Sie
 Die detaillierte Dokumentation zur vorgegebenen Schnittstelle ist unter\\
 'https://elearning.hslu.ch/ilias/ilias.php?ref\_id=3290529\&page=APPE\_Startseite\&wpg\_id=11071\&cmd=downloadFile\&cmdClass=ilwikipagegui\& cmdNode=yi:l5:yk\&baseClass=ilwikihandlergui\&file\_id=il\_\_file\_3582976' zu beziehen.
 
-Die Implementation wurde im Business-Layer vorgenommen. Die vorgegebene Schnittstelle wurde nur in einem minimalen Ausmass verwendet. Im Rahmen einer Bestelländerung /-erfassung wird bei Unterschreiten der definierten Mindestanzahl eines Artikels (bis Release 1.0 fix auf 2 definiert) über die Methode 'orderArticle(....)' eine Nachbestellung in der Höhe der geforderten Artikel + 2 ausgelöst. Es wird dabei nicht geprüft, ob am Zentrallager noch entsprechende Artikel vorhanden sind. \\Es wird daher davon ausgegangen, dass am Zentrallager wie auch im Filiallager ein Negativlagerbestand möglich ist. Die Schnittstelle ist dadurch nur unidirektional und es werden keine Daten \& Interaktionen durch das Zentrallager an das Filial-Bestellsystem direkt ausgeführt.  \\
+Die Implementation wurde im Business-Layer vorgenommen. Die vorgegebene Schnittstelle wurde nur in einem minimalen Ausmass verwendet. Im Rahmen einer Bestelländerung /-erfassung wird bei Unterschreiten der definierten Mindestanzahl eines Artikels (bis Release 1.0 fix auf 2 definiert) über die Methode 'orderArticle(....)' eine Nachbestellung in der Höhe der geforderten Artikel + 20 ausgelöst. Es wird dabei nicht geprüft, ob am Zentrallager noch entsprechende Artikel vorhanden sind. \\Es wird daher davon ausgegangen, dass am Zentrallager wie auch im Filiallager ein Negativlagerbestand möglich ist. Die Schnittstelle ist dadurch nur unidirektional und es werden keine Daten \& Interaktionen durch das Zentrallager an das Filial-Bestellsystem direkt ausgeführt.  \\
 \begin{figure}[H]
 \centering
-	\includegraphics[width=1.0\linewidth]{Images/Zentrallager}
+	\includegraphics[width=0.8\linewidth]{Images/Zentrallager}
 	\caption{Zentrallager}
 	\label{fig:zentrallager}
 \end{figure}
@@ -45,10 +45,11 @@ Das Rechnungswesen hat die Aufgabe bei Erfassung / Änderung einer Bestellung ei
 Von Seiten Auftraggeber sind keine Schnittstellen zur Verfügung gestellt worden und daher wurden die entsprechenden Aufgaben des Rechnungswesen als simpler Stub implementiert, der lediglich ein Output über die ausgeführte Arbeit (z.B. Neue Rechnung gedruckt) protokolliert. \\
 \begin{figure}[H]
 \centering
-	\includegraphics[width=1.0\linewidth]{Images/Rechnungswesen}
+	\includegraphics[width=0.8\linewidth]{Images/Rechnungswesen}
 	\caption{Rechnungswesen}
 	\label{fig:rechnungswesen}
 \end{figure}
+\clearpage
 
 \subsection{Interne Schnittstellen}
 In diesem Kapitel werden nur wichtige, systemrelevante Schnittstellen spezifiziert. Es werden primär die Schnittstellen zwischen den Layern 'Client', 'Business' inkl. Remote und 'Data' beschrieben.
@@ -194,7 +195,6 @@ Die Methode 'getCustomerStateOK' überprüft beim FinanceStub, ob der Kunden aus
 	\caption{Interface IUserHandler}
 	\label{fig:if-IUserHandler}
 \end{figure}
-\clearpage
 \textbf{ISessionHandler}\\
 Die Schnittstelle 'ISessionHandler' überprüft, ob der User die Berechtigungen für den gewünschten Ziel-Context hat oder nicht. Bei jedem Pageaufruf, wird die Überprüfung für jede Page (LoginPage ausgenommen) vorgenommen.
 \begin{figure}[H]
@@ -211,7 +211,7 @@ Das ILoggerHandler-Interface bietet anhand eines LoggerModels, welches bereits d
 \end{figure}
 
 %-----------------------------------------------------------------
-
+\clearpage
 \subsubsection{Business <-> Data}
 
 Zwischen der Anbindung der Layer 'Business' und 'Data' existieren Schnittstellen, um die gewünschten Daten dem Business Layer zur Verfügung zu stellen. Hier ist auch die Anbindung an die Datenbank angeordnet\\\\
@@ -230,7 +230,7 @@ Mit der Methode 'saveOrder' können neuen Order gespeichert gelöst oder aktuali
 Für eine Liste aller Nachbestellungen wird die Methode 'getFullOrderList' verwendet.\\
 Mittels der Methode 'makeOrderEntry' wird eine Nachbestellung abgeschickt für die Tabelle supply. Es muss ein Artikelnummer und die Menge mitgegeben werden. Wenn einen neuen Nachbestellung gemacht werden möchte, benutzt die Methode 'saveSupplyOrder', diese verlangt ein SupplyOrderModel.
 \begin{figure}[H]
-	\includegraphics[width=0.6\linewidth]{Images/ISupplyOrderManager}
+	\includegraphics[width=0.4\linewidth]{Images/ISupplyOrderManager}
 	\caption{Interface ISupplyOrderManager}
 	\label{fig:if-ISupplyOrderManager}
 \end{figure}
