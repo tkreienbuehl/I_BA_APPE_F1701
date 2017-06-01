@@ -4,8 +4,8 @@
 Im Rahmen des Filial-Bestellsystems existieren folgende Akteure, welche zugleich spezifische Rollen und somit Berechtigungen besitzen.
 \begin{itemize}
 	\item Benutzer: Jeder Akteur in der Rolle 'Benutzer' kann sich am System mit den entsprechenden Zugangsdaten anmelden.
-	\item Filialleiter: besitzt die Rechte 'OrderView' und 'OrderEdit' und kann daher sowohl bestehende Bestellungen einsehen, bearbeiten und annullieren.
-	\item Verkaufspersonal: hat grundsätzlich identische Rechte wie Filialleiter, kann jedoch zusätzlich noch Bestellungen erfassen. TODO: Prüfen, ob wirklich so umgesetzt!
+	\item Verkaufspersonal: besitzt die Rechte 'OrderView' und 'OrderEdit' und kann daher sowohl bestehende Bestellungen einsehen, bearbeiten und annullieren.
+	\item Filialleiter: besitzt die gleichen Rechte wie das Verkaufspersonal. Zusätzlich ist die Rolle 'SupplyView' gegeben, um den Status von Nachbestellungen einzusehen.	
 	\item Datentypist: besitzt die Rolle 'Supply' und kann dadurch den Wareneingang im System erfassen
 	\item Filialverwalter: besitzt die Rolle 'LogView' und kann daher das Logfile mit den abgelaufenen Systemabläufen überprüfen. Die Einsicht via Filial-Bestellsystem in das Logfile ist nicht im Release 1.0 realisiert. In folgenden Releases wird über eine zentrale Logfile-Verwaltung (bspw. Syslog) entschieden. 
 	\item Sysadmin: hat keine aktiven Steuerungsmöglichkeiten innerhalb des Systems. Der Anwendungsfall des Sysadmins ist für Release 1.0 noch nicht definiert.
