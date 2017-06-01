@@ -31,6 +31,9 @@ TODO Severin: Klassendiagram hinzufügen
 \subsection{Interne Schnittstellen}
 In diesem Kapitel werden nur wichtige, systemrelevante Schnittstellen spezifiziert. Es werden primär die Schnittstellen zwischen den Layern 'Client', 'Business' inkl. Remote und 'Data' beschrieben.
 
+
+
+
 \subsubsection{Globale Sicht}
 In einer groben Übersicht wird die globale Sicht der Schnittstellen zwischen den Schichten / Packages aufgezeigt.:\\
 \begin{figure}[H]
@@ -39,6 +42,11 @@ In einer groben Übersicht wird die globale Sicht der Schnittstellen zwischen de
 	\caption{Schnittstellen}
 	\label{fig:schnittstellen}
 \end{figure}
+
+
+
+
+
 
 \subsubsection{Client <-> Remote}
 Der Client-Layer ist generell als MVC implementiert. Der Controller fordert bei Aktionen des Benutzers jeweils die nachgefragten Informationen über die Remote-Schicht an, und sendet neue und geänderte Bestellungen über die definierten Schnittstellen zur Remote-Schicht.
@@ -60,7 +68,11 @@ Die Implementation des Client-Layers beruht auf JavaFX, bzw. FXML. Diese Impleme
 Der Client ist stark von der Remote-Schicht der Business-Logik abhängig. Es ist nicht gedacht, dass der Client-Layer für andere Applikationen verwendet wird.
 \newline
 
-------------------------------------------------------------------
+%------------------------------------------------------------------
+
+
+
+
 \textbf{IOrderHandlerRemote}\\
 Über die Methode 'getOrder' unter Angabe der gewünschten Bestellnr (int) wird vom Business Layer die Bestellung als 'OrderDTO' bereitgestellt. Für die Auflistung aller Bestellungen wird die Methode 'getOrderList' verwendet.\\
 Unter Angabe der Bestellnummer kann eine Bestellung annulliert werden (Methode cancelOrder(int)). Für das Ändern oder Speichern einer Bestellung werden zusätzlich Informationen (z.B. Kunden, bestellte Artikel) benötigt, weshalb ein OrderDTO benötigt wird.
@@ -126,13 +138,15 @@ Das ILoggerHandlerRemote-Interface bietet die möglichkeit anhand eines LogerDTO
 
 
 
-
+%-----------------------------------------------------------------------
 
 
 
 
 \subsubsection{Remote <-> Business}
 Zwischen der Anbindung der Layer 'Remote' und 'Business' existieren ähnliche Schnittstellen wie bei 'Client <-> Remote'. Diese Schicht reicht die Client-Operationsanfragen mit notwendiger Datentransformation (DTO zu Model) an den entsprechenden Business-Handler.\\\\
+
+
 \textbf{IOrderHandler}\\
 Über die Methode 'getOrder' unter Angabe der gewünschten Bestellnr wird vom Data-Layer die Bestellung als 'OrderModel' bereitgestellt. Für die Auflistung aller Bestellungen wird die Methode 'getOrderList' verwendet.\\
 Unter Angabe der Bestellnummer kann eine Bestellung annulliert werden (Methode cancelOrder). Für das Ändern oder Speichern einer Bestellung werden zusätzlich Informationen (z.B. Kunden, bestellte Artikel) benötigt, weshalb ein OrderModel benötigt wird. 
@@ -141,6 +155,9 @@ Unter Angabe der Bestellnummer kann eine Bestellung annulliert werden (Methode c
 	\caption{Interface IOrderHandler}
 	\label{fig:if-IOrderHandler}
 \end{figure}
+
+
+
 \textbf{ISupplyOrderHandler}\\
 Für die Auflistung aller Nachbestellungen wird die Methode 'getFullOrderList' verwendet.\\
 Mittels der Methode 'changeLocalArticleStockAmount' wird überprüft, ob der Filiallagerbestand für jeden einzelnen Artikel unter den Mindestbestand fällt und löst bei Unterschreitung eine Bestellung beim Zentrallager aus. Die Methode 'setCurrentSupplyOrder' ermöglicht anhand der auslösenden Bestellung eine provisorische Nachbestellung zu erstellen. Alle nachzubestellende Artikel werden dieser Nachbestellung beigefügt. Nachdem alle Nachbestellartikel erfasst sind, muss diese über 'saveSupply' an den Data-Layer für die Persistierung gesendet werden. Die Methode 'updateSupplyFromArrival' wird beim Wareneingang verwendet, um angelieferte Artikel zu verbuchen. 
@@ -149,7 +166,9 @@ Mittels der Methode 'changeLocalArticleStockAmount' wird überprüft, ob der Fil
 	\caption{Interface ISupplyOrderHandler}
 	\label{fig:if-ISupplyOrderHandler}
 \end{figure}
-\clearpage
+
+
+
 \textbf{IArticleHandler}\\
 Für die Auflistung aller möglicher Artikel (z.B. im NewOrder-Form) wird die Methode 'getFullArticleList' verwendet. Ein einzelner Artikel kann über 'getArticle' unter Artikelnummer von der Datenbank angefordert werden. Über 'getArticleAmountFromStock' kann pro Artikel der aktuelle Filiallagerbestand abgefragt werden. Die genannte Anzahl ist nicht garantiert, sondern zeigt lediglich einen Momentanbestand. Neben dem Auslesen der Artikelmenge wird über die Methode 'updateArticleAmount' die Möglichkeit zur Aktualisierung der Artikelmenge angeboten. Das Transaktionsmanagement unterliegt ausschliesslich dem Data-Layer, da über die Methode nur die gewünschte Mengendifferenz übertragen wird.
 \begin{figure}[H]
@@ -189,7 +208,68 @@ Das ILoggerHandler-Interface bietet anhand eines LoggerModels, welches bereits d
 	\label{fig:if-ILoggerHandler}
 \end{figure}
 
-
+%-----------------------------------------------------------------
 
 \subsubsection{Business <-> Data}
-TODO Marco \&Tobias
+
+Zwischen der Anbindung der Layer 'Business' und 'Data' existieren Schnittstellen, um die gewünschten Daten dem Business Layer zur Verfügung zu stellen. Hier ist auch die Anbindung an die Datenbank angeordnet\\\\
+
+\textbf{IOrderManager}\\
+Über die Methode 'getOrder' unter Angabe der gewünschten OrderNr wird von der Datenenbank die Bestellung als 'OrderModel' bereitgestellt. Für die Auflistung aller Bestellungen wird die Methode 'getOrderList' verwendet.\\
+Mit der Methode 'saveOrder' können neuen Order gespeichert gelöst oder aktualisiert werden. Es wird ein 'OrderModel' übergeben um die einzelnen Aktionen auszuführen. 
+\begin{figure}[H]
+	\includegraphics[width=0.3\linewidth]{Images/IOrderManager}
+	\caption{Interface IOrderManager}
+	\label{fig:if-IOrderManager}
+\end{figure}
+
+
+\textbf{ISupplyOrderManager}\\
+Für eine Liste aller Nachbestellungen wird die Methode 'getFullOrderList' verwendet.\\
+Mittels der Methode 'makeOrderEntry' wird eine Nachbestellung abgeschickt für die Tabelle supply. Es muss ein Artikelnummer und die Menge mitgegeben werden. Wenn einen neuen Nachbestellung gemacht werden möchte, benutzt die Methode 'saveSupplyOrder', diese verlangt ein SupplyOrderModel.
+\begin{figure}[H]
+	\includegraphics[width=0.6\linewidth]{Images/ISupplyOrderManager}
+	\caption{Interface ISupplyOrderManager}
+	\label{fig:if-ISupplyOrderManager}
+\end{figure}
+
+
+
+\textbf{ICustomerManager}\\
+Beim ICustomerHandler wird bis Release 1.0 keine erstellende oder mutierende Operationen angeboten. Konkret heisst dies, dass über 'getCustomerList' alle möglichen Kunden ausgewiesen werden. Es besteht mittels Kundennummer auch die Möglichkeit einen selektiven Kunden zu erhalten (Methode 'getCustomer).\\
+Die Methode 'getCustomerStateOK' überprüft beim FinanceStub, ob der Kunden ausstehende Mahnungen hat und so nicht legitimiert ist Bestellungen zu tätigen.
+\begin{figure}[H]
+	\includegraphics[width=0.4\linewidth]{Images/ICustomerManager}
+	\caption{Interface ICustomerManager}
+	\label{fig:if-ICustomerManager}
+\end{figure}
+
+
+
+\textbf{IUserManager}\\
+Über das IUserManager-Interface kann ein UserModel von der Datenbank geholt werden. Ein UserModel beinhaltet Name, Passwort und seine Rolle. Wenn der User nicht in der DB vorhanden ist wird eine Exception UserNotFoundInDatabaseExeption geworfen.
+\begin{figure}[H]
+	\includegraphics[width=0.4\linewidth]{Images/IUserManager}
+	\caption{Interface IUserManager}
+	\label{fig:if-IUserManager}
+\end{figure}
+
+
+
+
+\textbf{IArticleManager}\\
+Das IArticleManager-Interface managt die Artikel im Data Layer und der DB. Mit der Methode 'getArticleList()' werden alle vorhandenen Artikel ('ArticleModel') zurückgegeben. Wenn auf ein spezifische Artikel benötigt wird, kann dieser mit der articleNr und der Methode 'getArticle' abgefragt werden. Mit der Methode 'getArticleAmount wird der aktuellen Lagerbestand eines Artikels zurückgegeben. Wenn neue Artikel ins lokale Lager gekommen sind, können sie mit 'updateArticleAmountInLocalStock' angepasst werden. 
+\begin{figure}[H]
+	\includegraphics[width=0.6\linewidth]{Images/IArticleManager}
+	\caption{Interface IArticlerManager}
+	\label{fig:if-IArticleManager}
+\end{figure}
+
+
+\textbf{IStockManager}\\
+Das Interface IStockManager besitzt die eine Methode 'getArticleAmountFromStock' und mit einer articleNr wird der Lagerbestand dieses Artikels zurückgegeben.
+\begin{figure}[H]
+	\includegraphics[width=0.5\linewidth]{Images/IStockManager}
+	\caption{Interface IStockManager}
+	\label{fig:if-IStockManager}
+\end{figure}
