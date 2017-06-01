@@ -1,0 +1,59 @@
+% !TEX root = Testprotokolle.tex
+\subsection{Testprotokoll 01.06.2017}
+Für das vorliegende Testprotokoll gilt folgendes Testkonzept in der Version x.x vom xx.xx.xxxx als Beurteilungsgrundlage. \\
+Die Tests wurden durch die Person Tobias Kreienbühl ausgeführt.
+\subsubsection{Testkandidaten}
+Die folgenden Komponenten bzw. Maven-Projekte mit entsprechender Version werden als Testkandidaten verwendet:\\
+\begin{tabular}{|l|l|}
+	\hline \rowcolor{gray!50}
+	\textbf{Komponente / Projekt} & \textbf{Buildversion} \\ 
+	\hline 
+	g13\_fbs\_client & 1.0.0 \\ 
+	\hline 
+	g13\_fbs\_business & 1.0.0 \\ 
+	\hline 
+	g13\_fbs\_data & 1.0.0 \\ 
+	\hline 
+	g13\_fbs\_model & 1.0.0 \\ 
+	\hline 
+\end{tabular} 
+
+\subsubsection{Zusammenfassung der Ergebnisse}
+TODO: Kurzes Fazit! \\
+\begin{tabular}{|l|l|l|}
+	\hline \rowcolor{gray!50}
+	\textbf{\# Tests} & \textbf{\# Erfolgreich} & \textbf{\# Fehlgeschlagen} \\ 
+	\hline 
+	8 & 7 & 1 \\ 
+	\hline 
+\end{tabular} 
+
+\subsubsection{Ergebnisse System- \& Integrationstests}
+\begin{tabular}{|l|l|l|l|}
+	\hline \rowcolor{gray!50}
+	Testnr & Testbezeichnung & OK/NOK & Kommentar / Beweis \\ 
+	\hline 
+	I1 & Applikation 'Filialbestellsystem' kann gestartet werden & OK & Logindialog wird angezeigt. \\ 
+	\hline 
+	I2 & Anmeldung an Applikation funktioniert & OK & Man kann sich mit den Benutzer sgmuer, mmoro, tkreienbuehl, rwyss erfolgreich anmelden \\ 
+	\hline 
+	I3 & Wareneingang kann erfasst werden & OK & Artikel 1 wird mit 1000 Elemente eingelagert. \\ 
+	\hline 
+	I5 & Nachbestellung einsehen & OK & Informationsgehalt lässt zu wünschen übrig. \\ 
+	\hline 
+	I6 & Bestellung einsehen & OK & Die Testbestellung kann erfolgreich angezeigt werden inkl. Details und die bestellten Artikel. \\ 
+	\hline
+	I7 & Bestellung annullieren & OK & DIe Bestellung erhält den Status "Annulliert" und die bestellten bzw. annullierten Artikel werden im Stock wieder freigegeben. \\ 
+	\hline  
+	I8 & Bestellung editieren & OK & Der Testbestellung konnte erfolgreich ein weiterer Artikel bestellt werden und die Menge eines bereits bestellten Artikels angepasst werden. \\ 
+	\hline 
+	I9 & Bestellung erfassen & OK & Eine neue Bestellung konnte erfolgreich mit den entsprechenden Artikeln und dem Kunden gespeichert werden. \\ 
+	\hline 
+	S1 & Wareneingang erfassen & OK & Die angelieferten Artikeln konnten erfolgreich erfasst werden und das Filiallager wurde erfolgreich aktualisiert. \\ 
+	\hline 
+	S2 & Automatische Nachbestellung auslösen & OK & Eine Nachbestellung wird erfolgreich bei Unterschreitung von Menge 2\\  
+	\hline 
+	S3 & Bestellung bearbeiten & OK & Bei Bestellung von mehr als im Filiallager verfügbarer Menge wird neben dem geänderten Filiallagerbestand (negativ) einen auch eine Nachbestellung am Zentrallager ausgelöst. \\ 
+	\hline 
+\end{tabular} 
+\clearpage
