@@ -1,29 +1,6 @@
 % !TEX root = Dokumentation_SysSpec.tex
 \subsection{Modelle und Sichten}
 
-\subsubsection{Kontextdiagramm}
-Die entwickelte Applikation hat folgende Abhängigkeiten/Umsysteme/Akteuere:
-\begin{figure}[H]
-	\includegraphics[width=1.0\linewidth]{Images/kontextdiagram}
-	\caption{Kontextdiagram}
-	\label{fig:kontextdiagram}
-\end{figure}
-
-\textbf{Umsysteme}:
-\begin{itemize}
-\item Zentrallager: Nachbestellungen des lokalen Filiallagers werden an das Zentrallager gesendet.
-\item Rechnungswesen: Das Rechnungswesen wird für Bestell-Bestätigungen, Rechnungsversand und Mahnungsprüfungen verwendet.
-\item Filiallager: Lagerung der in der Filiale verkauften Artikel. Filiallager und Applikation müssen jederzeit einen übereinstimmenden Datenbestand haben.
-\end{itemize}
-
-\textbf{Akteuere}:
-\begin{itemize}
-\item Benutzer: Bestehend aus Filialverwalter, Filialleiter, Verkaufspersonal und Datentypist, bezeichnet alle Nutzer der Applikation. Die einzelnen Aktionen sind in der Use Case Übersicht ersichtlich
-\item Sysadmin: Gemäss Anforderungen kein eigentlicher Benutzer. Für konfigurative Anpassungen könnte ein Zugriff notwendig sein
-\item Kunde: Interaktion mit der Applikation wird via Verkaufspersonal abgewickelt.
-\end{itemize}
-
-\clearpage
 \subsection{Layer- \& Tier-Architektur}
 Das Filialbestellsystem basiert in der horizontalen Orienterung auf dem 4-Schichten Modell. \\
 Der \textbf{Client-Layer} stellt die Interaktionsschicht mit dem Anwender zur Verfügung.\\
