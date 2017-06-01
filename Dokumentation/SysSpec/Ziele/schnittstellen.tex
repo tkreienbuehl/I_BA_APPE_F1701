@@ -81,7 +81,7 @@ Unter Angabe der Bestellnummer kann eine Bestellung annulliert werden (Methode c
 
 
 \begin{figure}[H]
-	\includegraphics[width=0.3\linewidth]{Images/IOrderHandlerRemonte}
+	\includegraphics[width=0.3\linewidth]{Images/IOrderHandlerRemote}
 	\caption{Interface IOrderHandlerRemote}
 	\label{fig:if-IOrderHandlerRemote}
 \end{figure}
@@ -90,7 +90,7 @@ Unter Angabe der Bestellnummer kann eine Bestellung annulliert werden (Methode c
 Für die Auflistung aller Nachbestellungen wird die Methode 'getFullOrderList' verwendet und liefert ein SupplyOrderDTO zurück.\\
 Mittels der Methode 'updateSupplyFromArrical' wird mit der Übergabe eines 'SupplyOrderDTO' eine Nachbestellung ausgelöst. 
 \begin{figure}[H]
-	\includegraphics[width=0.6\linewidth]{Images/ISupplyOrderHandlerRemonte}
+	\includegraphics[width=0.6\linewidth]{Images/ISupplyOrderHandlerRemote}
 	\caption{Interface ISupplyOrderHandlerRemote}
 	\label{fig:if-ISupplyOrderHandlerRemote}
 \end{figure}
@@ -99,7 +99,7 @@ Mittels der Methode 'updateSupplyFromArrical' wird mit der Übergabe eines 'Supp
 \textbf{IArticleHandlerRemote}\\
 Für die Auflistung aller möglicher Artikel wird die Methode 'getFullArticleList' verwendet und liefert alle Liste aller verfügbaren Artikel zurück. Alle Artikel einer spezifischen Bestellung kann über 'getOrderArticleList' abgefragt werden. Sie benötigt eine ordernr (int). Ein einzelner Artikel kann über 'getArticle' mit Übergabe einer articleNr von der Remonteschicht angefordert werden. Die genannte Anzahl sind nicht garantiert, sondern zeigt lediglich einen Momentanbestand. Das Transaktionsmanagement unterliegt den unteren Layers.
 \begin{figure}[H]
-	\includegraphics[width=0.6\linewidth]{Images/IArticleHandlerRemonte}
+	\includegraphics[width=0.6\linewidth]{Images/IArticleHandlerRemote}
 	\caption{Interface IArticlerHandlerRemote}
 	\label{fig:if-IArticleHandlerRemote}
 \end{figure}
@@ -108,7 +108,7 @@ Für die Auflistung aller möglicher Artikel wird die Methode 'getFullArticleLis
 Beim ICustomerHandlerRemonte wird bis Release 1.0 keine erstellende oder mutierende Operationen angeboten. Konkret heisst dies, dass über 'getCustomerList' alle möglichen Kunden ausgewiesen werden und über eine Liste 'CustomerDTO' zurückgegeben. Es besteht mittels customerNr auch die Möglichkeit einen selektiven Kunden zu erhalten. Dies geschieht mit der Methode 'getCustomer'.
 Die Methode 'getCustomerStateOK' überprüft, ob der Kunden ausstehende Mahnungen hat und liefert einen boolean (true=OK / false=Mahnung) zurück.
 \begin{figure}[H]
-	\includegraphics[width=0.4\linewidth]{Images/ICustomerHandlerRemonte}
+	\includegraphics[width=0.4\linewidth]{Images/ICustomerHandlerRemote}
 	\caption{Interface ICustomerHandlerRemote}
 	\label{fig:if-ICustomerHandlerRemote}
 \end{figure}
@@ -116,7 +116,7 @@ Die Methode 'getCustomerStateOK' überprüft, ob der Kunden ausstehende Mahnunge
 \textbf{IUserHandlerRemote}\\
 Über das IUserHandlerRemote-Interface kann Abgefragt werden ob ein User gültig ist und das richtige Passwort eingegeben wurde. Mit 'getUserRole' kann anhand des Username seine Rolle abgefragt werden, z.B. für die Auswahl der Ziel-Page. 
 \begin{figure}[H]
-	\includegraphics[width=0.4\linewidth]{Images/IUserHandlerRemonte}
+	\includegraphics[width=0.4\linewidth]{Images/IUserHandlerRemote}
 	\caption{Interface IUserHandlerRemote}
 	\label{fig:if-IUserHandlerRemote}
 \end{figure}
@@ -125,7 +125,7 @@ Die Methode 'getCustomerStateOK' überprüft, ob der Kunden ausstehende Mahnunge
 \textbf{ISessionHandlerRemote}\\
 Die Schnittstelle 'ISessionHandlerRemote' überprüft, ob der User die Berechtigungen für den gewünschten Ziel-Context hat oder nicht. Bei jedem Pageaufruf, wird die Überprüfung für jede Page (LoginPage ausgenommen) vorgenommen.
 \begin{figure}[H]
-	\includegraphics[width=0.5\linewidth]{Images/ISessionHandlerRemonte}
+	\includegraphics[width=0.5\linewidth]{Images/ISessionHandlerRemote}
 	\caption{Interface ISessionHandlerRemote}
 	\label{fig:if-ISessionHandlerRemote}
 \end{figure}
@@ -133,7 +133,7 @@ Die Schnittstelle 'ISessionHandlerRemote' überprüft, ob der User die Berechtig
 \textbf{ILoggerHandlerRemote}\\
 Das ILoggerHandlerRemote-Interface bietet die möglichkeit anhand eines LogerDTO eine LogMessage zu übergeben. Die LogLevels werden in der unteren Schicht bestimmt. Es wird ein Default wert festgelegt für alle Log-Nachrichten vom Clint Layer.
 \begin{figure}[H]
-	\includegraphics[width=0.5\linewidth]{Images/ILoggerHandlerRemonte}
+	\includegraphics[width=0.5\linewidth]{Images/ILoggerHandlerRemote}
 	\caption{Interface ILoggerHandlerRemote}
 	\label{fig:if-ILoggerHandlerRemote}
 \end{figure}
