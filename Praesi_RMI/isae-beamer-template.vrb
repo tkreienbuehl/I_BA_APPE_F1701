@@ -1,0 +1,7 @@
+\frametitle{Fragen}
+	\begin{column}{1\linewidth}
+		Im Terminal von Debian (und allen weiteren bekannten Linux-Varianten) können mittels einem Suchbefehl die angeschlossenen Geräte angezeigt werden.
+		\begin{verbatim}
+			dmesg | grep tty
+		\end{verbatim}
+	\end{column}

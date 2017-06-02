@@ -324,10 +324,6 @@ Aufgrund der Tatsache, dass zwischen den Tabellen 'Order' und 'Article' eine kom
 \end{figure}
 \clearpage
 
-\clearpage
-\subsection{Sequenzdiagramme}
-todo
-
 \subsection{Transaktionsmanagement}
 Das Transaktionsmanagement für die Aktualisierung von Datenbeständen wie z.B. Artikelanzahl wird über den Data-Layer sichergestellt. Kommt es unerwartet zu einem Transaktionsfehler, so wird mittels Exception dem Business-Layer mitgeteilt, dass ein Fehler während der Verarbeitung aufgetreten ist. Die laufende Business-Aktion (z.B. Abbuchung Artikel von einer Bestellung) wird auf Business-Layer rückgängig gemacht, indem eine Stornobuchung an den Data-Layer gesendet wird. Die laufende Data-Layer Transaktion wird ebenfalls zurückgefahren.
 Bis Release 1.0 ist damit ein grundlegendes Transaktionsmanagement eingebunden. Es wird bis Release 1.0 jedoch die Strategie angewendet, dass bei einem Fehler alle bereits getätigten Bestellaktionen zurückgefahren werden und nicht selektiv für die betroffene Aktion. Weiter werden keine Retry-Operationen vorgenommen.

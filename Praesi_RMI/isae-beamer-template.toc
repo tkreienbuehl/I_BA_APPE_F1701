@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Remoteschicht ohne RMI}{3}{0}{1}
+\beamer@sectionintoc {2}{Remoteschicht mit RMI}{5}{0}{2}
+\beamer@sectionintoc {3}{Resultate}{7}{0}{3}
